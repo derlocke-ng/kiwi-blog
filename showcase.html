@@ -33,109 +33,63 @@
     <main>
 <h1 id="art-picture-gallery-tutorial">🎨 Art &amp; Picture Gallery
 Tutorial</h1>
-<p>This page shows how to create beautiful image galleries in Kiwi Blog
-with proper sizing and layout.</p>
+<p>This page shows how to create beautiful image galleries in Kiwi
+Blog.</p>
 <hr />
-<h2 id="how-to-size-images-properly">🖼️ How to Size Images Properly</h2>
-<p><strong>The key</strong>: Use <code>w=300&amp;q=80</code> in Unsplash
-URLs and proper CSS for responsive layouts.</p>
-<h3 id="basic-grid-gallery">Basic Grid Gallery</h3>
-<p><strong>Copy this code:</strong></p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 2rem 0;&quot;</span><span class="dt">&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;text-align: center;&quot;</span><span class="dt">&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=300</span><span class="er">&amp;</span><span class="st">q=80&quot;</span><span class="ot"> </span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ot">         style</span><span class="op">=</span><span class="st">&quot;width: 100%; height: 200px; object-fit: cover; border-radius: 8px;&quot;</span><span class="ot"> </span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ot">         alt</span><span class="op">=</span><span class="st">&quot;Abstract Art&quot;</span><span class="dt">&gt;</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;&lt;</span><span class="kw">em</span><span class="dt">&gt;</span>Abstract Colors<span class="dt">&lt;/</span><span class="kw">em</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>Digital Art, 2024<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;text-align: center;&quot;</span><span class="dt">&gt;</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300</span><span class="er">&amp;</span><span class="st">q=80&quot;</span><span class="ot"> </span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ot">         style</span><span class="op">=</span><span class="st">&quot;width: 100%; height: 200px; object-fit: cover; border-radius: 8px;&quot;</span><span class="ot"> </span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ot">         alt</span><span class="op">=</span><span class="st">&quot;Mountain Landscape&quot;</span><span class="dt">&gt;</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;&lt;</span><span class="kw">em</span><span class="dt">&gt;</span>Mountain Vista<span class="dt">&lt;/</span><span class="kw">em</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>Photography, 2024<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;text-align: center;&quot;</span><span class="dt">&gt;</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=300</span><span class="er">&amp;</span><span class="st">q=80&quot;</span><span class="ot"> </span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="ot">         style</span><span class="op">=</span><span class="st">&quot;width: 100%; height: 200px; object-fit: cover; border-radius: 8px;&quot;</span><span class="ot"> </span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ot">         alt</span><span class="op">=</span><span class="st">&quot;Architecture&quot;</span><span class="dt">&gt;</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;&lt;</span><span class="kw">em</span><span class="dt">&gt;</span>Urban Lines<span class="dt">&lt;/</span><span class="kw">em</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>Architecture, 2024<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
-<p><strong>Live Example:</strong></p>
+<h2 id="simple-gallery-examples">🖼️ Simple Gallery Examples</h2>
+<h3 id="example-1-grid-layout">Example 1: Grid Layout</h3>
 <div
 style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 2rem 0;">
 <div style="text-align: center;">
-<pre><code>&lt;img src=&quot;https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=300&amp;q=80&quot; 
-     style=&quot;width: 100%; height: 200px; object-fit: cover; border-radius: 8px;&quot; 
-     alt=&quot;Abstract Art&quot;&gt;
+<pre><code>&lt;img src=&quot;https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=300&amp;q=80&quot; style=&quot;width: 100%; height: 200px; object-fit: cover; border-radius: 8px;&quot; alt=&quot;Abstract Art&quot;&gt;
 &lt;p&gt;&lt;em&gt;Abstract Colors&lt;/em&gt;&lt;br&gt;Digital Art, 2024&lt;/p&gt;</code></pre>
 </div>
 <div style="text-align: center;">
-<pre><code>&lt;img src=&quot;https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&amp;q=80&quot; 
-     style=&quot;width: 100%; height: 200px; object-fit: cover; border-radius: 8px;&quot; 
-     alt=&quot;Mountain Landscape&quot;&gt;
+<pre><code>&lt;img src=&quot;https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&amp;q=80&quot; style=&quot;width: 100%; height: 200px; object-fit: cover; border-radius: 8px;&quot; alt=&quot;Mountain Landscape&quot;&gt;
 &lt;p&gt;&lt;em&gt;Mountain Vista&lt;/em&gt;&lt;br&gt;Photography, 2024&lt;/p&gt;</code></pre>
 </div>
 <div style="text-align: center;">
-<pre><code>&lt;img src=&quot;https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=300&amp;q=80&quot; 
-     style=&quot;width: 100%; height: 200px; object-fit: cover; border-radius: 8px;&quot; 
-     alt=&quot;Architecture&quot;&gt;
+<pre><code>&lt;img src=&quot;https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=300&amp;q=80&quot; style=&quot;width: 100%; height: 200px; object-fit: cover; border-radius: 8px;&quot; alt=&quot;Architecture&quot;&gt;
 &lt;p&gt;&lt;em&gt;Urban Lines&lt;/em&gt;&lt;br&gt;Architecture, 2024&lt;/p&gt;</code></pre>
 </div>
 </div>
-<h3 id="simple-row-layout">Simple Row Layout</h3>
-<p><strong>For fewer images:</strong></p>
-<div class="sourceCode" id="cb5"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin: 2rem 0;&quot;</span><span class="dt">&gt;</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300</span><span class="er">&amp;</span><span class="st">q=80&quot;</span><span class="ot"> </span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ot">       style</span><span class="op">=</span><span class="st">&quot;width: 280px; height: 200px; object-fit: cover; border-radius: 8px;&quot;</span><span class="ot"> </span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ot">       alt</span><span class="op">=</span><span class="st">&quot;Nature&quot;</span><span class="dt">&gt;</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300</span><span class="er">&amp;</span><span class="st">q=80&quot;</span><span class="ot"> </span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="ot">       style</span><span class="op">=</span><span class="st">&quot;width: 280px; height: 200px; object-fit: cover; border-radius: 8px;&quot;</span><span class="ot"> </span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="ot">       alt</span><span class="op">=</span><span class="st">&quot;Mountains&quot;</span><span class="dt">&gt;</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
-<p><strong>Live Example:</strong></p>
+<h3 id="example-2-simple-row">Example 2: Simple Row</h3>
 <div
 style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin: 2rem 0;">
-<p><img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&q=80" 
-       style="width: 280px; height: 200px; object-fit: cover; border-radius: 8px;" 
-       alt="Nature">
-<img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&q=80" 
-       style="width: 280px; height: 200px; object-fit: cover; border-radius: 8px;" 
-       alt="Mountains"></p>
+<p><img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&q=80" style="width: 280px; height: 200px; object-fit: cover; border-radius: 8px;" alt="Nature">
+<img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&q=80" style="width: 280px; height: 200px; object-fit: cover; border-radius: 8px;" alt="Mountains"></p>
 </div>
 <hr />
-<h2 id="image-sizing-rules">📏 Image Sizing Rules</h2>
-<ol type="1">
-<li><strong>Unsplash URLs</strong>: Always add
-<code>?w=300&amp;q=80</code> for 300px width, 80% quality</li>
-<li><strong>CSS width</strong>: Use <code>width: 100%</code> for
-responsive or fixed <code>width: 280px</code> for consistent</li>
-<li><strong>CSS height</strong>: Set fixed height like
-<code>height: 200px</code> for uniform grids</li>
-<li><strong>object-fit</strong>: Use <code>object-fit: cover</code> to
-crop nicely without stretching</li>
-<li><strong>border-radius</strong>: Add <code>border-radius: 8px</code>
-for modern rounded corners</li>
-</ol>
+<h2 id="copy-this-code">📋 Copy This Code</h2>
+<p><strong>Grid Gallery (3+ images):</strong></p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 2rem 0;&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;text-align: center;&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;YOUR_IMAGE_URL?w=300</span><span class="er">&amp;</span><span class="st">q=80&quot;</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;width: 100%; height: 200px; object-fit: cover; border-radius: 8px;&quot;</span><span class="ot"> alt</span><span class="op">=</span><span class="st">&quot;Your Alt Text&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;&lt;</span><span class="kw">em</span><span class="dt">&gt;</span>Your Title<span class="dt">&lt;/</span><span class="kw">em</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>Your Description<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+<p><strong>Simple Row (1-2 images):</strong></p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin: 2rem 0;&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;YOUR_IMAGE_URL?w=300</span><span class="er">&amp;</span><span class="st">q=80&quot;</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;width: 280px; height: 200px; object-fit: cover; border-radius: 8px;&quot;</span><span class="ot"> alt</span><span class="op">=</span><span class="st">&quot;Your Alt Text&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
 <hr />
-<h2 id="quick-tips">🎯 Quick Tips</h2>
-<ul>
-<li><strong>Grid layout</strong>: Best for 3+ images, automatically
-wraps to new rows</li>
-<li><strong>Flex layout</strong>: Best for 1-2 images, simple horizontal
-arrangement<br />
+<h2 id="key-rules">🎯 Key Rules</h2>
+<ol type="1">
+<li><strong>Image URLs</strong>: Add <code>?w=300&amp;q=80</code> for
+proper sizing</li>
+<li><strong>Grid</strong>: Use <code>minmax(250px, 1fr)</code> for
+responsive columns<br />
 </li>
-<li><strong>minmax(250px, 1fr)</strong>: Makes grid responsive - minimum
-250px, grows to fill space</li>
-<li><strong>gap: 1rem</strong>: Adds consistent spacing between
-images</li>
-<li><strong>margin: 2rem 0</strong>: Adds space above and below the
-gallery</li>
-</ul>
-<p>That’s it! Copy the code, replace the image URLs with your own, and
-you have a beautiful gallery.</p>
+<li><strong>Height</strong>: Set fixed <code>height: 200px</code> for
+uniform rows</li>
+<li><strong>object-fit</strong>: Use <code>cover</code> to crop nicely
+without stretching</li>
+<li><strong>Border</strong>: Add <code>border-radius: 8px</code> for
+modern look</li>
+</ol>
+<p>That’s it! Replace the URLs and text with your own content.</p>
     </main>
   </div>
   <footer>
