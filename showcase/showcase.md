@@ -1,33 +1,16 @@
 # 🎨 Art & Picture Gallery Tutorial
 
-This page shows how to create beautiful image galleries in Kiwi Blog.
+Learn how to create beautiful image galleries in Kiwi Blog with proper sizing and responsive layouts.
 
 ---
 
-## 🖼️ Simple Gallery Examples
+## 🖼️ Working Examples
 
-### Example 1: Grid Layout
-
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 2rem 0;">
-  <div style="text-align: center;">
-    <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=300&q=80" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" alt="Abstract Art">
-    <p><em>Abstract Colors</em><br>Digital Art, 2024</p>
-  </div>
-  <div style="text-align: center;">
-    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&q=80" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" alt="Mountain Landscape">
-    <p><em>Mountain Vista</em><br>Photography, 2024</p>
-  </div>
-  <div style="text-align: center;">
-    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=300&q=80" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" alt="Architecture">
-    <p><em>Urban Lines</em><br>Architecture, 2024</p>
-  </div>
-</div>
-
-### Example 2: Simple Row
+### Two Beautiful Images
 
 <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin: 2rem 0;">
-  <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&q=80" style="width: 280px; height: 200px; object-fit: cover; border-radius: 8px;" alt="Nature">
-  <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&q=80" style="width: 280px; height: 200px; object-fit: cover; border-radius: 8px;" alt="Mountains">
+  <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80" style="width: 350px; height: 250px; object-fit: cover; border-radius: 8px;" alt="Mountain Vista">
+  <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=400&q=80" style="width: 350px; height: 250px; object-fit: cover; border-radius: 8px;" alt="Abstract Colors">
 </div>
 
 ---
@@ -53,12 +36,11 @@ This page shows how to create beautiful image galleries in Kiwi Blog.
 
 ---
 
-## 🎯 Key Rules
+## 🎯 Pro Tips
 
-1. **Image URLs**: Add `?w=300&q=80` for proper sizing
-2. **Grid**: Use `minmax(250px, 1fr)` for responsive columns  
-3. **Height**: Set fixed `height: 200px` for uniform rows
-4. **object-fit**: Use `cover` to crop nicely without stretching
-5. **Border**: Add `border-radius: 8px` for modern look
+- **Image sizing**: Use `?w=400&q=80` for crisp, fast-loading images
+- **Responsive grids**: `minmax(250px, 1fr)` adapts to any screen size  
+- **Consistent heights**: Fixed height like `250px` creates uniform galleries
+- **Modern styling**: `border-radius: 8px` and `object-fit: cover` for polished look
 
-That's it! Replace the URLs and text with your own content.
+Now you can create stunning photo galleries that work perfectly on desktop and mobile!
