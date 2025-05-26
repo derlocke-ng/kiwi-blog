@@ -1,8 +1,9 @@
-# Generated HTML files (optional - you may want to include them)
-# Uncomment the lines below if you don't want to commit generated files
-index.html
-archive.html
-sample.html
+# Generated HTML files
+# Note: These are included for GitHub Pages deployment
+# If you prefer to build on deployment, you can uncomment these lines:
+# index.html
+# archive.html
+# sample.html
 # *.html
 
 # System files

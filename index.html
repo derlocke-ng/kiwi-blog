@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kiwi Blog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="taskbar">
+    <div class="logo"><a href="index.html">🥝 Kiwi Blog</a></div>
+    <ul class="menu">
+<li><a href="index.html#home">Home</a></li>
+<li><a href="archive.html">Archive</a></li>
+<li><a href="./sample.html">Sample</a></li>
+
+    </ul>
+    <div class="theme-slider">
+      <button id="darkModeToggle" class="dark-mode-toggle">🌙 Dark</button>
+      <div class="slider-group">
+        <label for="contentSlider">📄</label>
+        <input type="range" id="contentSlider" min="0" max="360" value="100" class="slider">
+      </div>
+      <div class="slider-group">
+        <label for="headerSlider">🎨</label>
+        <input type="range" id="headerSlider" min="0" max="360" value="210" class="slider">
+      </div>
+    </div>
+  </nav>
+  <div class="main-wrapper">
+    <main>
+<h1 id="home">Home</h1>
+<p>Welcome to <strong>Kiwi Blog</strong>! 🥝</p>
+<p>A modern, lightweight static site generator with advanced theming and
+dynamic page creation.</p>
+<hr />
+<h2 id="quick-start">⚡ Quick Start</h2>
+<ol type="1">
+<li><strong>Write a post</strong>: Create
+<code>blogentries/my-post.md</code></li>
+<li><strong>Build the site</strong>: Run <code>./build.sh</code></li>
+<li><strong>View your blog</strong>: Open <code>index.html</code></li>
+</ol>
+<h2 id="features">🎨 Features</h2>
+<ul>
+<li><strong>Advanced Theme System</strong>: Dual-slider color
+customization with dark mode</li>
+<li><strong>Dynamic Pages</strong>: Automatic page generation from
+templates</li>
+<li><strong>Pinned Posts</strong>: Feature important content at the
+top</li>
+<li><strong>Archive System</strong>: Organized yearly blog archives</li>
+<li><strong>Responsive Design</strong>: Beautiful on all devices</li>
+</ul>
+<h2 id="writing-posts">📝 Writing Posts</h2>
+<p>Create markdown files in <code>blogentries/</code> with this
+format:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Your Post Title</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>2025-05-26</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Your amazing content here!</span></code></pre></div>
+<h2 id="advanced-features">🔧 Advanced Features</h2>
+<p>Want to extend Kiwi Blog?</p>
+<ul>
+<li><strong><a href="index.html#extending-kiwi-blog">Extending Kiwi Blog
+guide</a></strong> - Advanced tips, custom pages, PWA features, and much
+more!</li>
+<li><strong><a href="sample.html">Sample Page</a></strong> - Learn how
+to create custom subpages with templates</li>
+</ul>
+<hr />
+<p><strong>Happy blogging!</strong> ✨</p>
+<h1 id="welcome-to-kiwi-blog-pinned">📌 Welcome to Kiwi Blog
+(Pinned)</h1>
+<p>2025-05-26</p>
+<div class="pinned-post">
+<strong>This is a pinned post!</strong>
+<p>
+This post always appears at the top of the home page. To pin your own
+post, edit or replace <code>pinned.md</code> in the
+<code>blogentries/</code> folder.
+</p>
+<ul>
+<li>
+Use this space for important announcements, a welcome message, or
+featured content.
+</li>
+<li>
+You can remove this by deleting <code>pinned.md</code>.
+</li>
+</ul>
+<blockquote>
+Pin any post you want here!
+</blockquote>
+</div>
+<section id="getting-started" class="blogentry"><h1 id="getting-started-with-kiwi-blog">Getting Started with Kiwi
+Blog</h1>
+<p>2025-05-26</p>
+<p>Welcome to your new <strong>Kiwi Blog</strong>! This static site
+generator makes it easy to create and maintain a beautiful blog using
+simple Markdown files. Let’s learn how to use Kiwi Blog and create
+amazing posts with Markdown.</p>
+<h2 id="how-kiwi-blog-works">🚀 How Kiwi Blog Works</h2>
+<p>Kiwi Blog converts your Markdown files into a beautiful website in 3
+simple steps:</p>
+<ol type="1">
+<li><strong>Write</strong>: Create <code>.md</code> files in the
+<code>blogentries/</code> folder</li>
+<li><strong>Build</strong>: Run <code>./build.sh</code> to generate your
+site<br />
+</li>
+<li><strong>Deploy</strong>: Upload the generated HTML files
+anywhere</li>
+</ol>
+<h2 id="your-first-blog-post">📁 Your First Blog Post</h2>
+<p>Create a new file in <code>blogentries/</code> called
+<code>my-first-post.md</code>:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># My Amazing First Post</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>2025-05-26</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>Welcome to my blog! This is my first post using **Kiwi Blog**.</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>I&#39;m excited to start sharing my thoughts and ideas here.</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## What I&#39;ll Write About</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Technology and coding</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>My learning journey  </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Helpful tutorials</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Personal experiences</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Stay tuned for more content!</span></code></pre></div>
+<p>Then run <code>./build.sh</code> and your post will appear on your
+blog!</p>
+<h2 id="text-formatting-with-markdown">📝 Text Formatting with
+Markdown</h2>
+<p>Here’s how to format text in your posts:</p>
+<h3 id="bold-and-italic-text">Bold and Italic Text</h3>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>**Bold text** using double asterisks</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>*Italic text* using single asterisks  </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>***Bold and italic*** using triple asterisks</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>~~Strikethrough~~ using double tildes</span></code></pre></div>
+<p><strong>Result:</strong></p>
+<ul>
+<li><strong>Bold text</strong> using double asterisks</li>
+<li><em>Italic text</em> using single asterisks<br />
+</li>
+<li><strong><em>Bold and italic</em></strong> using triple
+asterisks</li>
+<li><del>Strikethrough</del> using double tildes</li>
+</ul>
+<h3 id="links">Links</h3>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Visit GitHub</span><span class="co">](https://github.com)</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Check out the sample page</span><span class="co">](sample.html)</span></span></code></pre></div>
+<p><strong>Result:</strong></p>
+<ul>
+<li><a href="https://github.com">Visit GitHub</a></li>
+<li><a href="sample.html">Check out the sample page</a></li>
+</ul>
+<h3 id="inline-code">Inline Code</h3>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Use <span class="in">`backticks`</span> for inline code like <span class="in">`./build.sh`</span></span></code></pre></div>
+<p><strong>Result:</strong></p>
+<p>Use <code>backticks</code> for inline code like
+<code>./build.sh</code></p>
+<h2 id="lists-and-organization">Lists and Organization</h2>
+<h3 id="ordered-lists">Ordered Lists</h3>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Write your content in Markdown</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Run the build script  </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Deploy to any web server</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Enjoy your new blog!</span></code></pre></div>
+<p><strong>Result:</strong></p>
+<ol type="1">
+<li>Write your content in Markdown</li>
+<li>Run the build script<br />
+</li>
+<li>Deploy to any web server</li>
+<li>Enjoy your new blog!</li>
+</ol>
+<h3 id="unordered-lists">Unordered Lists</h3>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>🚀 **Simple Setup**: Just write Markdown files and run the build script</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>🎨 **Advanced Theming**: Dual-slider color customization with dark mode</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>📱 **Mobile Friendly**: Responsive design that works everywhere</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>⚡ **Lightning Fast**: Static HTML with no server requirements</span></code></pre></div>
+<p><strong>Result:</strong></p>
+<ul>
+<li>🚀 <strong>Simple Setup</strong>: Just write Markdown files and run
+the build script</li>
+<li>🎨 <strong>Advanced Theming</strong>: Dual-slider color
+customization with dark mode<br />
+</li>
+<li>📱 <strong>Mobile Friendly</strong>: Responsive design that works
+everywhere</li>
+<li>⚡ <strong>Lightning Fast</strong>: Static HTML with no server
+requirements</li>
+</ul>
+<h3 id="task-lists">Task Lists</h3>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Create blog content</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Customize theme colors</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Add your own images</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Share with the world</span></code></pre></div>
+<p><strong>Result:</strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="" />Create blog
+content</label></li>
+<li><label><input type="checkbox" checked="" />Customize theme
+colors</label></li>
+<li><label><input type="checkbox" />Add your own images</label></li>
+<li><label><input type="checkbox" />Share with the world</label></li>
+</ul>
+<h2 id="tables">Tables</h2>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Feature <span class="pp">|</span> Description <span class="pp">|</span> Status <span class="pp">|</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="pp">|---------|-------------|--------|</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Markdown Support <span class="pp">|</span> Full CommonMark compatibility <span class="pp">|</span> ✅ <span class="pp">|</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Theme System <span class="pp">|</span> Dual-slider color customization <span class="pp">|</span> ✅ <span class="pp">|</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Dark Mode <span class="pp">|</span> Automatic dark/light toggle <span class="pp">|</span> ✅ <span class="pp">|</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Mobile Design <span class="pp">|</span> Responsive layout <span class="pp">|</span> ✅ <span class="pp">|</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Custom Pages <span class="pp">|</span> Template-based page system <span class="pp">|</span> ✅ <span class="pp">|</span></span></code></pre></div>
+<p><strong>Result:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Markdown Support</td>
+<td>Full CommonMark compatibility</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Theme System</td>
+<td>Dual-slider color customization</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Dark Mode</td>
+<td>Automatic dark/light toggle</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Mobile Design</td>
+<td>Responsive layout</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Custom Pages</td>
+<td>Template-based page system</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<h2 id="code-blocks">Code Blocks</h2>
+<h3 id="inline-code-1">Inline Code</h3>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>Run <span class="in">`./build.sh`</span> to build your site</span></code></pre></div>
+<p><strong>Result:</strong></p>
+<p>Run <code>./build.sh</code> to build your site</p>
+<h3 id="code-blocks-with-syntax-highlighting">Code Blocks with Syntax
+Highlighting</h3>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Building your Kiwi Blog...&quot;</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="ex">./build.sh</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Done! Your blog is ready.&quot;</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
+<p><strong>Result:</strong></p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Building your Kiwi Blog...&quot;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="ex">./build.sh</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Done! Your blog is ready.&quot;</span></span></code></pre></div>
+<h2 id="images-and-media">Images and Media</h2>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="al">![Kiwi fruit](https://example.com/kiwi.jpg)</span></span></code></pre></div>
+<p>For videos, you can use HTML directly in Markdown:</p>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">video</span><span class="ot"> controls width</span><span class="op">=</span><span class="st">&quot;100%&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">source</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;your-video.mp4&quot;</span><span class="ot"> type</span><span class="op">=</span><span class="st">&quot;video/mp4&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    Your browser doesn&#39;t support video playback.</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">video</span><span class="dt">&gt;</span></span></code></pre></div>
+<h2 id="blockquotes">Blockquotes</h2>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; &quot;The best blogs are those that share knowledge and inspire others.&quot;</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; — A wise blogger</span></span></code></pre></div>
+<p><strong>Result:</strong></p>
+<blockquote>
+<p>“The best blogs are those that share knowledge and inspire
+others.”</p>
+<p>— A wise blogger</p>
+</blockquote>
+<h2 id="headings">Headings</h2>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Main Title (H1)</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Section Heading (H2)  </span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">### Subsection (H3)</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Sub-subsection (H4)</span></span></code></pre></div>
+<p><strong>Result:</strong></p>
+<h1 id="main-title-h1">Main Title (H1)</h1>
+<h2 id="section-heading-h2">Section Heading (H2)</h2>
+<h3 id="subsection-h3">Subsection (H3)</h3>
+<h4 id="sub-subsection-h4">Sub-subsection (H4)</h4>
+<h2 id="horizontal-rules">Horizontal Rules</h2>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span></code></pre></div>
+<p><strong>Result:</strong></p>
+<hr />
+<h2 id="building-your-blog">🔨 Building Your Blog</h2>
+<p>Once you’ve written your posts, build your blog:</p>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./build.sh</span></span></code></pre></div>
+<p>This will: - Convert all Markdown files in <code>blogentries/</code>
+to HTML - Sort posts by date (newest first) - Generate navigation menus
+- Create the archive page - Process any custom pages</p>
+<h2 id="file-structure">📂 File Structure</h2>
+<p>Your Kiwi Blog should look like this:</p>
+<pre><code>kiwi-blog/
+├── blogentries/           # Your blog posts (Markdown files)
+│   ├── home.md           # Homepage content
+│   ├── pinned.md         # Featured/pinned post
+│   ├── getting-started.md # This guide
+│   └── your-posts.md     # Your blog entries
+├── build.sh              # Build script
+├── template.html         # Main page template
+├── style.css             # Styling
+├── theme.js              # Theme system
+└── index.html            # Generated homepage (after building)</code></pre>
+<h2 id="your-next-steps">Your Next Steps</h2>
+<ol type="1">
+<li><strong>Create Your First Post</strong>: Add a new <code>.md</code>
+file in <code>blogentries/</code></li>
+<li><strong>Customize Theme Colors</strong>: Use the sliders in the
+header to adjust colors</li>
+<li><strong>Build Your Site</strong>: Run <code>./build.sh</code> to
+generate HTML files</li>
+<li><strong>Preview Your Blog</strong>: Open <code>index.html</code> in
+your browser</li>
+<li><strong>Deploy</strong>: Upload files to any web host (no server
+needed!)</li>
+</ol>
+<h2 id="special-features">🎨 Special Features</h2>
+<h3 id="pinned-posts">Pinned Posts</h3>
+<p>Edit <code>blogentries/pinned.md</code> to feature important content
+at the top of your blog.</p>
+<h3 id="archive-system">Archive System</h3>
+<p>Kiwi Blog automatically creates an archive page organizing your posts
+by date.</p>
+<h3 id="custom-pages">Custom Pages</h3>
+<p>Want to create pages beyond your blog? Check out the <a
+href="sample.html">sample page</a> to learn about the template system
+for custom pages.</p>
+<h2 id="content-tips">📝 Content Tips</h2>
+<h3 id="blog-entries-vs-custom-pages">Blog Entries vs Custom Pages</h3>
+<p>Kiwi Blog handles two types of content differently:</p>
+<p><strong>📅 Blog Entries</strong> (in <code>blogentries/</code>):</p>
+<ul>
+<li>Sorted by <strong>DATE</strong> (newest first)</li>
+<li>Require date on second line: <code>2025-05-26</code></li>
+<li>Appear on homepage and archive</li>
+<li>Example: <code>my-post.md</code>, <code>travel-blog.md</code></li>
+</ul>
+<p><strong>📁 Custom Pages</strong> (with
+<code>*-template.html</code>):</p>
+<ul>
+<li>Sorted <strong>ALPHABETICALLY</strong> by filename</li>
+<li>No date requirement</li>
+<li>Create separate pages</li>
+<li>Example: <code>about/</code>, <code>portfolio/</code>,
+<code>contact/</code></li>
+</ul>
+<h3 id="multiple-files-in-custom-pages">Multiple Files in Custom
+Pages</h3>
+<p>You can have multiple <code>.md</code> files in your custom page
+folder:</p>
+<pre><code>mypage/
+├── intro.md         # Appears first (alphabetical)
+├── projects.md      # Appears second
+└── contact.md       # Appears third</code></pre>
+<p>All files will be combined into one page in <strong>alphabetical
+order</strong> by filename.</p>
+<h3 id="theme-customization">Theme Customization</h3>
+<p>Use the color sliders in the header to customize your blog’s
+appearance. Toggle dark mode with the moon button.</p>
+<h2 id="pro-tips">💡 Pro Tips</h2>
+<ol type="1">
+<li><strong>Date Format</strong>: Always use YYYY-MM-DD format for post
+dates</li>
+<li><strong>File Names</strong>: Use descriptive filenames like
+<code>my-coding-journey.md</code></li>
+<li><strong>Headings</strong>: Use <code>#</code> for post titles,
+<code>##</code> for main sections</li>
+<li><strong>Preview Often</strong>: Build and preview your changes
+frequently</li>
+<li><strong>Keep It Simple</strong>: Markdown is powerful because it’s
+simple</li>
+</ol>
+<hr />
+<p><strong>Ready to start blogging?</strong> Create your first post in
+<code>blogentries/</code> and run <code>./build.sh</code>!</p>
+<p>Happy blogging! 🥝✨</p></section>
+<section id="extending-kiwi-blog" class="blogentry"><h1 id="extending-kiwi-blog---advanced-tips-build-kit-ideas">🛠️
+Extending Kiwi Blog - Advanced Tips &amp; Build Kit Ideas</h1>
+<p>2025-05-25</p>
+<p>Are you ready to <strong>supercharge your Kiwi Blog</strong>? This
+comprehensive guide shows you how to extend the basic blog system with
+advanced features, customizations, and professional enhancements.</p>
+<p>Whether you’re a beginner looking to add simple features or an
+experienced developer wanting to build a full-featured site, this guide
+has something for you!</p>
+<h2 id="quick-extensions-you-can-build">🚀 Quick Extensions You Can
+Build</h2>
+<h3 id="portfolio-page">1. <strong>Portfolio Page</strong></h3>
+<p>Perfect for showcasing your work:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create portfolio template</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> sample-template.html portfolio-template.html</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> portfolio</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;# My Portfolio</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="st">2025-05-26</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="st">Showcase your best work here!&quot;</span> <span class="op">&gt;</span> portfolio/portfolio.md</span></code></pre></div>
+<h3 id="contact-page">2. <strong>Contact Page</strong></h3>
+<p>Add a contact form or details:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> sample-template.html contact-template.html</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> contact</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;# Contact Me</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="st">2025-05-26</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="st">Get in touch!&quot;</span> <span class="op">&gt;</span> contact/contact.md</span></code></pre></div>
+<h3 id="projects-gallery">3. <strong>Projects Gallery</strong></h3>
+<p>Document your coding projects:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> sample-template.html projects-template.html</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> projects</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;# My Projects</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="st">2025-05-26</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="st">Here are my latest coding adventures!&quot;</span> <span class="op">&gt;</span> projects/projects.md</span></code></pre></div>
+<h2 id="theme-customization-ideas">🎨 Theme Customization Ideas</h2>
+<h3 id="custom-color-schemes">Custom Color Schemes</h3>
+<p>Edit <code>style.css</code> to add preset themes:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Add to style.css */</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.theme-preset-sunset</span> { <span class="va">--content-hue</span><span class="ch">:</span> <span class="dv">25</span><span class="op">;</span> <span class="va">--header-hue</span><span class="ch">:</span> <span class="dv">315</span><span class="op">;</span> }</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">.theme-preset-ocean</span> { <span class="va">--content-hue</span><span class="ch">:</span> <span class="dv">200</span><span class="op">;</span> <span class="va">--header-hue</span><span class="ch">:</span> <span class="dv">220</span><span class="op">;</span> }</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">.theme-preset-forest</span> { <span class="va">--content-hue</span><span class="ch">:</span> <span class="dv">120</span><span class="op">;</span> <span class="va">--header-hue</span><span class="ch">:</span> <span class="dv">140</span><span class="op">;</span> }</span></code></pre></div>
+<h3 id="typography-enhancements">Typography Enhancements</h3>
+<ul>
+<li><strong>Google Fonts</strong>: Add
+<code>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap');</code></li>
+<li><strong>Code Highlighting</strong>: Integrate Prism.js for syntax
+highlighting</li>
+<li><strong>Custom Icons</strong>: Replace emoji with SVG icons</li>
+</ul>
+<h2 id="advanced-build-script-extensions">🔧 Advanced Build Script
+Extensions</h2>
+<h3 id="image-optimization">Image Optimization</h3>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add image compression</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">optimize_images()</span> <span class="kw">{</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">find</span> . <span class="at">-name</span> <span class="st">&quot;*.jpg&quot;</span> <span class="at">-exec</span> jpegoptim <span class="at">--size</span><span class="op">=</span>200k {} <span class="dt">\;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">find</span> . <span class="at">-name</span> <span class="st">&quot;*.png&quot;</span> <span class="at">-exec</span> optipng <span class="at">-o7</span> {} <span class="dt">\;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span></code></pre></div>
+<h3 id="rss-feed-generation">RSS Feed Generation</h3>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate RSS feed</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">generate_rss()</span> <span class="kw">{</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&#39;&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#39;</span> <span class="op">&gt;</span> rss.xml</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&#39;&lt;rss version=&quot;2.0&quot;&gt;&lt;channel&gt;&#39;</span> <span class="op">&gt;&gt;</span> rss.xml</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add blog entries to RSS...</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span></code></pre></div>
+<h2 id="progressive-web-app-pwa-features">📱 Progressive Web App (PWA)
+Features</h2>
+<h3 id="service-worker">Service Worker</h3>
+<p>Create <code>sw.js</code> for offline functionality:</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>self<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">&#39;fetch&#39;</span><span class="op">,</span> <span class="bu">event</span> <span class="kw">=&gt;</span> {</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">event</span><span class="op">.</span><span class="fu">respondWith</span>(</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>        caches<span class="op">.</span><span class="fu">match</span>(<span class="bu">event</span><span class="op">.</span><span class="at">request</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>            <span class="op">.</span><span class="fu">then</span>(response <span class="kw">=&gt;</span> response <span class="op">||</span> <span class="fu">fetch</span>(<span class="bu">event</span><span class="op">.</span><span class="at">request</span>))</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    )<span class="op">;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+<h3 id="manifest-file">Manifest File</h3>
+<p>Add <code>manifest.json</code> for app-like experience:</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;Kiwi Blog&quot;</span><span class="fu">,</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;short_name&quot;</span><span class="fu">:</span> <span class="st">&quot;Kiwi&quot;</span><span class="fu">,</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;start_url&quot;</span><span class="fu">:</span> <span class="st">&quot;/&quot;</span><span class="fu">,</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;display&quot;</span><span class="fu">:</span> <span class="st">&quot;standalone&quot;</span><span class="fu">,</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;theme_color&quot;</span><span class="fu">:</span> <span class="st">&quot;#4ade80&quot;</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<h2 id="content-management-ideas">🎯 Content Management Ideas</h2>
+<h3 id="series-categories">Series &amp; Categories</h3>
+<ul>
+<li><strong>Tag System</strong>: Add tags to blog posts</li>
+<li><strong>Series Pages</strong>: Group related posts</li>
+<li><strong>Category Archives</strong>: Organize by topic</li>
+</ul>
+<h3 id="advanced-markdown-features">Advanced Markdown Features</h3>
+<ul>
+<li><strong>Mermaid Diagrams</strong>: Add flowcharts and diagrams</li>
+<li><strong>Math Equations</strong>: Integrate KaTeX for formulas</li>
+<li><strong>Interactive Elements</strong>: Embed CodePen, JSFiddle</li>
+</ul>
+<h2 id="seo-analytics">🔍 SEO &amp; Analytics</h2>
+<h3 id="meta-tags-enhancement">Meta Tags Enhancement</h3>
+<p>Add to your templates:</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> property</span><span class="op">=</span><span class="st">&quot;og:title&quot;</span><span class="ot"> content</span><span class="op">=</span><span class="st">&quot;{{TITLE}}&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> property</span><span class="op">=</span><span class="st">&quot;og:description&quot;</span><span class="ot"> content</span><span class="op">=</span><span class="st">&quot;{{DESCRIPTION}}&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> property</span><span class="op">=</span><span class="st">&quot;og:image&quot;</span><span class="ot"> content</span><span class="op">=</span><span class="st">&quot;{{IMAGE}}&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> name</span><span class="op">=</span><span class="st">&quot;twitter:card&quot;</span><span class="ot"> content</span><span class="op">=</span><span class="st">&quot;summary_large_image&quot;</span><span class="dt">&gt;</span></span></code></pre></div>
+<h3 id="analytics-integration">Analytics Integration</h3>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Google Analytics --&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> async src</span><span class="op">=</span><span class="st">&quot;https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span></code></pre></div>
+<h2 id="developer-tools">🛠️ Developer Tools</h2>
+<h3 id="live-reload">Live Reload</h3>
+<p>Add file watching for development:</p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install inotify-tools</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> dnf install inotify-tools</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Watch for changes</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="ex">inotifywait</span> <span class="at">-r</span> <span class="at">-e</span> modify,create,delete ./blogentries/ ./sample/<span class="kw">;</span> <span class="cf">do</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="ex">./build.sh</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;Site rebuilt at </span><span class="va">$(</span><span class="fu">date</span><span class="va">)</span><span class="st">&quot;</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code></pre></div>
+<h3 id="build-optimization">Build Optimization</h3>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Minify CSS</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install <span class="at">-g</span> clean-css-cli</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="ex">cleancss</span> <span class="at">-o</span> style.min.css style.css</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Compress HTML</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install <span class="at">-g</span> html-minifier</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="ex">html-minifier</span> <span class="at">--collapse-whitespace</span> <span class="at">--remove-comments</span></span></code></pre></div>
+<h2 id="fun-interactive-features">🎪 Fun Interactive Features</h2>
+<h3 id="comment-system">Comment System</h3>
+<ul>
+<li><strong>Disqus Integration</strong>: Easy comment system</li>
+<li><strong>Utterances</strong>: GitHub-based comments</li>
+<li><strong>Staticman</strong>: Static site comments</li>
+</ul>
+<h3 id="search-functionality">Search Functionality</h3>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Simple client-side search</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">searchBlog</span>(query) {</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> posts <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelectorAll</span>(<span class="st">&#39;.blog-post&#39;</span>)<span class="op">;</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    posts<span class="op">.</span><span class="fu">forEach</span>(post <span class="kw">=&gt;</span> {</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> content <span class="op">=</span> post<span class="op">.</span><span class="at">textContent</span><span class="op">.</span><span class="fu">toLowerCase</span>()<span class="op">;</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>        post<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">display</span> <span class="op">=</span> content<span class="op">.</span><span class="fu">includes</span>(query<span class="op">.</span><span class="fu">toLowerCase</span>()) <span class="op">?</span> <span class="st">&#39;block&#39;</span> <span class="op">:</span> <span class="st">&#39;none&#39;</span><span class="op">;</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h3 id="reading-progress-bar">Reading Progress Bar</h3>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.reading-progress</span> {</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">position</span><span class="ch">:</span> <span class="dv">fixed</span><span class="op">;</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">top</span><span class="ch">:</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">left</span><span class="ch">:</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">height</span><span class="ch">:</span> <span class="dv">4</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">background</span><span class="ch">:</span> <span class="fu">var(</span><span class="va">--accent-color</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">transition</span><span class="ch">:</span> <span class="dv">width 0.3</span><span class="dt">s</span><span class="op">;</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">z-index</span><span class="ch">:</span> <span class="dv">1000</span><span class="op">;</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h2 id="deployment-enhancements">🌐 Deployment Enhancements</h2>
+<h3 id="github-actions-cicd">GitHub Actions CI/CD</h3>
+<p>Create <code>.github/workflows/build.yml</code>:</p>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Build and Deploy</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">branches</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at"> main </span><span class="kw">]</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="fu">jobs</span><span class="kw">:</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">build</span><span class="kw">:</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">steps</span><span class="kw">:</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/checkout@v2</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Build site</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">run</span><span class="kw">:</span><span class="at"> ./build.sh</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Deploy to GitHub Pages</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> peaceiris/actions-gh-pages@v3</span></span></code></pre></div>
+<h3 id="multi-environment-support">Multi-Environment Support</h3>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Different configs for dev/prod</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">[</span> <span class="st">&quot;</span><span class="va">$NODE_ENV</span><span class="st">&quot;</span> <span class="ot">=</span> <span class="st">&quot;production&quot;</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="va">MINIFY</span><span class="op">=</span>true</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    <span class="va">ANALYTICS</span><span class="op">=</span>true</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    <span class="va">MINIFY</span><span class="op">=</span>false</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    <span class="va">ANALYTICS</span><span class="op">=</span>false</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span></code></pre></div>
+<h2 id="design-system-extensions">🎨 Design System Extensions</h2>
+<h3 id="component-library">Component Library</h3>
+<p>Create reusable components: - <strong>Card Components</strong>: For
+blog previews - <strong>Button Variants</strong>: Primary, secondary,
+outline - <strong>Alert Boxes</strong>: Info, warning, success,
+error</p>
+<h3 id="animation-library">Animation Library</h3>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.fade-in</span> { <span class="kw">animation</span><span class="ch">:</span> <span class="dv">fadeIn 0.5</span><span class="dt">s</span> <span class="dv">ease-in</span><span class="op">;</span> }</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.slide-up</span> { <span class="kw">transform</span><span class="ch">:</span> <span class="fu">translateY(</span><span class="dv">20</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span> <span class="kw">transition</span><span class="ch">:</span> <span class="dv">transform 0.3</span><span class="dt">s</span><span class="op">;</span> }</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">.hover-lift</span><span class="in">:hover</span> { <span class="kw">transform</span><span class="ch">:</span> <span class="fu">translateY(</span><span class="dv">-2</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span> <span class="kw">box-shadow</span><span class="ch">:</span> <span class="dv">0</span> <span class="dv">4</span><span class="dt">px</span> <span class="dv">12</span><span class="dt">px</span> <span class="fu">rgba(</span><span class="dv">0</span><span class="op">,</span><span class="dv">0</span><span class="op">,</span><span class="dv">0</span><span class="op">,</span><span class="dv">0.1</span><span class="fu">)</span><span class="op">;</span> }</span></code></pre></div>
+<h2 id="analytics-insights">📊 Analytics &amp; Insights</h2>
+<h3 id="performance-monitoring">Performance Monitoring</h3>
+<ul>
+<li><strong>Lighthouse CI</strong>: Automated performance testing</li>
+<li><strong>Core Web Vitals</strong>: Monitor loading, interactivity,
+visual stability</li>
+<li><strong>Bundle Analysis</strong>: Track CSS/JS file sizes</li>
+</ul>
+<h3 id="content-analytics">Content Analytics</h3>
+<ul>
+<li><strong>Reading Time</strong>: Calculate estimated reading time</li>
+<li><strong>Popular Posts</strong>: Track most viewed content</li>
+<li><strong>User Journey</strong>: Understand navigation patterns</li>
+</ul>
+<hr />
+<h2 id="your-next-steps">🎯 Your Next Steps</h2>
+<ol type="1">
+<li><strong>Pick One Extension</strong>: Start with something that
+excites you</li>
+<li><strong>Experiment</strong>: Copy this page template and try
+building your own</li>
+<li><strong>Share</strong>: Document your customizations for others</li>
+<li><strong>Contribute</strong>: Submit your improvements back to the
+project</li>
+</ol>
+<blockquote>
+<p><strong>Pro Tip</strong>: Start small and iterate. Each extension
+teaches you something new about web development!</p>
+</blockquote>
+<hr />
+<p><strong>Generated from</strong>: <code>sample/sample2.md</code> using
+the powerful Kiwi Blog build system 🥝</p></section>
+<section id="blog2" class="blogentry"><h1 id="my-second-blog-post">My Second Blog Post</h1>
+<p>2025-05-24</p>
+<p>This is another example blog entry. Add as many as you like!</p>
+<ul>
+<li>Markdown is simple</li>
+<li>Just add a new file for each post</li>
+</ul>
+<hr />
+<p>For more help, see the Home page tutorial.</p></section>
+<section id="blog1" class="blogentry"><h1 id="my-first-blog-post">My First Blog Post</h1>
+<p>2025-05-23</p>
+<p>Welcome to your new blog! This is your first post written in
+Markdown.</p>
+<ul>
+<li>Easy to write</li>
+<li>Easy to update</li>
+</ul>
+<blockquote>
+<p>Enjoy blogging!</p>
+</blockquote>
+<hr />
+<h2 id="how-to-add-more-posts">How to Add More Posts</h2>
+<ol type="1">
+<li>Create a new Markdown file in <code>blogentries/</code>
+(e.g. <code>blog3.md</code>).</li>
+<li>The first line is the title, the second line is the date.</li>
+<li>Run <code>bash build.sh</code> to update your site.</li>
+</ol>
+<hr />
+<p>See the Home page for a full tutorial!</p></section>
+
+    </main>
+  </div>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+<a href="index.html#home">Home</a> | <a href="archive.html">Archive</a> | <a href="./sample.html">Sample</a>
+      </div>
+      <div class="footer-info">
+        <span>© 2025 Kiwi Blog &mdash; <a href="mailto:your@email.com">Contact</a></span>
+      </div>
+    </div>
+  </footer>
+  <script src="theme.js"></script>
+</body>
+</html>

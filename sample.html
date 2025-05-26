@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Page - Kiwi Blog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="taskbar">
+    <div class="logo"><a href="index.html">🥝 Kiwi Blog</a></div>
+    <ul class="menu">
+<li><a href="index.html#home">Home</a></li>
+<li><a href="archive.html">Archive</a></li>
+<li><a href="./sample.html">Sample</a></li>
+
+    </ul>
+    <div class="theme-slider">
+      <button id="darkModeToggle" class="dark-mode-toggle">🌙 Dark</button>
+      <div class="slider-group">
+        <label for="contentSlider">📄</label>
+        <input type="range" id="contentSlider" min="0" max="360" value="100" class="slider">
+      </div>
+      <div class="slider-group">
+        <label for="headerSlider">🎨</label>
+        <input type="range" id="headerSlider" min="0" max="360" value="210" class="slider">
+      </div>
+    </div>
+  </nav>
+  <div class="main-wrapper">
+    <main>
+<h1 id="sample-custom-page">Sample Custom Page</h1>
+<p>2025-05-26</p>
+<p>Welcome to the <strong>Sample Page</strong>! This demonstrates how
+Kiwi Blog’s custom page system works.</p>
+<h2 id="what-this-demonstrates">🎯 What This Demonstrates</h2>
+<p>This page shows you how to: - ✅ Create custom pages beyond the main
+blog - ✅ Use template-based page generation - ✅ Organize content in
+subfolders - ✅ Get automatic navigation integration</p>
+<h2 id="how-custom-pages-work">🔧 How Custom Pages Work</h2>
+<h3 id="template-system">1. Template System</h3>
+<p>Each custom page needs two components: - <strong>Template</strong>:
+<code>pagename-template.html</code> (defines the layout) -
+<strong>Content</strong>: <code>pagename/</code> folder with
+<code>.md</code> files (your content)</p>
+<h3 id="build-process">2. Build Process</h3>
+<p>When you run <code>./build.sh</code>: 1. Scans for all
+<code>*-template.html</code> files 2. Finds matching content folders 3.
+Converts Markdown to HTML 4. Generates the final page 5. Updates
+navigation automatically</p>
+<h3 id="this-page-example">3. This Page Example</h3>
+<ul>
+<li><strong>Template</strong>: <code>sample-template.html</code></li>
+<li><strong>Content</strong>: <code>sample/sample.md</code> (this
+file!)</li>
+<li><strong>Output</strong>: <code>sample.html</code></li>
+<li><strong>Navigation</strong>: Auto-added to menu</li>
+</ul>
+<h2 id="creating-your-own-page">🚀 Creating Your Own Page</h2>
+<h3 id="quick-setup">Quick Setup</h3>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Copy the template</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> sample-template.html mypage-template.html</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Create content folder</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> mypage</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Add your content</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;# My Custom Page</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="st">2025-05-26</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="st">Your amazing content here!&quot;</span> <span class="op">&gt;</span> mypage/mypage.md</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Build the site</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ex">./build.sh</span></span></code></pre></div>
+<h3 id="page-ideas">Page Ideas</h3>
+<ul>
+<li><strong>Portfolio</strong>: Showcase your projects</li>
+<li><strong>About</strong>: Tell your story</li>
+<li><strong>Contact</strong>: Share your contact info</li>
+<li><strong>Gallery</strong>: Display photos or artwork</li>
+<li><strong>Documentation</strong>: Technical guides</li>
+<li><strong>Resources</strong>: Useful links and tools</li>
+</ul>
+<h2 id="content-tips">📝 Content Tips</h2>
+<h3 id="multiple-files">Multiple Files</h3>
+<p>You can have multiple <code>.md</code> files in your content
+folder:</p>
+<pre><code>mypage/
+├── intro.md
+├── projects.md
+└── contact.md</code></pre>
+<p><strong>Important</strong>: Files are combined in
+<strong>alphabetical order</strong> by filename (not by date like blog
+entries).</p>
+<p>All files will be combined into one page in alphabetical order.</p>
+<h3 id="markdown-features">Markdown Features</h3>
+<p>Use all standard Markdown features: - <strong>Headers</strong> for
+structure - <strong>Lists</strong> for organization -
+<strong>Links</strong> for navigation - <strong>Code blocks</strong> for
+examples - <strong>Images</strong> for visual content -
+<strong>Blockquotes</strong> for emphasis</p>
+<blockquote>
+<p><strong>Pro Tip</strong>: Keep your custom pages focused on specific
+topics for better user experience!</p>
+</blockquote>
+<h2 id="customization">🎨 Customization</h2>
+<h3 id="template-modification">Template Modification</h3>
+<p>Edit your <code>*-template.html</code> file to: - Change the layout -
+Add custom CSS - Include JavaScript - Modify the structure</p>
+<h3 id="styling">Styling</h3>
+<p>All pages inherit the main theme system: - Dual-slider color
+customization - Dark mode support - Responsive design - Consistent
+styling</p>
+<h2 id="navigation-integration">🔗 Navigation Integration</h2>
+<p>Custom pages automatically appear in: - <strong>Main navigation
+menu</strong> (top of every page) - <strong>Footer links</strong>
+(bottom of every page) - <strong>Clean URLs</strong> (e.g.,
+<code>/sample.html</code>)</p>
+<p>The navigation uses the filename as the title (e.g.,
+<code>sample</code> becomes “Sample”).</p>
+<hr />
+<h2 id="summary">✨ Summary</h2>
+<p>This sample page demonstrates Kiwi Blog’s powerful custom page
+system. You can create unlimited pages for any purpose while maintaining
+consistent design and automatic navigation.</p>
+<p><strong>Ready to create your own custom page?</strong> Follow the
+steps above and start building!</p>
+<hr />
+<p><em>Generated from <code>sample/sample.md</code> using the Kiwi Blog
+build system</em> 🥝</p>
+    </main>
+  </div>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+<a href="index.html#home">Home</a> | <a href="archive.html">Archive</a> | <a href="./sample.html">Sample</a>
+      </div>
+      <div class="footer-info">
+        <span>© 2025 Kiwi Blog &mdash; <a href="mailto:your@email.com">Contact</a></span>
+      </div>
+    </div>
+  </footer>
+  <script src="theme.js"></script>
+</body>
+</html>
