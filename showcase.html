@@ -31,48 +31,108 @@
   </nav>
   <div class="main-wrapper">
     <main>
-<h1 id="art-picture-gallery-tutorial">🎨 Art &amp; Picture Gallery
-Tutorial</h1>
-<p>Learn how to create beautiful image galleries in Kiwi Blog with
-proper sizing and responsive layouts.</p>
+<h1 id="gallery-media-showcase">🎨 Gallery &amp; Media Showcase</h1>
+<p>Create stunning galleries, embed videos, and build beautiful visual
+content with Kiwi Blog.</p>
 <hr />
-<h2 id="working-examples">🖼️ Working Examples</h2>
-<h3 id="two-beautiful-images">Two Beautiful Images</h3>
+<h2 id="photo-gallery-examples">🖼️ Photo Gallery Examples</h2>
+<h3 id="landscape-collection">Landscape Collection</h3>
 <div
 style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin: 2rem 0;">
 <p><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80" style="width: 350px; height: 250px; object-fit: cover; border-radius: 8px;" alt="Mountain Vista">
 <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=400&q=80" style="width: 350px; height: 250px; object-fit: cover; border-radius: 8px;" alt="Abstract Colors"></p>
 </div>
+<h3 id="art-architecture-grid">Art &amp; Architecture Grid</h3>
+<div
+style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0;">
+<p><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&q=80" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" alt="Modern Architecture">
+<img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&q=80" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" alt="Nature Abstract">
+<img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=400&q=80" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" alt="Ocean Waves">
+<img src="https://images.unsplash.com/photo-1551033406-611cf9a28f54?w=400&q=80" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" alt="Forest Path"></p>
+</div>
+<h3 id="featured-image-with-caption">Featured Image with Caption</h3>
+<div style="text-align: center; margin: 2rem 0;">
+<img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=85" style="width: 100%; max-width: 600px; height: 400px; object-fit: cover; border-radius: 12px;" alt="Starry Night">
+<p style="margin-top: 1rem; font-style: italic; color: #666;">
+✨ <em>Starry Night Over the Lake</em> - A moment of perfect tranquility
+</p>
+</div>
+<hr />
+<h2 id="video-integration">🎥 Video Integration</h2>
+<h3 id="youtube-embed">YouTube Embed</h3>
+<div
+style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 2rem 0;">
+<p><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px;" allowfullscreen></iframe></p>
+</div>
+<h3 id="side-by-side-image-video">Side-by-Side: Image + Video</h3>
+<div
+style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; align-items: center;">
+<div>
+<pre><code>&lt;img src=&quot;https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&amp;q=80&quot; style=&quot;width: 100%; height: 250px; object-fit: cover; border-radius: 8px;&quot; alt=&quot;Mountain Landscape&quot;&gt;
+&lt;p style=&quot;margin-top: 0.5rem; text-align: center; font-size: 0.9em; color: #666;&quot;&gt;&lt;em&gt;Majestic Peaks&lt;/em&gt;&lt;/p&gt;</code></pre>
+</div>
+<div
+style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+<pre><code>&lt;iframe src=&quot;https://www.youtube.com/embed/ZXsQAXx_ao0&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px;&quot; allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+</div>
+</div>
 <hr />
 <h2 id="copy-this-code">📋 Copy This Code</h2>
-<p><strong>Grid Gallery (3+ images):</strong></p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 2rem 0;&quot;</span><span class="dt">&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;text-align: center;&quot;</span><span class="dt">&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;YOUR_IMAGE_URL?w=300</span><span class="er">&amp;</span><span class="st">q=80&quot;</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;width: 100%; height: 200px; object-fit: cover; border-radius: 8px;&quot;</span><span class="ot"> alt</span><span class="op">=</span><span class="st">&quot;Your Alt Text&quot;</span><span class="dt">&gt;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;&lt;</span><span class="kw">em</span><span class="dt">&gt;</span>Your Title<span class="dt">&lt;/</span><span class="kw">em</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>Your Description<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
-<p><strong>Simple Row (1-2 images):</strong></p>
-<div class="sourceCode" id="cb2"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin: 2rem 0;&quot;</span><span class="dt">&gt;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;YOUR_IMAGE_URL?w=300</span><span class="er">&amp;</span><span class="st">q=80&quot;</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;width: 280px; height: 200px; object-fit: cover; border-radius: 8px;&quot;</span><span class="ot"> alt</span><span class="op">=</span><span class="st">&quot;Your Alt Text&quot;</span><span class="dt">&gt;</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+<p><strong>Photo Grid (3+ images):</strong></p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0;&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;YOUR_IMAGE_URL?w=400</span><span class="er">&amp;</span><span class="st">q=80&quot;</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;width: 100%; height: 200px; object-fit: cover; border-radius: 8px;&quot;</span><span class="ot"> alt</span><span class="op">=</span><span class="st">&quot;Your Alt Text&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;YOUR_IMAGE_URL?w=400</span><span class="er">&amp;</span><span class="st">q=80&quot;</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;width: 100%; height: 200px; object-fit: cover; border-radius: 8px;&quot;</span><span class="ot"> alt</span><span class="op">=</span><span class="st">&quot;Your Alt Text&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;YOUR_IMAGE_URL?w=400</span><span class="er">&amp;</span><span class="st">q=80&quot;</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;width: 100%; height: 200px; object-fit: cover; border-radius: 8px;&quot;</span><span class="ot"> alt</span><span class="op">=</span><span class="st">&quot;Your Alt Text&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+<p><strong>Two Images Side-by-Side:</strong></p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin: 2rem 0;&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;YOUR_IMAGE_URL?w=400</span><span class="er">&amp;</span><span class="st">q=80&quot;</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;width: 350px; height: 250px; object-fit: cover; border-radius: 8px;&quot;</span><span class="ot"> alt</span><span class="op">=</span><span class="st">&quot;Your Alt Text&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;YOUR_IMAGE_URL?w=400</span><span class="er">&amp;</span><span class="st">q=80&quot;</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;width: 350px; height: 250px; object-fit: cover; border-radius: 8px;&quot;</span><span class="ot"> alt</span><span class="op">=</span><span class="st">&quot;Your Alt Text&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+<p><strong>Featured Image with Caption:</strong></p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;text-align: center; margin: 2rem 0;&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;YOUR_IMAGE_URL?w=800</span><span class="er">&amp;</span><span class="st">q=85&quot;</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;width: 100%; max-width: 600px; height: 400px; object-fit: cover; border-radius: 12px;&quot;</span><span class="ot"> alt</span><span class="op">=</span><span class="st">&quot;Your Alt Text&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;margin-top: 1rem; font-style: italic; color: #666;&quot;</span><span class="dt">&gt;</span>✨ <span class="dt">&lt;</span><span class="kw">em</span><span class="dt">&gt;</span>Your Caption<span class="dt">&lt;/</span><span class="kw">em</span><span class="dt">&gt;</span> - Your description<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+<p><strong>YouTube Video Embed:</strong></p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 2rem 0;&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;https://www.youtube.com/embed/YOUR_VIDEO_ID&quot;</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px;&quot;</span><span class="ot"> allowfullscreen</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+<p><strong>Image + Video Side-by-Side:</strong></p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; align-items: center;&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;YOUR_IMAGE_URL?w=500</span><span class="er">&amp;</span><span class="st">q=80&quot;</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;width: 100%; height: 250px; object-fit: cover; border-radius: 8px;&quot;</span><span class="ot"> alt</span><span class="op">=</span><span class="st">&quot;Your Alt Text&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;margin-top: 0.5rem; text-align: center; font-size: 0.9em; color: #666;&quot;</span><span class="dt">&gt;&lt;</span><span class="kw">em</span><span class="dt">&gt;</span>Your Caption<span class="dt">&lt;/</span><span class="kw">em</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;https://www.youtube.com/embed/YOUR_VIDEO_ID&quot;</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px;&quot;</span><span class="ot"> allowfullscreen</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
 <hr />
-<h2 id="pro-tips">🎯 Pro Tips</h2>
-<ul>
-<li><strong>Image sizing</strong>: Use <code>?w=400&amp;q=80</code> for
-crisp, fast-loading images</li>
-<li><strong>Responsive grids</strong>: <code>minmax(250px, 1fr)</code>
-adapts to any screen size<br />
-</li>
-<li><strong>Consistent heights</strong>: Fixed height like
-<code>250px</code> creates uniform galleries</li>
-<li><strong>Modern styling</strong>: <code>border-radius: 8px</code> and
-<code>object-fit: cover</code> for polished look</li>
-</ul>
-<p>Now you can create stunning photo galleries that work perfectly on
-desktop and mobile!</p>
+<h2 id="how-to-use">🎯 How to Use</h2>
+<p><strong>Get YouTube Video ID:</strong> 1. Go to any YouTube video 2.
+Copy the URL: <code>https://www.youtube.com/watch?v=dQw4w9WgXcQ</code>
+3. Extract the ID after <code>v=</code>: <code>dQw4w9WgXcQ</code> 4. Use
+in embed: <code>https://www.youtube.com/embed/dQw4w9WgXcQ</code></p>
+<p><strong>Image Sizing Tips:</strong> - <strong>Small images</strong>:
+<code>?w=300&amp;q=80</code> (300px wide, 80% quality) - <strong>Medium
+images</strong>: <code>?w=400&amp;q=80</code> (400px wide, 80%
+quality)<br />
+- <strong>Large images</strong>: <code>?w=800&amp;q=85</code> (800px
+wide, 85% quality) - <strong>Grid heights</strong>: Use fixed heights
+like <code>200px</code> for uniform rows - <strong>Responsive</strong>:
+Use <code>width: 100%</code> with <code>max-width</code> for flexible
+sizing</p>
+<p><strong>Pro Styling:</strong> - <code>object-fit: cover</code> crops
+images to fit without stretching - <code>border-radius: 8px</code> adds
+modern rounded corners - <code>gap: 1rem</code> creates consistent
+spacing between items - <code>margin: 2rem 0</code> adds space above and
+below galleries</p>
     </main>
   </div>
   <footer>
