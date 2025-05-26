@@ -14,6 +14,7 @@
 <li><a href="index.html#home">Home</a></li>
 <li><a href="archive.html">Archive</a></li>
 <li><a href="./sample.html">Sample</a></li>
+<li><a href="./showcase.html">Showcase</a></li>
 
     </ul>
     <div class="theme-slider">
@@ -58,8 +59,13 @@ top</li>
 format:</p>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Your Post Title</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>2025-05-26</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Your amazing content here!</span></code></pre></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>**Date:** YYYY-MM-DD</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>**Author:** Your Name</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>Your amazing content here!</span></code></pre></div>
+<p><strong>Important:</strong> Use the exact <code>**Date:**</code> and
+<code>**Author:**</code> format for proper sorting!</p>
 <h2 id="advanced-features">🔧 Advanced Features</h2>
 <p>Want to extend Kiwi Blog?</p>
 <ul>
@@ -73,7 +79,7 @@ to create custom subpages with templates</li>
 <p><strong>Happy blogging!</strong> ✨</p>
 <h1 id="welcome-to-kiwi-blog-pinned">📌 Welcome to Kiwi Blog
 (Pinned)</h1>
-<p>2025-05-26</p>
+<p>// no date no author!</p>
 <div class="pinned-post">
 <strong>This is a pinned post!</strong>
 <p>
@@ -96,7 +102,8 @@ Pin any post you want here!
 </div>
 <section id="getting-started" class="blogentry"><h1 id="getting-started-with-kiwi-blog">Getting Started with Kiwi
 Blog</h1>
-<p>2025-05-26</p>
+<p><strong>Date:</strong> 2025-05-26 <strong>Author:</strong>
+derlocke-ng</p>
 <p>Welcome to your new <strong>Kiwi Blog</strong>! This static site
 generator makes it easy to create and maintain a beautiful blog using
 simple Markdown files. Let’s learn how to use Kiwi Blog and create
@@ -413,7 +420,8 @@ simple</li>
 <p>Happy blogging! 🥝✨</p></section>
 <section id="extending-kiwi-blog" class="blogentry"><h1 id="extending-kiwi-blog---advanced-tips-build-kit-ideas">🛠️
 Extending Kiwi Blog - Advanced Tips &amp; Build Kit Ideas</h1>
-<p>2025-05-25</p>
+<p><strong>Date:</strong> 2025-05-25 <strong>Author:</strong>
+derlocke-ng</p>
 <p>Are you ready to <strong>supercharge your Kiwi Blog</strong>? This
 comprehensive guide shows you how to extend the basic blog system with
 advanced features, customizations, and professional enhancements.</p>
@@ -646,16 +654,30 @@ teaches you something new about web development!</p>
 <p><strong>Generated from</strong>: <code>sample/sample2.md</code> using
 the powerful Kiwi Blog build system 🥝</p></section>
 <section id="blog2" class="blogentry"><h1 id="my-second-blog-post">My Second Blog Post</h1>
-<p>2025-05-24</p>
+<p><strong>Date:</strong> 2025-05-24<br />
+<strong>Author:</strong> derlocke-ng</p>
 <p>This is another example blog entry. Add as many as you like!</p>
 <ul>
 <li>Markdown is simple</li>
 <li>Just add a new file for each post</li>
+<li>Remember to use <strong>Date:</strong> and <strong>Author:</strong>
+format</li>
 </ul>
+<h2 id="blog-entry-format">Blog Entry Format</h2>
+<p>Each blog entry needs this header format:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Your Title</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>**Date:** YYYY-MM-DD</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>**Author:** Your Name</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>Your content...</span></code></pre></div>
+<p>This ensures proper chronological sorting on your blog!</p>
 <hr />
 <p>For more help, see the Home page tutorial.</p></section>
 <section id="blog1" class="blogentry"><h1 id="my-first-blog-post">My First Blog Post</h1>
-<p>2025-05-23</p>
+<p><strong>Date:</strong> 2025-05-23<br />
+<strong>Author:</strong> derlocke-ng</p>
 <p>Welcome to your new blog! This is your first post written in
 Markdown.</p>
 <ul>
@@ -668,11 +690,20 @@ Markdown.</p>
 <hr />
 <h2 id="how-to-add-more-posts">How to Add More Posts</h2>
 <ol type="1">
-<li>Create a new Markdown file in <code>blogentries/</code>
-(e.g. <code>blog3.md</code>).</li>
-<li>The first line is the title, the second line is the date.</li>
-<li>Run <code>bash build.sh</code> to update your site.</li>
+<li><p>Create a new Markdown file in <code>blogentries/</code>
+(e.g. <code>my-new-post.md</code>)</p></li>
+<li><p><strong>Always start with this format:</strong></p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Your Post Title</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>**Date:** YYYY-MM-DD  </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>**Author:** Your Name</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>Your content here...</span></code></pre></div></li>
+<li><p>Run <code>./build.sh</code> to update your site</p></li>
 </ol>
+<p>The <strong>Date:</strong> and <strong>Author:</strong> format is
+required for proper sorting!</p>
 <hr />
 <p>See the Home page for a full tutorial!</p></section>
 
@@ -681,7 +712,7 @@ Markdown.</p>
   <footer>
     <div class="footer-content">
       <div class="footer-links">
-<a href="index.html#home">Home</a> | <a href="archive.html">Archive</a> | <a href="./sample.html">Sample</a>
+<a href="index.html#home">Home</a> | <a href="archive.html">Archive</a> | <a href="./sample.html">Sample</a> | <a href="./showcase.html">Showcase</a>
       </div>
       <div class="footer-info">
         <span>© 2025 Kiwi Blog &mdash; <a href="mailto:your@email.com">Contact</a></span>

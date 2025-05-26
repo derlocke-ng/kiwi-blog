@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Showcase - Kiwi Blog</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥝</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="taskbar">
+    <div class="logo"><a href="index.html">🥝 Kiwi Blog</a></div>
+    <ul class="menu">
+<li><a href="index.html#home">Home</a></li>
+<li><a href="archive.html">Archive</a></li>
+<li><a href="./sample.html">Sample</a></li>
+<li><a href="./showcase.html">Showcase</a></li>
+
+    </ul>
+    <div class="theme-slider">
+      <button id="darkModeToggle" class="dark-mode-toggle">🌙 Dark</button>
+      <div class="slider-group">
+        <label for="contentSlider">📄</label>
+        <input type="range" id="contentSlider" min="0" max="360" value="100" class="slider">
+      </div>
+      <div class="slider-group">
+        <label for="headerSlider">🎨</label>
+        <input type="range" id="headerSlider" min="0" max="360" value="210" class="slider">
+      </div>
+    </div>
+  </nav>
+  <div class="main-wrapper">
+    <main>
+<h1 id="creative-showcase">🎨 Creative Showcase</h1>
+<h2 id="photography-visual-arts">Photography &amp; Visual Arts</h2>
+<h3 id="professional-photography-portfolios">Professional Photography
+Portfolios</h3>
+<ul>
+<li><strong>Gallery layouts</strong> with masonry grids and lightbox
+effects</li>
+<li><strong>Fullscreen sliders</strong> showcasing high-resolution
+images</li>
+<li><strong>Client galleries</strong> with password protection</li>
+<li><strong>Print shop integration</strong> for selling artwork</li>
+</ul>
+<h3 id="digital-art-design-portfolios">Digital Art &amp; Design
+Portfolios</h3>
+<ul>
+<li><strong>Interactive portfolios</strong> with hover animations</li>
+<li><strong>Case study presentations</strong> with before/after
+comparisons</li>
+<li><strong>Process documentation</strong> showing design workflows</li>
+<li><strong>Client testimonials</strong> with rotating quotes</li>
+</ul>
+<h2 id="web-design-excellence">Web Design Excellence</h2>
+<h3 id="agency-websites">Agency Websites</h3>
+<ul>
+<li><strong>Hero sections</strong> with compelling video
+backgrounds</li>
+<li><strong>Service showcases</strong> with interactive elements</li>
+<li><strong>Team profiles</strong> with personality and style</li>
+<li><strong>Contact forms</strong> with custom validation</li>
+</ul>
+<h3 id="landing-page-design">Landing Page Design</h3>
+<ul>
+<li><strong>Conversion-optimized</strong> layouts with clear CTAs</li>
+<li><strong>A/B testing</strong> integration for performance
+optimization</li>
+<li><strong>Social proof</strong> sections with reviews and
+testimonials</li>
+<li><strong>Lead generation</strong> forms with smart automation</li>
+</ul>
+<h2 id="user-experience-innovation">User Experience Innovation</h2>
+<h3 id="interactive-elements">Interactive Elements</h3>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Example: Smooth hover transitions */</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.gallery-item</span> {</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">transition</span><span class="ch">:</span> <span class="dv">all</span> <span class="dv">0.3</span><span class="dt">s</span> cubic-bezier<span class="fu">(</span><span class="dv">0.4</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0.2</span><span class="op">,</span> <span class="dv">1</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">overflow</span><span class="ch">:</span> <span class="dv">hidden</span><span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">.gallery-item</span><span class="in">:hover</span> {</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">transform</span><span class="ch">:</span> <span class="fu">scale(</span><span class="dv">1.05</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">box-shadow</span><span class="ch">:</span> <span class="dv">0</span> <span class="dv">20</span><span class="dt">px</span> <span class="dv">40</span><span class="dt">px</span> <span class="fu">rgba(</span><span class="dv">0</span><span class="op">,</span><span class="dv">0</span><span class="op">,</span><span class="dv">0</span><span class="op">,</span><span class="dv">0.15</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">.gallery-item</span> img {</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">transition</span><span class="ch">:</span> <span class="dv">transform 0.3</span><span class="dt">s</span> <span class="dv">ease</span><span class="op">;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">.gallery-item</span><span class="in">:hover</span> img {</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">transform</span><span class="ch">:</span> <span class="fu">scale(</span><span class="dv">1.1</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h3 id="navigation-innovation">Navigation Innovation</h3>
+<ul>
+<li><strong>Sticky navigation</strong> that adapts to scroll
+position</li>
+<li><strong>Mobile hamburger menus</strong> with smooth animations</li>
+<li><strong>Breadcrumb systems</strong> for complex site structures</li>
+<li><strong>Search functionality</strong> with instant results</li>
+</ul>
+<h2 id="visual-design-principles">Visual Design Principles</h2>
+<h3 id="color-psychology-in-web-design">Color Psychology in Web
+Design</h3>
+<ul>
+<li><strong>Warm colors</strong> (reds, oranges) for energy and
+urgency</li>
+<li><strong>Cool colors</strong> (blues, greens) for trust and calm</li>
+<li><strong>Neutral colors</strong> for sophistication and
+minimalism</li>
+<li><strong>Accent colors</strong> for highlighting important
+elements</li>
+</ul>
+<h3 id="typography-hierarchy">Typography Hierarchy</h3>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Scalable typography system */</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="in">:root</span> {</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="va">--text-xs</span><span class="ch">:</span> <span class="fu">clamp(</span><span class="dv">0.75</span><span class="dt">rem</span><span class="op">,</span> <span class="dv">0.5</span><span class="dt">vw</span><span class="op">,</span> <span class="dv">0.875</span><span class="dt">rem</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="va">--text-sm</span><span class="ch">:</span> <span class="fu">clamp(</span><span class="dv">0.875</span><span class="dt">rem</span><span class="op">,</span> <span class="dv">1</span><span class="dt">vw</span><span class="op">,</span> <span class="dv">1</span><span class="dt">rem</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="va">--text-base</span><span class="ch">:</span> <span class="fu">clamp(</span><span class="dv">1</span><span class="dt">rem</span><span class="op">,</span> <span class="dv">2</span><span class="dt">vw</span><span class="op">,</span> <span class="dv">1.125</span><span class="dt">rem</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="va">--text-lg</span><span class="ch">:</span> <span class="fu">clamp(</span><span class="dv">1.125</span><span class="dt">rem</span><span class="op">,</span> <span class="dv">2.5</span><span class="dt">vw</span><span class="op">,</span> <span class="dv">1.25</span><span class="dt">rem</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="va">--text-xl</span><span class="ch">:</span> <span class="fu">clamp(</span><span class="dv">1.25</span><span class="dt">rem</span><span class="op">,</span> <span class="dv">3</span><span class="dt">vw</span><span class="op">,</span> <span class="dv">1.5</span><span class="dt">rem</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="va">--text-2xl</span><span class="ch">:</span> <span class="fu">clamp(</span><span class="dv">1.5</span><span class="dt">rem</span><span class="op">,</span> <span class="dv">4</span><span class="dt">vw</span><span class="op">,</span> <span class="dv">2</span><span class="dt">rem</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="va">--text-3xl</span><span class="ch">:</span> <span class="fu">clamp(</span><span class="dv">2</span><span class="dt">rem</span><span class="op">,</span> <span class="dv">5</span><span class="dt">vw</span><span class="op">,</span> <span class="dv">3</span><span class="dt">rem</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h2 id="accessibility-performance">Accessibility &amp; Performance</h2>
+<h3 id="inclusive-design">Inclusive Design</h3>
+<ul>
+<li><strong>High contrast</strong> color combinations for
+readability</li>
+<li><strong>Screen reader</strong> compatible markup and ARIA
+labels</li>
+<li><strong>Keyboard navigation</strong> support for all interactive
+elements</li>
+<li><strong>Focus indicators</strong> that are visible and clear</li>
+</ul>
+<h3 id="performance-optimization">Performance Optimization</h3>
+<ul>
+<li><strong>Lazy loading</strong> for images and heavy content</li>
+<li><strong>Critical CSS</strong> inlined for faster first paint</li>
+<li><strong>Font optimization</strong> with variable fonts and
+preloading</li>
+<li><strong>Image optimization</strong> with modern formats (WebP,
+AVIF)</li>
+</ul>
+<hr />
+<p><em>Showcasing the artistic and technical excellence of modern web
+design.</em></p>
+<h1 id="developer-tools-portfolio">🛠️ Developer Tools Portfolio</h1>
+<h2 id="open-source-projects">Open Source Projects</h2>
+<h3 id="static-site-generator-tools">Static Site Generator Tools</h3>
+<p>Building better blogging experiences:</p>
+<h4 id="kiwi-blog-engine">Kiwi Blog Engine</h4>
+<ul>
+<li><strong>Fast builds</strong> with shell script efficiency</li>
+<li><strong>Flexible theming</strong> with CSS custom properties</li>
+<li><strong>Mobile-responsive</strong> out of the box</li>
+<li><strong>Zero dependencies</strong> - just Pandoc and standard
+tools</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Simple build process</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">./build.sh</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># That&#39;s it! Your site is ready</span></span></code></pre></div>
+<h4 id="markdown-enhancement-tools">Markdown Enhancement Tools</h4>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Example: Syntax highlighting processor</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">highlightCode</span>(content) {</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> content<span class="op">.</span><span class="fu">replace</span>(</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="ss">/```</span><span class="sc">(\w+)
+([\s\S]*?)</span><span class="ss">```/g</span><span class="op">,</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    (match<span class="op">,</span> lang<span class="op">,</span> code) <span class="kw">=&gt;</span> {</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> <span class="vs">`&lt;pre&gt;&lt;code class=&quot;language-</span><span class="sc">${</span>lang<span class="sc">}</span><span class="vs">&quot;&gt;</span><span class="sc">${</span><span class="fu">escapeHtml</span>(code)<span class="sc">}</span><span class="vs">&lt;/code&gt;&lt;/pre&gt;`</span><span class="op">;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  )<span class="op">;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h3 id="utility-scripts">Utility Scripts</h3>
+<h4 id="build-automation">Build Automation</h4>
+<ul>
+<li><strong>File watching</strong> for development</li>
+<li><strong>Asset optimization</strong> for production</li>
+<li><strong>Git hooks</strong> for automated deployment</li>
+<li><strong>Error handling</strong> with helpful messages</li>
+</ul>
+<h4 id="performance-monitoring">Performance Monitoring</h4>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Lighthouse CI integration</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run lighthouse <span class="at">--</span> <span class="at">--budget-path</span><span class="op">=</span>budget.json</span></code></pre></div>
+<h3 id="api-integration-examples">API Integration Examples</h3>
+<h4 id="github-api-projects">GitHub API Projects</h4>
+<ul>
+<li><strong>Repository analytics</strong> dashboard</li>
+<li><strong>Issue tracking</strong> automation</li>
+<li><strong>Deployment status</strong> monitoring</li>
+<li><strong>Contribution graphs</strong> visualization</li>
+</ul>
+<h4 id="content-management">Content Management</h4>
+<ul>
+<li><strong>Headless CMS</strong> integration</li>
+<li><strong>Real-time updates</strong> with WebSockets</li>
+<li><strong>Content validation</strong> and sanitization</li>
+<li><strong>Multi-format</strong> content support</li>
+</ul>
+<h2 id="technical-achievements">Technical Achievements</h2>
+<h3 id="performance-optimizations">Performance Optimizations</h3>
+<ul>
+<li><strong>Bundle size</strong> reduced by 60%</li>
+<li><strong>Load times</strong> under 2 seconds</li>
+<li><strong>Lighthouse scores</strong> consistently 95+</li>
+<li><strong>Core Web Vitals</strong> all green</li>
+</ul>
+<h3 id="code-quality-metrics">Code Quality Metrics</h3>
+<ul>
+<li><strong>Test coverage</strong> above 90%</li>
+<li><strong>ESLint compliance</strong> with zero warnings</li>
+<li><strong>TypeScript</strong> strict mode enabled</li>
+<li><strong>Documentation</strong> coverage complete</li>
+</ul>
+<hr />
+<p><em>Showcasing technical excellence and developer productivity
+tools.</em></p>
+<h1 id="photography-visual-portfolio">📸 Photography &amp; Visual
+Portfolio</h1>
+<h2 id="featured-photography-work">Featured Photography Work</h2>
+<h3 id="nature-photography">Nature Photography</h3>
+<p>Beautiful landscapes and wildlife photography showcasing: -
+<strong>Mountain landscapes</strong> with dramatic lighting -
+<strong>Forest scenes</strong> captured in golden hour -
+<strong>Wildlife photography</strong> with telephoto precision -
+<strong>Macro photography</strong> revealing tiny details</p>
+<h3 id="portrait-photography">Portrait Photography</h3>
+<p>Professional portrait work including: - <strong>Studio
+portraits</strong> with controlled lighting setups -
+<strong>Environmental portraits</strong> in natural settings -
+<strong>Street photography</strong> capturing candid moments -
+<strong>Event photography</strong> documenting special occasions</p>
+<h3 id="architecture-urban">Architecture &amp; Urban</h3>
+<p>Architectural photography featuring: - <strong>Modern
+buildings</strong> with geometric compositions - <strong>Historic
+structures</strong> preserving cultural heritage - <strong>Urban
+landscapes</strong> showing city life - <strong>Interior design</strong>
+highlighting spatial relationships</p>
+<h2 id="visual-design-projects">Visual Design Projects</h2>
+<h3 id="brand-identity-design">Brand Identity Design</h3>
+<p>Complete brand packages including: - <strong>Logo design</strong>
+with multiple variations - <strong>Color palettes</strong> for brand
+consistency - <strong>Typography systems</strong> for various
+applications - <strong>Brand guidelines</strong> for implementation</p>
+<h3 id="print-design">Print Design</h3>
+<p>Traditional print media design: - <strong>Magazine layouts</strong>
+with editorial photography - <strong>Poster designs</strong> for events
+and promotions - <strong>Brochure designs</strong> for business
+marketing - <strong>Packaging design</strong> for product launches</p>
+<h3 id="digital-art">Digital Art</h3>
+<p>Creative digital artwork: - <strong>Illustrations</strong> in various
+artistic styles - <strong>Photo manipulations</strong> creating surreal
+scenes - <strong>Digital paintings</strong> using tablet and stylus -
+<strong>Concept art</strong> for games and entertainment</p>
+<h2 id="gallery-examples">Gallery Examples</h2>
+<h3 id="responsive-image-galleries">Responsive Image Galleries</h3>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Masonry-style photo grid */</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.photo-grid</span> {</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span><span class="ch">:</span> <span class="dv">grid</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-template-columns</span><span class="ch">:</span> <span class="fu">repeat(</span><span class="dv">auto-fit</span><span class="op">,</span> <span class="fu">minmax(</span><span class="dv">300</span><span class="dt">px</span><span class="op">,</span> <span class="dv">1</span><span class="dt">fr</span><span class="fu">))</span><span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-auto-rows</span><span class="ch">:</span> <span class="dv">200</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">gap</span><span class="ch">:</span> <span class="dv">1</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">.photo-item</span> {</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-radius</span><span class="ch">:</span> <span class="dv">8</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">overflow</span><span class="ch">:</span> <span class="dv">hidden</span><span class="op">;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">transition</span><span class="ch">:</span> <span class="dv">transform 0.3</span><span class="dt">s</span> <span class="dv">ease</span><span class="op">;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">.photo-item</span><span class="in">:hover</span> {</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">transform</span><span class="ch">:</span> <span class="fu">scale(</span><span class="dv">1.02</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">.photo-item</span> img {</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span><span class="ch">:</span> <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="kw">height</span><span class="ch">:</span> <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="kw">object-fit</span><span class="ch">:</span> <span class="dv">cover</span><span class="op">;</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h3 id="lightbox-integration">Lightbox Integration</h3>
+<ul>
+<li><strong>Smooth transitions</strong> between images</li>
+<li><strong>Touch gestures</strong> for mobile navigation</li>
+<li><strong>Zoom functionality</strong> for detailed viewing</li>
+<li><strong>Caption overlays</strong> with photo information</li>
+</ul>
+<h2 id="client-work-examples">Client Work Examples</h2>
+<h3 id="wedding-photography">Wedding Photography</h3>
+<ul>
+<li><strong>Ceremony documentation</strong> capturing key moments</li>
+<li><strong>Reception photography</strong> showing celebration</li>
+<li><strong>Portrait sessions</strong> with couples and families</li>
+<li><strong>Detail shots</strong> of rings, flowers, and decor</li>
+</ul>
+<h3 id="commercial-photography">Commercial Photography</h3>
+<ul>
+<li><strong>Product photography</strong> for e-commerce</li>
+<li><strong>Corporate headshots</strong> for professional use</li>
+<li><strong>Restaurant photography</strong> showcasing cuisine</li>
+<li><strong>Real estate photography</strong> highlighting
+properties</li>
+</ul>
+<h3 id="travel-photography">Travel Photography</h3>
+<ul>
+<li><strong>Destination photography</strong> from around the world</li>
+<li><strong>Cultural documentation</strong> showing local
+traditions</li>
+<li><strong>Landscape photography</strong> from remote locations</li>
+<li><strong>Street photography</strong> capturing daily life</li>
+</ul>
+<h2 id="technical-specifications">Technical Specifications</h2>
+<h3 id="camera-equipment">Camera Equipment</h3>
+<ul>
+<li><strong>Full-frame DSLRs</strong> for professional quality</li>
+<li><strong>Mirrorless cameras</strong> for portability</li>
+<li><strong>Specialty lenses</strong> for different perspectives</li>
+<li><strong>Lighting equipment</strong> for studio work</li>
+</ul>
+<h3 id="post-processing-workflow">Post-Processing Workflow</h3>
+<ul>
+<li><strong>RAW processing</strong> for maximum image quality</li>
+<li><strong>Color grading</strong> to enhance mood</li>
+<li><strong>Retouching</strong> for portrait refinement</li>
+<li><strong>Print preparation</strong> for physical output</li>
+</ul>
+<hr />
+<p><em>Showcasing visual storytelling through photography and
+design.</em></p>
+<h1 id="featured-projects-showcase">🚀 Featured Projects &amp;
+Showcase</h1>
+<p>Welcome to our project showcase! Here are amazing examples of
+websites, portfolios, and creative projects built with modern web
+technologies.</p>
+<h2 id="featured-projects">Featured Projects</h2>
+<h3 id="creative-portfolio-sites">🎨 Creative Portfolio Sites</h3>
+<p>Beautiful, artistic websites showcasing design excellence: -
+<strong>Artist portfolios</strong> with stunning image galleries -
+<strong>Photography websites</strong> with lightbox effects<br />
+- <strong>Design agencies</strong> with smooth animations -
+<strong>Creative studios</strong> with interactive elements</p>
+<h3 id="mobile-first-applications">📱 Mobile-First Applications</h3>
+<p>Responsive web apps that work perfectly on any device: -
+<strong>Progressive Web Apps</strong> with offline functionality -
+<strong>E-commerce sites</strong> with mobile payment integration -
+<strong>Social platforms</strong> optimized for touch interfaces -
+<strong>Dashboard applications</strong> with responsive layouts</p>
+<h3 id="developer-tools-utilities">🛠️ Developer Tools &amp;
+Utilities</h3>
+<p>Useful applications and tools for developers: - <strong>Code
+generators</strong> and snippet managers - <strong>API
+documentation</strong> sites with interactive examples - <strong>Build
+tools</strong> and deployment dashboards - <strong>Developer
+portfolios</strong> with live project demos</p>
+<h3 id="business-corporate-sites">🌐 Business &amp; Corporate Sites</h3>
+<p>Professional websites for companies and organizations: -
+<strong>Company homepages</strong> with modern design - <strong>Product
+landing pages</strong> with conversion optimization - <strong>Blog
+platforms</strong> with content management - <strong>Service
+websites</strong> with booking systems</p>
+<h3 id="educational-learning-platforms">🎓 Educational &amp; Learning
+Platforms</h3>
+<p>Websites focused on education and knowledge sharing: - <strong>Online
+courses</strong> with video integration - <strong>Tutorial
+websites</strong> with step-by-step guides - <strong>Documentation
+sites</strong> with search functionality - <strong>Learning management
+systems</strong> with progress tracking</p>
+<h3 id="interactive-entertainment">🎮 Interactive &amp;
+Entertainment</h3>
+<p>Engaging websites with interactive elements: - <strong>Web
+games</strong> built with HTML5 Canvas - <strong>Interactive
+storytelling</strong> with scroll effects - <strong>Virtual
+galleries</strong> with 3D navigation - <strong>Music platforms</strong>
+with audio players</p>
+<hr />
+<p><em>This page demonstrates custom content organization with Kiwi
+Blog’s flexible template system.</em></p>
+    </main>
+  </div>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+<a href="index.html#home">Home</a> | <a href="archive.html">Archive</a> | <a href="./sample.html">Sample</a> | <a href="./showcase.html">Showcase</a>
+      </div>
+      <div class="footer-info">
+        <span>© 2025 Kiwi Blog &mdash; <a href="mailto:your@email.com">Contact</a></span>
+      </div>
+    </div>
+  </footer>
+  <script src="theme.js"></script>
+</body>
+</html>

@@ -1,5 +1,7 @@
 # Getting Started with Kiwi Blog
-2025-05-26
+
+**Date:** 2025-05-26
+**Author:** derlocke-ng
 
 Welcome to your new **Kiwi Blog**! This static site generator makes it easy to create and maintain a beautiful blog using simple Markdown files. Let's learn how to use Kiwi Blog and create amazing posts with Markdown.
 

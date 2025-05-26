@@ -1,5 +1,5 @@
 # 📌 Welcome to Kiwi Blog (Pinned)
-2025-05-26
+// no date no author!
 
 <div class="pinned-post">
   <strong>This is a pinned post!</strong>

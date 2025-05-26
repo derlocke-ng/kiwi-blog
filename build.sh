@@ -56,8 +56,16 @@ for f in "$BLOG_DIR"/*.md; do
   ENTRIES+=("$f")
 done
 
-# Sort entries by date (second line), newest first
-mapfile -t sorted < <(for f in "${ENTRIES[@]}"; do echo "$f|$(head -n 2 "$f" | tail -n 1)"; done | sort -t'|' -k2 -r)
+# Sort entries by date, newest first
+mapfile -t sorted < <(for f in "${ENTRIES[@]}"; do 
+  DATE=$(head -n 4 "$f" | grep -E "(\*\*Date:\*\*|^[0-9]{4}-[0-9]{2}-[0-9]{2})" | head -n 1)
+  if [[ $DATE == *"**Date:**"* ]]; then
+    CLEAN_DATE=$(echo "$DATE" | sed 's/.*\*\*Date:\*\* \([0-9-]*\).*/\1/')
+  else
+    CLEAN_DATE="$DATE"
+  fi
+  echo "$f|$CLEAN_DATE"
+done | sort -t'|' -k2 -r)
 
 # Prepare all entries for home (show all, newest first)
 LATEST_HTML=""
@@ -76,40 +84,61 @@ ARCHIVE_HTML+="<h1>📅 Blog Archive</h1>\n"
 ARCHIVE_HTML+="<p class=\"archive-description\">Explore all blog posts organized by year. Click any post to jump to it on the main page.</p>\n"
 ARCHIVE_HTML+="</div>\n"
 ARCHIVE_HTML+="<div class=\"archive-content\">\n"
-YEAR=""
-YEAR_COUNT=0
+
+# First, collect all unique years from sorted entries
+declare -A years
 for entry in "${sorted[@]}"; do
   f="${entry%%|*}"
-  TITLE=$(head -n 1 "$f" | sed 's/^# //')
-  DATE=$(head -n 2 "$f" | tail -n 1)
-  ID=$(basename "$f" .md)
-  YR=${DATE:0:4}
-  if [ "$YR" != "$YEAR" ]; then
-    [ -n "$YEAR" ] && ARCHIVE_HTML+="</div></div>"
-    YEAR_COUNT=0
-    # Count posts for this year
-    for count_entry in "${sorted[@]}"; do
-      count_date=$(head -n 2 "${count_entry%%|*}" | tail -n 1)
-      count_yr=${count_date:0:4}
-      [ "$count_yr" = "$YR" ] && YEAR_COUNT=$((YEAR_COUNT + 1))
-    done
-    ARCHIVE_HTML+="<div class=\"archive-year\">\n"
-    ARCHIVE_HTML+="<div class=\"year-header\">\n"
-    ARCHIVE_HTML+="<h2 class=\"year-title\">$YR</h2>\n"
-    ARCHIVE_HTML+="<span class=\"post-count\">$YEAR_COUNT posts</span>\n"
-    ARCHIVE_HTML+="</div>\n"
-    ARCHIVE_HTML+="<div class=\"posts-grid\">\n"
-    YEAR="$YR"
+  DATE=$(head -n 4 "$f" | grep -E "(\*\*Date:\*\*|^[0-9]{4}-[0-9]{2}-[0-9]{2})" | head -n 1)
+  if [[ $DATE == *"**Date:**"* ]]; then
+    YR=$(echo "$DATE" | sed 's/.*\*\*Date:\*\* \([0-9]\{4\}\)-.*/\1/')
+  else
+    YR=$(echo "$DATE" | sed 's/^\([0-9]\{4\}\)-.*/\1/')
   fi
-  # Format date nicely
-  MONTH_DAY=${DATE:5:5}
-  FORMATTED_DATE=$(date -d "$DATE" "+%B %d" 2>/dev/null || echo "$MONTH_DAY")
-  ARCHIVE_HTML+="<article class=\"archive-post\">\n"
-  ARCHIVE_HTML+="<div class=\"post-date\">$FORMATTED_DATE</div>\n"
-  ARCHIVE_HTML+="<h3 class=\"post-title\"><a href=\"index.html#$ID\">$TITLE</a></h3>\n"
-  ARCHIVE_HTML+="</article>\n"
+  years[$YR]=1
 done
-[ -n "$YEAR" ] && ARCHIVE_HTML+="</div></div>"
+
+# Process each year in reverse chronological order
+for YR in $(printf '%s\n' "${!years[@]}" | sort -nr); do
+  YEAR_COUNT=0
+  YEAR_POSTS=""
+  
+  # Collect all posts for this year
+  for entry in "${sorted[@]}"; do
+    f="${entry%%|*}"
+    TITLE=$(head -n 1 "$f" | sed 's/^# //')
+    DATE=$(head -n 4 "$f" | grep -E "(\*\*Date:\*\*|^[0-9]{4}-[0-9]{2}-[0-9]{2})" | head -n 1)
+    ID=$(basename "$f" .md)
+    
+    if [[ $DATE == *"**Date:**"* ]]; then
+      POST_YR=$(echo "$DATE" | sed 's/.*\*\*Date:\*\* \([0-9]\{4\}\)-.*/\1/')
+      CLEAN_DATE=$(echo "$DATE" | sed 's/.*\*\*Date:\*\* \([0-9-]*\).*/\1/')
+    else
+      POST_YR=$(echo "$DATE" | sed 's/^\([0-9]\{4\}\)-.*/\1/')
+      CLEAN_DATE="$DATE"
+    fi
+    
+    if [ "$POST_YR" = "$YR" ]; then
+      YEAR_COUNT=$((YEAR_COUNT + 1))
+      FORMATTED_DATE=$(date -d "$CLEAN_DATE" "+%B %d" 2>/dev/null || echo "$CLEAN_DATE")
+      YEAR_POSTS+="<article class=\"archive-post\">\n"
+      YEAR_POSTS+="<div class=\"post-date\">$FORMATTED_DATE</div>\n"
+      YEAR_POSTS+="<h3 class=\"post-title\"><a href=\"index.html#$ID\">$TITLE</a></h3>\n"
+      YEAR_POSTS+="</article>\n"
+    fi
+  done
+  
+  # Add year section to archive
+  ARCHIVE_HTML+="<div class=\"archive-year\">\n"
+  ARCHIVE_HTML+="<div class=\"year-header\">\n"
+  ARCHIVE_HTML+="<h2 class=\"year-title\">$YR</h2>\n"
+  ARCHIVE_HTML+="<span class=\"post-count\">$YEAR_COUNT posts</span>\n"
+  ARCHIVE_HTML+="</div>\n"
+  ARCHIVE_HTML+="<div class=\"posts-grid\">\n"
+  ARCHIVE_HTML+="$YEAR_POSTS"
+  ARCHIVE_HTML+="</div></div>"
+done
+
 ARCHIVE_HTML+="</div>\n"
 echo -e "$ARCHIVE_HTML" > /tmp/archive.html
 

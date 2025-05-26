@@ -1,5 +1,5 @@
 # Sample Custom Page
-2025-05-26
+
 
 Welcome to the **Sample Page**! This demonstrates how Kiwi Blog's custom page system works.
 

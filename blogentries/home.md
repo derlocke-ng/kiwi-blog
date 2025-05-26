@@ -25,9 +25,14 @@ A modern, lightweight static site generator with advanced theming and dynamic pa
 Create markdown files in `blogentries/` with this format:
 ```markdown
 # Your Post Title
-2025-05-26
+
+**Date:** YYYY-MM-DD
+**Author:** Your Name
+
 Your amazing content here!
 ```
+
+**Important:** Use the exact `**Date:**` and `**Author:**` format for proper sorting!
 
 ## 🔧 Advanced Features
 

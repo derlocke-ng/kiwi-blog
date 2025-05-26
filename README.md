@@ -1,384 +1,261 @@
 # 🥝 Kiwi Blog
 
-A modern, lightweight static site generator with advanced theming capabilities and dynamic page creation.
+A lightweight, elegant static site generator that transforms Markdown files into a beautiful blog with advanced theming and automatic archive generation.
 
 ## 🌐 Live Demo
 
 **[🔗 View Live Demo](https://derlocke-ng.github.io/kiwi-blog/)**
 
-*Experience the full functionality including the dual-slider theme system, dark mode toggle, and responsive design.*
+## ✨ Key Features
 
-## ✨ Features
-
-- **🔥 Dynamic Site Generation**: Automatically creates pages from `*-template.html` files
-- **📌 Pinned Posts**: Feature important content at the top
-- **📅 Archive System**: Organized yearly blog archives  
-- **🎨 Advanced Theming**: Dual-slider color customization with dark mode
-- **📱 Responsive Design**: Mobile-friendly layout
-- **⚡ Fast & Lightweight**: Pure HTML/CSS/JS with no dependencies
-- **🔧 Easy Customization**: Markdown-based content management
+- **📝 Markdown-Based**: Write posts in simple Markdown format
+- **📅 Automatic Sorting**: Chronological blog posts with yearly archives
+- **🎨 Advanced Theming**: Dual-slider color system with dark mode
+- **📱 Responsive Design**: Works perfectly on all devices
+- **⚡ Zero Dependencies**: Pure HTML, CSS, and vanilla JavaScript
+- **🚀 Easy Deployment**: Perfect for GitHub Pages
 
 ## 🚀 Quick Start
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/kiwi-blog.git
-   cd kiwi-blog
-   ```
+### 1. Clone the Repository
+```bash
+git clone https://github.com/derlocke-ng/kiwi-blog.git
+cd kiwi-blog
+```
 
-2. **Make the build script executable**
-   ```bash
-   chmod +x build.sh
-   ```
+### 2. Make Build Script Executable
+```bash
+chmod +x build.sh
+```
 
-3. **Build your site**
-   ```bash
-   ./build.sh
-   ```
+### 3. Build Your Site
+```bash
+./build.sh
+```
 
-4. **Open `index.html` in your browser**
+### 4. Open in Browser
+Open `index.html` in your web browser to see your site!
 
 ## 📁 Project Structure
 
 ```
 kiwi-blog/
-├── 📝 Content Files
-│   ├── blogentries/          # Blog posts and main content
-│   │   ├── home.md          # Homepage content
-│   │   ├── pinned.md        # Pinned post
-│   │   └── *.md             # Other blog entries
-│   └── sample/              # Custom page content
-│       └── sample.md        # Sample custom page
-│
+├── 📂 blogentries/           # Your blog posts (Markdown files)
+│   ├── home.md              # Homepage content
+│   ├── pinned.md            # Pinned post (always appears first)
+│   └── *.md                 # Your blog posts
+├── 📂 showcase/             # Portfolio/showcase content
+├── 📂 sample/               # Sample custom page content
 ├── 🎨 Templates
-│   ├── template.html        # Main page template
+│   ├── template.html        # Main blog template
 │   ├── archive-template.html # Archive page template
+│   ├── showcase-template.html # Portfolio template
 │   └── sample-template.html  # Custom page template
-│
-├── 🎯 Generated Pages (auto-created)
-│   ├── index.html           # Main page
-│   ├── archive.html         # Archive page
+├── 🎯 Generated Files (auto-created by build.sh)
+│   ├── index.html           # Main blog page
+│   ├── archive.html         # Yearly archive page
+│   ├── showcase.html        # Portfolio page
 │   └── sample.html          # Sample page
-│
 ├── 🎨 Styling & Scripts
 │   ├── style.css            # Main stylesheet
 │   └── theme.js             # Theme system
-│
-└── ⚙️ Build System
-    └── build.sh             # Main build script
+└── ⚙️ build.sh              # Build script
 ```
 
-## 📝 Creating Content
+## 📝 Writing Blog Posts
 
-### Blog Entries
+### Required Format
 
-Blog entries go in the `blogentries/` folder and are sorted by **DATE** (newest first):
+**CRITICAL**: Every blog post MUST follow this exact format for proper sorting:
 
-**Example: `blogentries/my-new-post.md`**
 ```markdown
-# My First Blog Post
-2025-05-27
+# Your Post Title
 
-Welcome to my **first blog post**! This is written in Markdown.
+**Date:** YYYY-MM-DD
+**Author:** Your Name
+
+Your content goes here...
+```
+
+### Example Blog Post
+
+Create `blogentries/my-new-post.md`:
+
+```markdown
+# My Awesome Blog Post
+
+**Date:** 2025-05-27
+**Author:** derlocke-ng
+
+Welcome to my blog! This post is written in **Markdown** and will be automatically sorted by date.
 
 ## Features I Love
 
-- Easy markdown writing
-- Automatic HTML generation  
-- Beautiful themes
-- Code highlighting
+- Automatic chronological sorting
+- Beautiful responsive design
+- Code syntax highlighting
+- Easy Markdown writing
 
 ```python
-def hello_world():
+def hello_kiwi():
     print("Hello from Kiwi Blog!")
 ```
 
-That's all there is to it!
+That's it! Run `./build.sh` to update your site.
 ```
 
-### Custom Pages
+### Important Notes
 
-Custom pages are sorted **ALPHABETICALLY** and created with:
-
-1. **Create template**: `my-page-template.html`
-2. **Create folder**: `my-page/` 
-3. **Add content**: `my-page/content.md`
-
-**Example Template Structure:**
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Page - Kiwi Blog</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥝</text></svg>">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <nav class="taskbar">
-    <div class="logo"><a href="index.html">🥝 Kiwi Blog</a></div>
-    <ul class="menu">
-      <!--MENU-->
-    </ul>
-  </nav>
-  <div class="main-wrapper">
-    <main>
-      <!--SAMPLE-->
-    </main>
-  </div>
-  <footer>
-    <div class="footer-content">
-      <div class="footer-links">
-        <!--FOOTERLINKS-->
-      </div>
-    </div>
-  </footer>
-  <script src="theme.js"></script>
-</body>
-</html>
-```
-
-### Template Placeholders
-
-**Key Placeholders** (case-sensitive):
-- `<!--MENU-->` - Auto-generated navigation menu
-- `<!--SAMPLE-->` - Content from matching folder (e.g., `sample/` for `sample-template.html`)
-- `<!--FOOTERLINKS-->` - Auto-generated footer links
-- `<!--MAIN-->` - Used in main template for blog content
-
-### Content Sorting
-
-Kiwi Blog handles different content types with different sorting:
-
-- **📅 Blog Entries** (`blogentries/`): Sorted by **DATE** (newest first)
-  - Requires date on second line: `2025-05-26`
-  - Appears on homepage and archive
-  
-- **📁 Custom Pages** (from `*-template.html`): Sorted **ALPHABETICALLY** by filename
-  - No date requirement
-  - Creates separate pages
-  - Multiple `.md` files combined in alphabetical order
-
-### Pinned Posts
-
-Edit `blogentries/pinned.md` to feature important content at the top:
-
-```markdown
-# 📌 Important Announcement
-2025-05-27
-
-This post will always appear first on your blog!
-
-Perfect for:
-- Site announcements
-- Welcome messages  
-- Important updates
-```
+- **Date Format**: Must be `**Date:** YYYY-MM-DD` (exactly as shown)
+- **Author Format**: Must be `**Author:** Name` (exactly as shown)
+- **Sorting**: Posts are sorted chronologically (newest first)
+- **Archive**: Posts are automatically grouped by year in `/archive.html`
 
 ## 🎨 Theme System
 
-Kiwi Blog features an advanced dual-slider theming system:
+Kiwi Blog features a powerful dual-slider theming system:
 
-### Controls
+### Theme Controls
 - **🌙 Dark Mode Toggle**: Switch between light and dark themes
-- **📄 Content Slider**: Customize colors for blog content and articles (HSL hue 0-360)
+- **📄 Content Slider**: Customize blog content colors (HSL hue 0-360)
 - **🎨 Header/Footer Slider**: Adjust navigation and footer colors (HSL hue 0-360)
 
 ### Features
-- ✅ **Real-time Updates**: Changes apply instantly
-- ✅ **Cross-page Persistence**: Settings saved with `localStorage` 
-- ✅ **Responsive Design**: Touch-friendly sliders on mobile
-- ✅ **Accessibility**: Proper contrast ratios maintained
-- ✅ **Kiwi-inspired Defaults**: Beautiful green (#64 hue) and blue (#210 hue) scheme
+- ✅ **Real-time Preview**: Changes apply instantly
+- ✅ **Persistent Settings**: Saved using localStorage
+- ✅ **Mobile Friendly**: Touch-optimized sliders
+- ✅ **Accessibility**: Maintains proper contrast ratios
 
-### CSS Variables
-The theme system uses CSS custom properties:
+## 🔧 Advanced Features
 
-```css
-:root {
-  --content-hue: 100;        /* Content color hue (0-360) */
-  --header-hue: 210;         /* Header/footer color hue (0-360) */
-  --dark-mode: 0;            /* Dark mode state (0 or 1) */
-  
-  /* Auto-calculated colors */
-  --bg-primary: hsl(var(--content-hue), 20%, 98%);
-  --text-primary: hsl(var(--content-hue), 10%, 15%);
-  --header-bg: hsl(var(--header-hue), 30%, 25%);
-}
+### Custom Pages
+Create additional pages by:
+1. Creating `newpage-template.html`
+2. Adding content in `newpage/content.md`
+3. Running `./build.sh`
 
-[data-theme="dark"] {
-  --bg-primary: hsl(var(--content-hue), 15%, 12%);
-  --text-primary: hsl(var(--content-hue), 10%, 85%);
-}
-```
+### Pinned Posts
+Edit `blogentries/pinned.md` to feature important content at the top of your blog.
+
+### Portfolio/Showcase
+The `showcase/` folder contains portfolio content that appears on `/showcase.html`.
 
 ## ⚙️ Build System
 
 The `build.sh` script automatically:
+1. Processes all Markdown files in `blogentries/`
+2. Sorts posts chronologically by date
+3. Groups posts by year for the archive
+4. Generates navigation menus
+5. Creates all HTML pages from templates
+6. Adds syntax highlighting to code blocks
 
-1. **Processes blog entries** from `blogentries/` folder
-2. **Generates navigation menus** for all pages
-3. **Creates archive pages** grouped by year
-4. **Builds custom pages** from `*-template.html` files
-5. **Adds syntax highlighting** with Pandoc's `--highlight-style=pygments`
-6. **Sorts content appropriately**:
-   - Blog entries: By date (newest first)
-   - Custom pages: Alphabetically
+### Build Requirements
+- **Pandoc**: For Markdown to HTML conversion
+- **Bash**: For running the build script
 
-### Build Process Example
-
+### Installing Pandoc
 ```bash
-#!/bin/bash
-# Key features of build.sh:
+# Ubuntu/Debian
+sudo apt install pandoc
 
-# 1. Dynamic menu generation
-MENU_LINKS=( '<li><a href="index.html#home">Home</a></li>' '<li><a href="archive.html">Archive</a></li>' )
+# macOS
+brew install pandoc
 
-# 2. Pandoc with syntax highlighting  
-pandoc "blogentries/home.md" --highlight-style=pygments -o /tmp/home_content.html
-
-# 3. Template placeholder replacement
-sed -i '/<!--MENU-->/r /tmp/menu_links.html' "$OUTPUT"
-sed -i '/<!--MAIN-->/r /tmp/main_content.html' "$OUTPUT"
-sed -i '/<!--FOOTERLINKS-->/r /tmp/footer_links.html' "$OUTPUT"
+# Windows (using Chocolatey)
+choco install pandoc
 ```
-
-## 🔧 Advanced Customization
-
-### Adding New Template Types
-
-1. Create `newtype-template.html` with the placeholder structure
-2. Create `newtype/` folder for content
-3. Add `newtype/content.md` files
-4. Run `./build.sh` - automatic page generation!
-
-### Markdown Features
-
-Full Markdown support with enhanced features:
-
-````markdown
-# Heading 1
-## Heading 2
-
-**Bold text** and *italic text*
-
-- Bulleted lists
-- With multiple items
-
-1. Numbered lists
-2. Also supported
-
-```python
-# Code blocks with syntax highlighting
-def kiwi_blog():
-    return "Awesome static site generator!"
-```
-
-> Blockquotes for important information
-
-[Links](https://github.com) and images work perfectly.
-
-| Tables | Are |
-|--------|-----|
-| Also   | Supported |
-````
-
-### Archive System
-- Automatically groups posts by year
-- Shows post counts per year
-- Accessible via `/archive.html`
-- Maintains chronological order
 
 ## 🌐 Deployment
 
 ### GitHub Pages (Recommended)
 
-1. Push to GitHub repository
-2. Go to Settings → Pages
-3. Select "Deploy from a branch"
-4. Choose "main" branch and "/" (root) folder
-5. Your site will be live at `https://yourusername.github.io/kiwi-blog`
+1. **Push to GitHub**:
+   ```bash
+   git add .
+   git commit -m "Update blog"
+   git push origin main
+   ```
 
-See `GITHUB-SETUP.md` for detailed instructions.
+2. **Enable GitHub Pages**:
+   - Go to your repository's Settings → Pages
+   - Select "Deploy from a branch"
+   - Choose "main" branch and "/" (root) folder
+   - Your site will be live at `https://yourusername.github.io/kiwi-blog`
 
-### Manual Deployment
+### Other Hosting Options
 
-Upload these files to any web server:
-- All generated `.html` files
+Upload these files to any web hosting service:
+- All `.html` files
 - `style.css`
-- `theme.js`  
+- `theme.js`
 - Optional: `favicon.svg`
 
-## 🎯 Browser Compatibility
+## 🛠️ Development Workflow
 
-- ✅ Chrome/Chromium 80+
-- ✅ Firefox 75+
-- ✅ Safari 13+
-- ✅ Edge 80+
-- ✅ Mobile browsers (iOS Safari, Chrome Mobile)
-
-## 📱 Responsive Design
-
-Kiwi Blog is mobile-first with:
-- 📱 Touch-friendly theme sliders
-- 🔄 Responsive navigation that collapses on mobile
-- 📖 Optimized typography for reading
-- ⚡ Fast loading on all devices
-- 🎨 Theme controls work perfectly on touchscreens
-
-## 🛠️ Development
-
-### Prerequisites
-- **Pandoc** for Markdown processing
-- **Bash** shell for build script
-- Modern web browser for testing
+### Daily Workflow
+1. **Create new post**: Add Markdown file to `blogentries/`
+2. **Build**: Run `./build.sh`
+3. **Preview**: Open `index.html` in browser
+4. **Deploy**: Push to GitHub (if using GitHub Pages)
 
 ### Local Development
 ```bash
-# Make changes to templates or content
-vim blogentries/my-post.md
+# Edit content
+vim blogentries/my-new-post.md
 
-# Rebuild
+# Rebuild site
 ./build.sh
 
-# Test in browser
+# Test locally
 open index.html
 ```
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b amazing-feature`
-3. Make your changes
-4. Test thoroughly (build and check all pages)
-5. Submit a pull request
-
-## 📚 Documentation
-
-- `README.md` - This comprehensive guide
-- `GITHUB-SETUP.md` - GitHub Pages deployment guide
-- `PROJECT-SUMMARY.md` - Technical overview and development notes
 
 ## 🐛 Troubleshooting
 
 ### Common Issues
 
-**Build script doesn't work:**
-- Check that Pandoc is installed: `pandoc --version`
+**Build script fails**:
+- Install Pandoc: `sudo apt install pandoc` (Ubuntu) or `brew install pandoc` (macOS)
 - Make script executable: `chmod +x build.sh`
 
-**Favicon not showing:**
-- Clear browser cache
-- Check if emoji-based favicon appears in tab
+**Posts not sorting correctly**:
+- Check date format is exactly: `**Date:** YYYY-MM-DD`
+- Ensure there's a space after the colon
+- Verify date is on the second line after the title
 
-**Theme not persisting:**
+**Themes not saving**:
+- Enable JavaScript in your browser
 - Check browser localStorage support
-- Verify JavaScript is enabled
+
+## 💡 Tips & Best Practices
+
+### Content Organization
+- Use descriptive filenames: `fixing-css-bugs.md` instead of `post1.md`
+- Keep consistent author names across posts
+- Use proper Markdown formatting for better SEO
+
+### Performance
+- Optimize images before adding them to posts
+- Keep individual posts under 5MB for fast loading
+- Use relative links within your blog
+
+## 📚 Resources
+
+- **Markdown Guide**: [markdownguide.org](https://markdownguide.org)
+- **Pandoc Documentation**: [pandoc.org](https://pandoc.org)
+- **GitHub Pages**: [pages.github.com](https://pages.github.com)
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature-name`
+3. Make your changes and test thoroughly
+4. Submit a pull request with a clear description
 
 ## 📄 License
 
-MIT License - feel free to use this project for personal or commercial purposes.
+MIT License - see LICENSE file for details.
 
 ## 🔗 Links
 
@@ -390,4 +267,4 @@ MIT License - feel free to use this project for personal or commercial purposes.
 
 **Made with 🥝 by the Kiwi Blog community**
 
-*A fresh take on static site generation - simple, powerful, and deliciously customizable!*
+*Simple, fast, and beautifully customizable static site generation.*

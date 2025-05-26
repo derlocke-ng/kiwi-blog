@@ -1,5 +1,7 @@
 # 🛠️ Extending Kiwi Blog - Advanced Tips & Build Kit Ideas
-2025-05-25
+
+**Date:** 2025-05-25
+**Author:** derlocke-ng
 
 Are you ready to **supercharge your Kiwi Blog**? This comprehensive guide shows you how to extend the basic blog system with advanced features, customizations, and professional enhancements.
 
