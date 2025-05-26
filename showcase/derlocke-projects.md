@@ -1,135 +1,146 @@
-# 🚀 derlocke-ng Projects Showcase
+# 🤖 Weird Programming Tricks in Kiwi Blog
 
-Explore the innovative projects and repositories by derlocke-ng.
+Let me show you some unconventional programming techniques and how to document them with Kiwi Blog.
 
-## 🥝 Kiwi Blog - Static Site Generator
+## How I Document Code Tricks
 
-![Kiwi Blog Screenshot](https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=800&q=80)
-*Photo by Lukas Blazek on [Unsplash](https://unsplash.com/photos/mcSDtbWXUZU)*
+Here's the Markdown I use to explain complex code:
 
-**[🔗 View Repository](https://github.com/derlocke-ng/kiwi-blog)** | **[🌐 Live Demo](https://derlocke-ng.github.io/kiwi-blog/)**
-
-A lightweight, elegant static site generator that transforms Markdown files into beautiful blogs with advanced theming.
-
-### ✨ Key Features
-- **📝 Markdown-Based**: Simple content creation
-- **🎨 Dual-Slider Theming**: Real-time color customization
-- **📅 Automatic Archive**: Chronological post organization
-- **📱 Responsive Design**: Perfect on all devices
-- **⚡ Zero Dependencies**: Pure HTML, CSS, and vanilla JavaScript
-
-### 🛠️ Technical Highlights
+````markdown
+### One-Liner File Server
 ```bash
-# Simple build process
-./build.sh
-
-# Automatic features:
-✓ Markdown to HTML conversion with Pandoc
-✓ Syntax highlighting for code blocks
-✓ Archive generation grouped by year
-✓ Responsive navigation menu
-✓ Theme persistence with localStorage
+# Start a web server in any directory
+python3 -m http.server 8000
 ```
 
-### 🎯 Perfect For
-- Personal blogs and portfolios
-- Technical documentation sites
-- Project showcases
-- GitHub Pages deployment
+**What this does**: Instantly serves current directory on `localhost:8000`  
+**Why it's cool**: Zero configuration, works anywhere Python is installed  
+**Use case**: Quick file sharing, testing static sites
+````
+
+## 🔥 Actual Weird Code
+
+### One-Liner File Server
+```bash
+# Start a web server in any directory
+python3 -m http.server 8000
+```
+
+**What this does**: Instantly serves current directory on `localhost:8000`  
+**Why it's cool**: Zero configuration, works anywhere Python is installed  
+**Use case**: Quick file sharing, testing static sites
 
 ---
 
-## 🐧 Awesome Linux - Curated Resources
+### CSS-Only Toggle Switch
+```css
+/* No JavaScript needed! */
+.toggle {
+  appearance: none;
+  width: 60px;
+  height: 30px;
+  background: #ccc;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+}
 
-![Linux Terminal](https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=800&q=80)
-*Photo by Gabriel Heinzer on [Unsplash](https://unsplash.com/photos/4Mw7nkQDByk)*
+.toggle:before {
+  content: '';
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: white;
+  top: 2px;
+  left: 2px;
+  transition: 0.3s;
+}
 
-**[🔗 View Repository](https://github.com/derlocke-ng/awesome-linux)**
+.toggle:checked {
+  background: #4CAF50;
+}
 
-A comprehensive collection of Linux resources, tools, and guides for developers and enthusiasts.
-
-### 📚 What's Included
-- **Essential Tools**: Command-line utilities and productivity apps
-- **Development Environment**: IDEs, editors, and development tools
-- **System Administration**: Server management and automation
-- **Security Resources**: Privacy tools and security guides
-- **Learning Materials**: Tutorials, books, and documentation
-
-### 🌟 Categories Covered
-```markdown
-📁 Development Tools
-  ├── Code Editors (Vim, Emacs, VS Code)
-  ├── Version Control (Git workflows)
-  ├── Terminal Tools (zsh, tmux, htop)
-  └── Language-specific tools
-
-📁 System Tools
-  ├── File Management (ranger, fd, ripgrep)
-  ├── System Monitoring (neofetch, btop)
-  ├── Network Tools (netstat, tcpdump)
-  └── Security (fail2ban, ufw)
-
-📁 Productivity
-  ├── Window Managers (i3, Awesome)
-  ├── Media Tools (mpv, ImageMagick)
-  ├── Office Suites (LibreOffice)
-  └── Communication (Thunderbird)
+.toggle:checked:before {
+  transform: translateX(30px);
+}
 ```
+
+**What this does**: Creates an animated toggle without any JavaScript  
+**Why it's weird**: Pure CSS handles the state change  
+**How it works**: `:checked` pseudo-class + CSS transforms
 
 ---
 
-## 🌐 Kiwi Network - Coming Soon
+### Bash Function Magic
+```bash
+# Create a function that remembers where you were
+goto() {
+  if [ "$1" = "back" ]; then
+    cd "$OLDPWD"
+  else
+    GOTO_PREV="$PWD"
+    cd "$1"
+  fi
+}
 
-![Network Visualization](https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80)
-*Photo by Alina Grubnyak on [Unsplash](https://unsplash.com/photos/ZiQkhI7417A)*
+# Usage:
+# goto /some/path
+# goto back    # returns to where you were
+```
 
-**🚧 In Development** | **Expected Release: Q3 2025**
+**What this does**: Like browser back button for terminal  
+**Why it's useful**: Quickly jump between directories  
+**The trick**: Uses `$OLDPWD` and custom variable storage
 
-An upcoming networking and collaboration platform designed for developers and creative professionals.
+---
 
-### 🎯 Planned Features
-- **Real-time Collaboration**: Live code editing and pair programming
-- **Project Showcase**: Portfolio integration with GitHub
-- **Community Forums**: Topic-based discussion groups
-- **Resource Sharing**: Tool recommendations and tutorials
-- **Event Organization**: Virtual meetups and conferences
-
-### 🛠️ Tech Stack (Planned)
+### JavaScript Array Wizardry
 ```javascript
-// Frontend
-React 18 + TypeScript
-Tailwind CSS for styling
-WebSocket for real-time features
+// Remove duplicates and sort in one line
+const cleanArray = arr => [...new Set(arr)].sort();
 
-// Backend
-Node.js + Express
-PostgreSQL database
-Redis for caching
-Docker containerization
+// Group array by property
+const groupBy = (arr, key) => 
+  arr.reduce((groups, item) => ({
+    ...groups,
+    [item[key]]: [...(groups[item[key]] || []), item]
+  }), {});
 
-// Infrastructure
-GitHub Actions CI/CD
-Cloudflare CDN
-Digital Ocean hosting
+// Chunk array into smaller arrays
+const chunk = (arr, size) => 
+  Array.from({length: Math.ceil(arr.length / size)}, 
+    (_, i) => arr.slice(i * size, i * size + size));
 ```
 
-### 📋 Development Roadmap
-- **Phase 1**: User authentication and profiles ✅
-- **Phase 2**: Project showcase functionality 🔄
-- **Phase 3**: Real-time collaboration tools ⏳
-- **Phase 4**: Community features ⏳
-- **Phase 5**: Mobile app development ⏳
+**What these do**: Common array operations in functional style  
+**Why they're neat**: Readable one-liners that replace loops  
+**When to use**: Data processing, API responses, list manipulation
+
+## 📝 How to Document Your Own Tricks
+
+### The Formula I Use
+
+1. **Show the code first** - let people see it working
+2. **Explain what it does** - in simple terms
+3. **Why it's cool/weird** - what makes it special
+4. **When to use it** - practical applications
+
+### Markdown Template
+```markdown
+### Your Trick Name
+```language
+// Your code here
+```
+
+**What this does**: Brief explanation  
+**Why it's cool**: What makes it special  
+**Use case**: When you'd actually use this
+```
+
+This template works great in Kiwi Blog because:
+- Code blocks get syntax highlighting
+- Consistent structure is easy to scan
+- No need for complex formatting
 
 ---
-
-### 🤝 Contributions Welcome
-
-All projects are open source and welcome contributions from the community:
-
-- **🐛 Bug Reports**: Help improve stability
-- **✨ Feature Requests**: Suggest new functionality  
-- **📚 Documentation**: Improve guides and tutorials
-- **🔧 Code Contributions**: Submit pull requests
-- **💡 Ideas**: Share innovative concepts
-
-**Contact**: Feel free to reach out via GitHub issues or email for collaboration opportunities!

@@ -31,93 +31,77 @@
   </nav>
   <div class="main-wrapper">
     <main>
-<h1 id="coding-web-design-showcase">💻 Coding &amp; Web Design
+<h1 id="building-a-github-project-showcase">💻 Building a GitHub Project
 Showcase</h1>
-<p>Demonstrating modern web development techniques and design
-patterns.</p>
-<h2 id="frontend-technologies">🌐 Frontend Technologies</h2>
-<h3 id="modern-css-techniques">Modern CSS Techniques</h3>
-<p><img
-src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&amp;q=80"
-alt="CSS Grid Layout" /> <em>Photo by Florian Olivo on <a
-href="https://unsplash.com/photos/4hbJ-eymZ1o">Unsplash</a></em></p>
+<p>Let me show you how to create an impressive project showcase in Kiwi
+Blog.</p>
+<h2 id="the-markdown-behind-this-page">The Markdown Behind This
+Page</h2>
+<p>Here’s how I built this GitHub project display:</p>
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Modern CSS Grid Layout */</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.gallery</span> {</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span><span class="ch">:</span> <span class="dv">grid</span><span class="op">;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-template-columns</span><span class="ch">:</span> <span class="fu">repeat(</span><span class="dv">auto-fit</span><span class="op">,</span> <span class="fu">minmax(</span><span class="dv">300</span><span class="dt">px</span><span class="op">,</span> <span class="dv">1</span><span class="dt">fr</span><span class="fu">))</span><span class="op">;</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">gap</span><span class="ch">:</span> <span class="dv">2</span><span class="dt">rem</span><span class="op">;</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">padding</span><span class="ch">:</span> <span class="dv">2</span><span class="dt">rem</span><span class="op">;</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>}</span>
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🚀 My Projects</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">### Kiwi Blog</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>**Tech Stack**: Bash, HTML, CSS, JavaScript  </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>**Status**: ✅ Live</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>A lightweight static site generator that you&#39;re using right now!</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">.card</span> {</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span><span class="ch">:</span> <span class="fu">linear-gradient(</span><span class="dv">135</span><span class="dt">deg</span><span class="op">,</span> <span class="cn">#667eea</span> <span class="dv">0</span><span class="dt">%</span><span class="op">,</span> <span class="cn">#764ba2</span> <span class="dv">100</span><span class="dt">%</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-radius</span><span class="ch">:</span> <span class="dv">12</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">padding</span><span class="ch">:</span> <span class="dv">1.5</span><span class="dt">rem</span><span class="op">;</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">box-shadow</span><span class="ch">:</span> <span class="dv">0</span> <span class="dv">8</span><span class="dt">px</span> <span class="dv">32</span><span class="dt">px</span> <span class="fu">rgba(</span><span class="dv">0</span><span class="op">,</span><span class="dv">0</span><span class="op">,</span><span class="dv">0</span><span class="op">,</span><span class="dv">0.1</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">transition</span><span class="ch">:</span> <span class="dv">transform 0.3</span><span class="dt">s</span> <span class="dv">ease</span><span class="op">;</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">.card</span><span class="in">:hover</span> {</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">transform</span><span class="ch">:</span> <span class="fu">translateY(</span><span class="dv">-8</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<h3 id="javascript-es6-features">JavaScript ES6+ Features</h3>
-<div class="sourceCode" id="cb2"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Modern async/await with error handling</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> fetchUserData <span class="op">=</span> <span class="kw">async</span> (userId) <span class="kw">=&gt;</span> {</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">try</span> {</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> response <span class="op">=</span> <span class="cf">await</span> <span class="fu">fetch</span>(<span class="vs">`/api/users/</span><span class="sc">${</span>userId<span class="sc">}</span><span class="vs">`</span>)<span class="op">;</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> userData <span class="op">=</span> <span class="cf">await</span> response<span class="op">.</span><span class="fu">json</span>()<span class="op">;</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Destructuring and template literals</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> { name<span class="op">,</span> email<span class="op">,</span> avatar } <span class="op">=</span> userData<span class="op">;</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="vs">`User: </span><span class="sc">${</span>name<span class="sc">}</span><span class="vs"> (</span><span class="sc">${</span>email<span class="sc">}</span><span class="vs">)`</span><span class="op">;</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">catch</span> (error) {</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">error</span>(<span class="st">&#39;Failed to fetch user:&#39;</span><span class="op">,</span> error)<span class="op">;</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">Error</span>(<span class="st">&#39;User data unavailable&#39;</span>)<span class="op">;</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co">// Arrow functions and array methods</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> processUsers <span class="op">=</span> (users) <span class="kw">=&gt;</span> </span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  users</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">filter</span>(user <span class="kw">=&gt;</span> user<span class="op">.</span><span class="at">active</span>)</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">map</span>(({ id<span class="op">,</span> name<span class="op">,</span> role }) <span class="kw">=&gt;</span> ({ id<span class="op">,</span> name<span class="op">,</span> role }))</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">sort</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> a<span class="op">.</span><span class="at">name</span><span class="op">.</span><span class="fu">localeCompare</span>(b<span class="op">.</span><span class="at">name</span>))<span class="op">;</span></span></code></pre></div>
-<h3 id="responsive-design-patterns">Responsive Design Patterns</h3>
-<ul>
-<li><strong>Mobile-First Approach</strong>: Start with mobile design,
-scale up</li>
-<li><strong>Flexbox Layouts</strong>: Flexible container and item
-alignment</li>
-<li><strong>CSS Grid</strong>: Two-dimensional layout system</li>
-<li><strong>Container Queries</strong>: Element-based responsive
-design</li>
-</ul>
-<h2 id="uiux-design-principles">🎨 UI/UX Design Principles</h2>
-<h3 id="modern-design-trends">Modern Design Trends</h3>
-<p><img
-src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&amp;q=80"
-alt="Modern UI Design" /> <em>Photo by Hal Gatewood on <a
-href="https://unsplash.com/photos/tZc3vjPCk-Q">Unsplash</a></em></p>
-<ul>
-<li><strong>Minimalist Interfaces</strong>: Clean, focused user
-experiences</li>
-<li><strong>Dark Mode Support</strong>: Eye-friendly alternatives</li>
-<li><strong>Micro-interactions</strong>: Subtle animations for
-feedback</li>
-<li><strong>Accessibility First</strong>: Inclusive design for all
-users</li>
-</ul>
-<h3 id="color-psychology-in-web-design">Color Psychology in Web
-Design</h3>
-<ul>
-<li><strong>Blue</strong>: Trust, stability, professionalism</li>
-<li><strong>Green</strong>: Growth, harmony, freshness<br />
-</li>
-<li><strong>Orange</strong>: Energy, enthusiasm, creativity</li>
-<li><strong>Purple</strong>: Luxury, creativity, innovation</li>
-</ul>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Clone and build</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/derlocke-ng/kiwi-blog.git</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> kiwi-blog</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> +x build.sh</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ex">./build.sh</span></span></code></pre></div>
+<p><a href="https://github.com/derlocke-ng/kiwi-blog">🔗 Repository</a>
+| <a href="https://derlocke-ng.github.io/kiwi-blog/">🌐 Demo</a></p>
+<pre><code>
+## 🚀 The Result
+
+### Kiwi Blog
+**Tech Stack**: Bash, HTML, CSS, JavaScript  
+**Status**: ✅ Live
+
+A lightweight static site generator that you&#39;re using right now!
+
+```bash
+# Clone and build
+git clone https://github.com/derlocke-ng/kiwi-blog.git
+cd kiwi-blog
+chmod +x build.sh
+./build.sh</code></pre>
+<p><a href="https://github.com/derlocke-ng/kiwi-blog">🔗 Repository</a>
+| <a href="https://derlocke-ng.github.io/kiwi-blog/">🌐 Demo</a></p>
+<hr />
+<h3 id="awesome-linux">Awesome Linux</h3>
+<p><strong>Tech Stack</strong>: Markdown, Documentation<br />
+<strong>Status</strong>: 🔄 Growing</p>
+<p>Curated list of Linux tools and resources.</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Featured tools</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install htop neofetch ranger</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install thefuck</span></code></pre></div>
+<p><a href="https://github.com/derlocke-ng/awesome-linux">🔗
+Repository</a></p>
+<hr />
+<h3 id="kiwi-network">Kiwi Network</h3>
+<p><strong>Tech Stack</strong>: React, Node.js, PostgreSQL<br />
+<strong>Status</strong>: 🚧 In Development</p>
+<p>Upcoming developer collaboration platform.</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Planned features</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> features <span class="op">=</span> [</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;Real-time collaboration&#39;</span><span class="op">,</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;Project showcases&#39;</span><span class="op">,</span> </span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;Community forums&#39;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>]<span class="op">;</span></span></code></pre></div>
+<p><strong>Expected</strong>: Q3 2025</p>
+<h2 id="showcase-tips">💡 Showcase Tips</h2>
+<p><strong>1. Use Status Emojis</strong>: ✅ Live, 🔄 Active, 🚧 In
+Dev<br />
+<strong>2. Show Code</strong>: Include setup/usage examples<br />
+<strong>3. Multiple Links</strong>: Repository, demo, docs<br />
+<strong>4. Tech Stacks</strong>: Help people understand complexity</p>
 <hr />
 <h1 id="creative-showcase">🎨 Creative Showcase</h1>
 <h2 id="photography-visual-arts">Photography &amp; Visual Arts</h2>
@@ -234,156 +218,136 @@ AVIF)</li>
 <hr />
 <p><em>Showcasing the artistic and technical excellence of modern web
 design.</em></p>
-<h1 id="derlocke-ng-projects-showcase">🚀 derlocke-ng Projects
-Showcase</h1>
-<p>Explore the innovative projects and repositories by derlocke-ng.</p>
-<h2 id="kiwi-blog---static-site-generator">🥝 Kiwi Blog - Static Site
-Generator</h2>
-<p><img
-src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=800&amp;q=80"
-alt="Kiwi Blog Screenshot" /> <em>Photo by Lukas Blazek on <a
-href="https://unsplash.com/photos/mcSDtbWXUZU">Unsplash</a></em></p>
-<p><strong><a href="https://github.com/derlocke-ng/kiwi-blog">🔗 View
-Repository</a></strong> | <strong><a
-href="https://derlocke-ng.github.io/kiwi-blog/">🌐 Live
-Demo</a></strong></p>
-<p>A lightweight, elegant static site generator that transforms Markdown
-files into beautiful blogs with advanced theming.</p>
-<h3 id="key-features">✨ Key Features</h3>
-<ul>
-<li><strong>📝 Markdown-Based</strong>: Simple content creation</li>
-<li><strong>🎨 Dual-Slider Theming</strong>: Real-time color
-customization</li>
-<li><strong>📅 Automatic Archive</strong>: Chronological post
-organization</li>
-<li><strong>📱 Responsive Design</strong>: Perfect on all devices</li>
-<li><strong>⚡ Zero Dependencies</strong>: Pure HTML, CSS, and vanilla
-JavaScript</li>
-</ul>
-<h3 id="technical-highlights">🛠️ Technical Highlights</h3>
+<h1 id="weird-programming-tricks-in-kiwi-blog">🤖 Weird Programming
+Tricks in Kiwi Blog</h1>
+<p>Let me show you some unconventional programming techniques and how to
+document them with Kiwi Blog.</p>
+<h2 id="how-i-document-code-tricks">How I Document Code Tricks</h2>
+<p>Here’s the Markdown I use to explain complex code:</p>
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Simple build process</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">./build.sh</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Automatic features:</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">✓</span> Markdown to HTML conversion with Pandoc</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">✓</span> Syntax highlighting for code blocks</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ex">✓</span> Archive generation grouped by year</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ex">✓</span> Responsive navigation menu</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ex">✓</span> Theme persistence with localStorage</span></code></pre></div>
-<h3 id="perfect-for">🎯 Perfect For</h3>
-<ul>
-<li>Personal blogs and portfolios</li>
-<li>Technical documentation sites</li>
-<li>Project showcases</li>
-<li>GitHub Pages deployment</li>
-</ul>
-<hr />
-<h2 id="awesome-linux---curated-resources">🐧 Awesome Linux - Curated
-Resources</h2>
-<p><img
-src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=800&amp;q=80"
-alt="Linux Terminal" /> <em>Photo by Gabriel Heinzer on <a
-href="https://unsplash.com/photos/4Mw7nkQDByk">Unsplash</a></em></p>
-<p><strong><a href="https://github.com/derlocke-ng/awesome-linux">🔗
-View Repository</a></strong></p>
-<p>A comprehensive collection of Linux resources, tools, and guides for
-developers and enthusiasts.</p>
-<h3 id="whats-included">📚 What’s Included</h3>
-<ul>
-<li><strong>Essential Tools</strong>: Command-line utilities and
-productivity apps</li>
-<li><strong>Development Environment</strong>: IDEs, editors, and
-development tools</li>
-<li><strong>System Administration</strong>: Server management and
-automation</li>
-<li><strong>Security Resources</strong>: Privacy tools and security
-guides</li>
-<li><strong>Learning Materials</strong>: Tutorials, books, and
-documentation</li>
-</ul>
-<h3 id="categories-covered">🌟 Categories Covered</h3>
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">### One-Liner File Server</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Start a web server in any directory</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> http.server 8000</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>**What this does**: Instantly serves current directory on <span class="in">`localhost:8000`</span>  </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>**Why it&#39;s cool**: Zero configuration, works anywhere Python is installed  </span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>**Use case**: Quick file sharing, testing static sites</span></code></pre></div>
+<h2 id="actual-weird-code">🔥 Actual Weird Code</h2>
+<h3 id="one-liner-file-server">One-Liner File Server</h3>
 <div class="sourceCode" id="cb2"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>📁 Development Tools</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  ├── Code Editors (Vim, Emacs, VS Code)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  ├── Version Control (Git workflows)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  ├── Terminal Tools (zsh, tmux, htop)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  └── Language-specific tools</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>📁 System Tools</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  ├── File Management (ranger, fd, ripgrep)</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  ├── System Monitoring (neofetch, btop)</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  ├── Network Tools (netstat, tcpdump)</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  └── Security (fail2ban, ufw)</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>📁 Productivity</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  ├── Window Managers (i3, Awesome)</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  ├── Media Tools (mpv, ImageMagick)</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  ├── Office Suites (LibreOffice)</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  └── Communication (Thunderbird)</span></code></pre></div>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Start a web server in any directory</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> http.server 8000</span></code></pre></div>
+<p><strong>What this does</strong>: Instantly serves current directory
+on <code>localhost:8000</code><br />
+<strong>Why it’s cool</strong>: Zero configuration, works anywhere
+Python is installed<br />
+<strong>Use case</strong>: Quick file sharing, testing static sites</p>
 <hr />
-<h2 id="kiwi-network---coming-soon">🌐 Kiwi Network - Coming Soon</h2>
-<p><img
-src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&amp;q=80"
-alt="Network Visualization" /> <em>Photo by Alina Grubnyak on <a
-href="https://unsplash.com/photos/ZiQkhI7417A">Unsplash</a></em></p>
-<p><strong>🚧 In Development</strong> | <strong>Expected Release: Q3
-2025</strong></p>
-<p>An upcoming networking and collaboration platform designed for
-developers and creative professionals.</p>
-<h3 id="planned-features">🎯 Planned Features</h3>
-<ul>
-<li><strong>Real-time Collaboration</strong>: Live code editing and pair
-programming</li>
-<li><strong>Project Showcase</strong>: Portfolio integration with
-GitHub</li>
-<li><strong>Community Forums</strong>: Topic-based discussion
-groups</li>
-<li><strong>Resource Sharing</strong>: Tool recommendations and
-tutorials</li>
-<li><strong>Event Organization</strong>: Virtual meetups and
-conferences</li>
-</ul>
-<h3 id="tech-stack-planned">🛠️ Tech Stack (Planned)</h3>
+<h3 id="css-only-toggle-switch">CSS-Only Toggle Switch</h3>
 <div class="sourceCode" id="cb3"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Frontend</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>React <span class="dv">18</span> <span class="op">+</span> TypeScript</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>Tailwind <span class="bu">CSS</span> <span class="cf">for</span> styling</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">WebSocket</span> <span class="cf">for</span> real<span class="op">-</span>time features</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">// Backend</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="bu">Node</span><span class="op">.</span><span class="at">js</span> <span class="op">+</span> Express</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>PostgreSQL database</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>Redis <span class="cf">for</span> caching</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>Docker containerization</span>
+class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* No JavaScript needed! */</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.toggle</span> {</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">appearance</span><span class="ch">:</span> <span class="dv">none</span><span class="op">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span><span class="ch">:</span> <span class="dv">60</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">height</span><span class="ch">:</span> <span class="dv">30</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span><span class="ch">:</span> <span class="cn">#ccc</span><span class="op">;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-radius</span><span class="ch">:</span> <span class="dv">15</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">position</span><span class="ch">:</span> <span class="dv">relative</span><span class="op">;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">cursor</span><span class="ch">:</span> <span class="dv">pointer</span><span class="op">;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co">// Infrastructure</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>GitHub Actions CI<span class="op">/</span>CD</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>Cloudflare CDN</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>Digital Ocean hosting</span></code></pre></div>
-<h3 id="development-roadmap">📋 Development Roadmap</h3>
-<ul>
-<li><strong>Phase 1</strong>: User authentication and profiles ✅</li>
-<li><strong>Phase 2</strong>: Project showcase functionality 🔄</li>
-<li><strong>Phase 3</strong>: Real-time collaboration tools ⏳</li>
-<li><strong>Phase 4</strong>: Community features ⏳</li>
-<li><strong>Phase 5</strong>: Mobile app development ⏳</li>
-</ul>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="fu">.toggle</span><span class="in">:before</span> {</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">content</span><span class="ch">:</span> <span class="st">&#39;&#39;</span><span class="op">;</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">position</span><span class="ch">:</span> <span class="dv">absolute</span><span class="op">;</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span><span class="ch">:</span> <span class="dv">26</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">height</span><span class="ch">:</span> <span class="dv">26</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-radius</span><span class="ch">:</span> <span class="dv">50</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span><span class="ch">:</span> <span class="cn">white</span><span class="op">;</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">top</span><span class="ch">:</span> <span class="dv">2</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  <span class="kw">left</span><span class="ch">:</span> <span class="dv">2</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  <span class="kw">transition</span><span class="ch">:</span> <span class="dv">0.3</span><span class="dt">s</span><span class="op">;</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="fu">.toggle</span><span class="in">:checked</span> {</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span><span class="ch">:</span> <span class="cn">#4CAF50</span><span class="op">;</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="fu">.toggle</span><span class="in">:checked:before</span> {</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>  <span class="kw">transform</span><span class="ch">:</span> <span class="fu">translateX(</span><span class="dv">30</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p><strong>What this does</strong>: Creates an animated toggle without
+any JavaScript<br />
+<strong>Why it’s weird</strong>: Pure CSS handles the state change<br />
+<strong>How it works</strong>: <code>:checked</code> pseudo-class + CSS
+transforms</p>
 <hr />
-<h3 id="contributions-welcome">🤝 Contributions Welcome</h3>
-<p>All projects are open source and welcome contributions from the
-community:</p>
-<ul>
-<li><strong>🐛 Bug Reports</strong>: Help improve stability</li>
-<li><strong>✨ Feature Requests</strong>: Suggest new
-functionality<br />
-</li>
-<li><strong>📚 Documentation</strong>: Improve guides and tutorials</li>
-<li><strong>🔧 Code Contributions</strong>: Submit pull requests</li>
-<li><strong>💡 Ideas</strong>: Share innovative concepts</li>
-</ul>
-<p><strong>Contact</strong>: Feel free to reach out via GitHub issues or
-email for collaboration opportunities!</p>
+<h3 id="bash-function-magic">Bash Function Magic</h3>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a function that remembers where you were</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">goto()</span> <span class="kw">{</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="bu">[</span> <span class="st">&quot;</span><span class="va">$1</span><span class="st">&quot;</span> <span class="ot">=</span> <span class="st">&quot;back&quot;</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">cd</span> <span class="st">&quot;</span><span class="va">$OLDPWD</span><span class="st">&quot;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="va">GOTO_PREV</span><span class="op">=</span><span class="st">&quot;</span><span class="va">$PWD</span><span class="st">&quot;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">cd</span> <span class="st">&quot;</span><span class="va">$1</span><span class="st">&quot;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">fi</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Usage:</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co"># goto /some/path</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co"># goto back    # returns to where you were</span></span></code></pre></div>
+<p><strong>What this does</strong>: Like browser back button for
+terminal<br />
+<strong>Why it’s useful</strong>: Quickly jump between directories<br />
+<strong>The trick</strong>: Uses <code>$OLDPWD</code> and custom
+variable storage</p>
+<hr />
+<h3 id="javascript-array-wizardry">JavaScript Array Wizardry</h3>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Remove duplicates and sort in one line</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> cleanArray <span class="op">=</span> arr <span class="kw">=&gt;</span> [<span class="op">...</span><span class="kw">new</span> <span class="bu">Set</span>(arr)]<span class="op">.</span><span class="fu">sort</span>()<span class="op">;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">// Group array by property</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> groupBy <span class="op">=</span> (arr<span class="op">,</span> key) <span class="kw">=&gt;</span> </span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  arr<span class="op">.</span><span class="fu">reduce</span>((groups<span class="op">,</span> item) <span class="kw">=&gt;</span> ({</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">...</span>groups<span class="op">,</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    [item[key]]<span class="op">:</span> [<span class="op">...</span>(groups[item[key]] <span class="op">||</span> [])<span class="op">,</span> item]</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  })<span class="op">,</span> {})<span class="op">;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co">// Chunk array into smaller arrays</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> chunk <span class="op">=</span> (arr<span class="op">,</span> size) <span class="kw">=&gt;</span> </span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>({<span class="dt">length</span><span class="op">:</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">ceil</span>(arr<span class="op">.</span><span class="at">length</span> <span class="op">/</span> size)}<span class="op">,</span> </span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    (_<span class="op">,</span> i) <span class="kw">=&gt;</span> arr<span class="op">.</span><span class="fu">slice</span>(i <span class="op">*</span> size<span class="op">,</span> i <span class="op">*</span> size <span class="op">+</span> size))<span class="op">;</span></span></code></pre></div>
+<p><strong>What these do</strong>: Common array operations in functional
+style<br />
+<strong>Why they’re neat</strong>: Readable one-liners that replace
+loops<br />
+<strong>When to use</strong>: Data processing, API responses, list
+manipulation</p>
+<h2 id="how-to-document-your-own-tricks">📝 How to Document Your Own
+Tricks</h2>
+<h3 id="the-formula-i-use">The Formula I Use</h3>
+<ol type="1">
+<li><strong>Show the code first</strong> - let people see it
+working</li>
+<li><strong>Explain what it does</strong> - in simple terms</li>
+<li><strong>Why it’s cool/weird</strong> - what makes it special</li>
+<li><strong>When to use it</strong> - practical applications</li>
+</ol>
+<h3 id="markdown-template">Markdown Template</h3>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">### Your Trick Name</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="in">```language</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="in">// Your code here</span></span></code></pre></div>
+<p><strong>What this does</strong>: Brief explanation<br />
+<strong>Why it’s cool</strong>: What makes it special<br />
+<strong>Use case</strong>: When you’d actually use this ```</p>
+<p>This template works great in Kiwi Blog because: - Code blocks get
+syntax highlighting - Consistent structure is easy to scan - No need for
+complex formatting</p>
+<hr />
 <h1 id="developer-tools-portfolio">🛠️ Developer Tools Portfolio</h1>
 <h2 id="open-source-projects">Open Source Projects</h2>
 <h3 id="static-site-generator-tools">Static Site Generator Tools</h3>
@@ -457,275 +421,190 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="
 <hr />
 <p><em>Showcasing technical excellence and developer productivity
 tools.</em></p>
-<h1 id="markdown-mastery-showcase">📝 Markdown Mastery Showcase</h1>
-<p>Learn advanced Markdown techniques and explore what’s possible with
-this powerful markup language.</p>
-<h2 id="what-is-markdown">🎯 What is Markdown?</h2>
-<p><img
-src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&amp;q=80"
-alt="Markdown Logo" /> <em>Photo by Markus Winkler on <a
-href="https://unsplash.com/photos/f57lx37DCM4">Unsplash</a></em></p>
-<p>Markdown is a lightweight markup language that allows you to format
-text using simple, readable syntax. Created by John Gruber in 2004, it’s
-designed to be easy to write and easy to read, even in its raw form.</p>
-<p><strong>Why Markdown?</strong> - ✅ <strong>Simple</strong>: Easy to
-learn and write - ✅ <strong>Portable</strong>: Works everywhere - ✅
-<strong>Fast</strong>: Quick formatting without lifting hands from
-keyboard - ✅ <strong>Version Control Friendly</strong>: Plain text,
-perfect for Git - ✅ <strong>Platform Independent</strong>: Supported by
-countless tools</p>
-<hr />
-<h2 id="basic-markdown-syntax">🚀 Basic Markdown Syntax</h2>
-<h3 id="headers-and-emphasis">Headers and Emphasis</h3>
+<h1 id="mastering-kiwi-blog">🥝 Mastering Kiwi Blog</h1>
+<p>Here’s how to actually use Kiwi Blog like a pro, with real examples
+from this showcase.</p>
+<h2 id="the-secret-mix-html-markdown">The Secret: Mix HTML +
+Markdown</h2>
+<p>Kiwi Blog’s power comes from combining Markdown simplicity with HTML
+flexibility.</p>
+<h3 id="example-this-gallery-grid">Example: This Gallery Grid</h3>
+<p><strong>The Markdown:</strong></p>
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># H1 Header</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## H2 Header  </span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">### H3 Header</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>**Bold text** and *italic text*</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>***Bold and italic combined***</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>~~Strikethrough text~~</span></code></pre></div>
-<p><strong>Rendered Output:</strong> # H1 Header ## H2 Header<br />
-### H3 Header</p>
-<p><strong>Bold text</strong> and <em>italic text</em> <strong><em>Bold
-and italic combined</em></strong> <del>Strikethrough text</del></p>
-<hr />
-<h3 id="lists-and-links">Lists and Links</h3>
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;text-align: center; padding: 1rem; background: #f5f5f5; border-radius: 8px;&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>**Feature 1**  </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>Simple Markdown inside HTML</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;text-align: center; padding: 1rem; background: #f5f5f5; border-radius: 8px;&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>**Feature 2**  </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>Code blocks work too:</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ex">./build.sh</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+<p><strong>The Result:</strong></p>
+<div
+style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+<div
+style="text-align: center; padding: 1rem; background: #f5f5f5; border-radius: 8px;">
+<p><strong>Feature 1</strong><br />
+Simple Markdown inside HTML</p>
+</div>
+<div
+style="text-align: center; padding: 1rem; background: #f5f5f5; border-radius: 8px;">
+<p><strong>Feature 2</strong><br />
+Code blocks work too:</p>
 <div class="sourceCode" id="cb2"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">### Unordered Lists</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>First item</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Second item</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Nested item</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Another nested item</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">### Ordered Lists</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>First step</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Second step</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Third step</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="fu">### Links and Images</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">GitHub</span><span class="co">](https://github.com)</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="al">![Alt text](image-url.jpg)</span></span></code></pre></div>
-<p><strong>Rendered Output:</strong></p>
-<h4 id="unordered-lists">Unordered Lists</h4>
-<ul>
-<li>First item</li>
-<li>Second item
-<ul>
-<li>Nested item</li>
-<li>Another nested item</li>
-</ul></li>
-</ul>
-<h4 id="ordered-lists">Ordered Lists</h4>
-<ol type="1">
-<li>First step</li>
-<li>Second step</li>
-<li>Third step</li>
-</ol>
-<h4 id="links-and-images">Links and Images</h4>
-<p><a href="https://github.com">GitHub</a></p>
-<hr />
-<h2 id="advanced-markdown-tricks">💡 Advanced Markdown Tricks</h2>
-<h3 id="code-blocks-with-syntax-highlighting">Code Blocks with Syntax
-Highlighting</h3>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./build.sh</span></span></code></pre></div>
+</div>
+</div>
+<h2 id="essential-kiwi-blog-techniques">Essential Kiwi Blog
+Techniques</h2>
+<h3 id="proper-image-sizing">1. Proper Image Sizing</h3>
 <div class="sourceCode" id="cb3"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="in">```javascript</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">// JavaScript example</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> greeting <span class="op">=</span> (name) <span class="kw">=&gt;</span> {</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="vs">`Hello, </span><span class="sc">${</span>name<span class="sc">}</span><span class="vs">!`</span>)<span class="op">;</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">greeting</span>(<span class="st">&#39;World&#39;</span>)<span class="op">;</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="in">```css</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">/* CSS example */</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="fu">.highlight</span> {</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span><span class="ch">:</span> <span class="fu">linear-gradient(</span><span class="dv">45</span><span class="dt">deg</span><span class="op">,</span> <span class="cn">#ff6b6b</span><span class="op">,</span> <span class="cn">#4ecdc4</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">padding</span><span class="ch">:</span> <span class="dv">1</span><span class="dt">rem</span><span class="op">;</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-radius</span><span class="ch">:</span> <span class="dv">8</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>```</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>```bash</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a># Bash example</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>#!/bin/bash</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>echo &quot;Building project...&quot;</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>npm install <span class="op">&amp;&amp;</span> npm run build</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>echo &quot;Build complete!&quot;</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>```</span></code></pre></div>
-<p><strong>Rendered Output:</strong></p>
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Bad: Huge images --&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="al">![Big Image](https://images.unsplash.com/photo-123456789?w=1200)</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Good: Controlled size --&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;https://images.unsplash.com/photo-123456789?w=300</span><span class="er">&amp;</span><span class="st">q=80&quot;</span><span class="ot"> </span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ot">     style</span><span class="op">=</span><span class="st">&quot;width: 100%; max-width: 300px; height: auto;&quot;</span><span class="ot"> </span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="ot">     alt</span><span class="op">=</span><span class="st">&quot;Description&quot;</span><span class="dt">&gt;</span></span></code></pre></div>
+<h3 id="code-documentation-pattern">2. Code Documentation Pattern</h3>
 <div class="sourceCode" id="cb4"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">// JavaScript example</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> greeting <span class="op">=</span> (name) <span class="kw">=&gt;</span> {</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="vs">`Hello, </span><span class="sc">${</span>name<span class="sc">}</span><span class="vs">!`</span>)<span class="op">;</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">greeting</span>(<span class="st">&#39;World&#39;</span>)<span class="op">;</span></span></code></pre></div>
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">### Your Feature</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>Here&#39;s how to use it:</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="in">```language</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="in">your code here</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>**What it does**: Brief explanation  </span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>**Why use it**: The benefit  </span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>**Pro tip**: Extra insight</span></code></pre></div>
+<h3 id="status-indicators">3. Status Indicators</h3>
 <div class="sourceCode" id="cb5"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* CSS example */</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.highlight</span> {</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span><span class="ch">:</span> <span class="fu">linear-gradient(</span><span class="dv">45</span><span class="dt">deg</span><span class="op">,</span> <span class="cn">#ff6b6b</span><span class="op">,</span> <span class="cn">#4ecdc4</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">padding</span><span class="ch">:</span> <span class="dv">1</span><span class="dt">rem</span><span class="op">;</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-radius</span><span class="ch">:</span> <span class="dv">8</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>**Status**: ✅ Complete | 🔄 In Progress | 🚧 Coming Soon | ❌ Deprecated</span></code></pre></div>
+<h3 id="multi-column-layouts">4. Multi-Column Layouts</h3>
 <div class="sourceCode" id="cb6"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bash example</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Building project...&quot;</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install <span class="kw">&amp;&amp;</span> <span class="ex">npm</span> run build</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Build complete!&quot;</span></span></code></pre></div>
-<hr />
-<h3 id="tables-and-alignment">Tables and Alignment</h3>
-<div class="sourceCode" id="cb7"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Feature <span class="pp">|</span> Markdown <span class="pp">|</span> HTML <span class="pp">|</span> Word <span class="pp">|</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="pp">|---------|:--------:|:----:|:----:|</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Speed <span class="pp">|</span> ⚡ Fast <span class="pp">|</span> 🐌 Slow <span class="pp">|</span> 🐌 Slow <span class="pp">|</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Learning Curve <span class="pp">|</span> 📈 Easy <span class="pp">|</span> 📈 Hard <span class="pp">|</span> 📈 Easy <span class="pp">|</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Version Control <span class="pp">|</span> ✅ Perfect <span class="pp">|</span> ❌ Poor <span class="pp">|</span> ❌ Poor <span class="pp">|</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Portability <span class="pp">|</span> ✅ Excellent <span class="pp">|</span> ⚠️ Good <span class="pp">|</span> ❌ Poor <span class="pp">|</span></span></code></pre></div>
-<p><strong>Rendered Output:</strong> | Feature | Markdown | HTML | Word
-| |———|:——–:|:—-:|:—-:| | Speed | ⚡ Fast | 🐌 Slow | 🐌 Slow | |
-Learning Curve | 📈 Easy | 📈 Hard | 📈 Easy | | Version Control | ✅
-Perfect | ❌ Poor | ❌ Poor | | Portability | ✅ Excellent | ⚠️ Good |
-❌ Poor |</p>
-<hr />
-<h3 id="blockquotes-and-special-characters">Blockquotes and Special
-Characters</h3>
-<div class="sourceCode" id="cb8"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; &quot;The best way to learn Markdown is to start writing with it.&quot;</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; — Every developer who discovered Markdown</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; 💡 **Pro Tip**: You can nest blockquotes</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; &gt; Like this!</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; &gt; &gt; And even deeper!</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="fu">### Horizontal Rules</span></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>Use three or more dashes, asterisks, or underscores:</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>***</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>___</span></code></pre></div>
-<p><strong>Rendered Output:</strong> &gt; “The best way to learn
-Markdown is to start writing with it.” &gt; &gt; — Every developer who
-discovered Markdown</p>
-<blockquote>
-<p>💡 <strong>Pro Tip</strong>: You can nest blockquotes &gt; Like this!
-&gt; &gt; And even deeper!</p>
-</blockquote>
-<h3 id="horizontal-rules">Horizontal Rules</h3>
-<h2 id="use-three-or-more-dashes-asterisks-or-underscores">Use three or
-more dashes, asterisks, or underscores:</h2>
-<hr />
-<hr />
-<hr />
-<h2 id="markdown-tools-and-extensions">🛠️ Markdown Tools and
-Extensions</h2>
-<h3 id="popular-markdown-editors">Popular Markdown Editors</h3>
-<ul>
-<li><strong>Typora</strong>: WYSIWYG editor with live preview</li>
-<li><strong>Mark Text</strong>: Real-time preview editor</li>
-<li><strong>Obsidian</strong>: Knowledge management with Markdown</li>
-<li><strong>Notable</strong>: Markdown-based note-taking app</li>
-</ul>
-<h3 id="markdown-extensions">Markdown Extensions</h3>
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>**Left Column**</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>Your content here</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>**Right Column**  </span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>More content here</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+<h2 id="file-organization-best-practices">File Organization Best
+Practices</h2>
+<h3 id="blog-structure">Blog Structure</h3>
+<pre><code>blogentries/
+├── home.md              # Homepage content
+├── pinned.md            # Important announcements
+├── getting-started.md   # Tutorial posts
+├── project-showcase.md  # Portfolio pieces
+└── random-thoughts.md   # Personal posts</code></pre>
+<h3 id="custom-pages">Custom Pages</h3>
+<pre><code>showcase/
+├── showcase.md          # Main showcase page
+├── gallery.md           # Photo galleries
+├── projects.md          # Code projects
+└── tutorials.md         # How-to guides</code></pre>
+<h2 id="date-format-mastery">Date Format Mastery</h2>
+<p><strong>Critical Rule</strong>: Always use this exact format:</p>
 <div class="sourceCode" id="cb9"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">### Task Lists (GitHub Flavored Markdown)</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Completed task</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Incomplete task</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[x]</span> Another completed task</span>
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Your Post Title</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>**Date:** YYYY-MM-DD</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>**Author:** Your Name</span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="fu">### Footnotes</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>This text has a footnote<span class="ot">[^1]</span>.</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="ot">[^1]: </span>This is the footnote text.</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="fu">### Emoji Support 🎉</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="sc">:rocket:</span> <span class="sc">:heart:</span> <span class="sc">:thumbsup:</span> <span class="sc">:fire:</span></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="fu">### Math Expressions (where supported)</span></span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>$$E = mc^2$$</span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>Inline math: $x = rac{-b \pm \sqrt{b^2-4ac}}{2a}$</span></code></pre></div>
-<p><strong>Rendered Output:</strong> ### Task Lists (GitHub Flavored
-Markdown) - [x] Completed task - [ ] Incomplete task - [x] Another
-completed task</p>
-<h3 id="emoji-support">Emoji Support 🎉</h3>
-<p>🚀 ❤️ 👍 🔥</p>
-<hr />
-<h2 id="best-practices-for-markdown">📚 Best Practices for Markdown</h2>
-<h3 id="consistency-is-key">1. <strong>Consistency is Key</strong></h3>
-<ul>
-<li>Use the same heading style throughout your document</li>
-<li>Stick to one list marker style (- or *)</li>
-<li>Consistent spacing around elements</li>
-</ul>
-<h3 id="structure-your-content">2. <strong>Structure Your
-Content</strong></h3>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>Content starts here...</span></code></pre></div>
+<p><strong>Why this matters:</strong> - Archive page groups by year
+automatically - Posts sort chronologically - Build script parses dates
+correctly</p>
+<h2 id="advanced-markdown-tricks">Advanced Markdown Tricks</h2>
+<h3 id="collapsible-sections">Collapsible Sections</h3>
 <div class="sourceCode" id="cb10"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Main Title (H1) - Use only once per document</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Major sections (H2)</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">### Subsections (H3)</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Details (H4) - Use sparingly</span></span></code></pre></div>
-<h3 id="make-it-readable">3. <strong>Make It Readable</strong></h3>
-<ul>
-<li>Leave blank lines between elements</li>
-<li>Use descriptive link text</li>
-<li>Add alt text for images</li>
-<li>Break up long paragraphs</li>
-</ul>
-<h3 id="use-semantic-elements">4. <strong>Use Semantic
-Elements</strong></h3>
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">details</span><span class="dt">&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">summary</span><span class="dt">&gt;</span>Click to expand<span class="dt">&lt;/</span><span class="kw">summary</span><span class="dt">&gt;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>Hidden content here! Works great for:</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Long code examples</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Optional reading</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>FAQ answers</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">details</span><span class="dt">&gt;</span></span></code></pre></div>
+<details>
+<summary>
+Click to expand
+</summary>
+<p>Hidden content here! Works great for: - Long code examples - Optional
+reading - FAQ answers</p>
+</details>
+<h3 id="highlight-boxes">Highlight Boxes</h3>
 <div class="sourceCode" id="cb11"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Good: Semantic structure --&gt;</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Installation Steps</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Download the package</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Extract to desired folder</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Run the installer</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Better: With emphasis --&gt;</span></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🚀 Installation Steps</span></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Download** the latest package from <span class="co">[</span><span class="ot">releases page</span><span class="co">](link)</span></span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Extract** to your desired folder</span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Run** the installer and follow prompts</span></code></pre></div>
-<hr />
-<h2 id="markdown-in-different-contexts">🎨 Markdown in Different
-Contexts</h2>
-<h3 id="documentation">Documentation</h3>
-<ul>
-<li><strong>README files</strong>: Project overviews and setup
-instructions</li>
-<li><strong>API docs</strong>: Endpoint descriptions and examples</li>
-<li><strong>Wiki pages</strong>: Knowledge bases and tutorials</li>
-</ul>
-<h3 id="content-creation">Content Creation</h3>
-<ul>
-<li><strong>Blog posts</strong>: Articles and tutorials</li>
-<li><strong>Static sites</strong>: Jekyll, Hugo, Gatsby</li>
-<li><strong>Note-taking</strong>: Personal knowledge management</li>
-</ul>
-<h3 id="communication">Communication</h3>
-<ul>
-<li><strong>GitHub issues</strong>: Bug reports and feature
-requests</li>
-<li><strong>Slack/Discord</strong>: Formatted messages</li>
-<li><strong>Email</strong>: Rich text alternatives</li>
-</ul>
-<hr />
-<h3 id="final-tips">💡 Final Tips</h3>
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;background: #e3f2fd; padding: 1rem; border-left: 4px solid #2196f3; margin: 1rem 0;&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>💡 **Pro Tip**: This creates a highlighted info box</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+<div
+style="background: #e3f2fd; padding: 1rem; border-left: 4px solid #2196f3; margin: 1rem 0;">
+<p>💡 <strong>Pro Tip</strong>: This creates a highlighted info box</p>
+</div>
+<h3 id="quick-reference-cards">Quick Reference Cards</h3>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Command <span class="pp">|</span> Purpose <span class="pp">|</span> Example <span class="pp">|</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="pp">|---------|---------|---------|</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`./build.sh`</span> <span class="pp">|</span> Build site <span class="pp">|</span> <span class="in">`./build.sh`</span> <span class="pp">|</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`git add .`</span> <span class="pp">|</span> Stage changes <span class="pp">|</span> <span class="in">`git add .`</span> <span class="pp">|</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`git push`</span> <span class="pp">|</span> Deploy <span class="pp">|</span> <span class="in">`git push origin main`</span> <span class="pp">|</span></span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Purpose</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>./build.sh</code></td>
+<td>Build site</td>
+<td><code>./build.sh</code></td>
+</tr>
+<tr>
+<td><code>git add .</code></td>
+<td>Stage changes</td>
+<td><code>git add .</code></td>
+</tr>
+<tr>
+<td><code>git push</code></td>
+<td>Deploy</td>
+<td><code>git push origin main</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-kiwi-blog-workflow">The Kiwi Blog Workflow</h2>
 <ol type="1">
-<li><strong>Practice regularly</strong>: The more you write, the more
-natural it becomes</li>
-<li><strong>Use live preview</strong>: See your formatting in
-real-time</li>
-<li><strong>Learn shortcuts</strong>: Master your editor’s Markdown
-shortcuts</li>
-<li><strong>Explore extensions</strong>: GitHub Flavored Markdown,
-tables, task lists</li>
-<li><strong>Keep it simple</strong>: Markdown’s power is in its
-simplicity</li>
+<li><strong>Write in Markdown</strong> - Focus on content, not
+formatting</li>
+<li><strong>Add HTML when needed</strong> - For complex layouts</li>
+<li><strong>Test locally</strong> - Run <code>./build.sh</code> and
+check <code>index.html</code></li>
+<li><strong>Push to GitHub</strong> - Automatic deployment with GitHub
+Pages</li>
 </ol>
-<p><strong>Happy writing! 🥝✨</strong></p>
+<p><strong>Remember</strong>: Kiwi Blog is about simplicity. Don’t
+overthink it—just write! 🥝</p>
 <h1 id="photography-visual-portfolio">📸 Photography &amp; Visual
 Portfolio</h1>
 <h2 id="featured-photography-work">Featured Photography Work</h2>
@@ -838,50 +717,75 @@ traditions</li>
 <hr />
 <p><em>Showcasing visual storytelling through photography and
 design.</em></p>
-<h1 id="art-photography-showcase">🎨 Art &amp; Photography Showcase</h1>
-<p>Explore beautiful visual content and artistic photography from around
-the world.</p>
-<h2 id="featured-photography">📸 Featured Photography</h2>
-<h3 id="urban-architecture">Urban Architecture</h3>
-<p><img
-src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&amp;q=80"
-alt="Modern Architecture" /> <em>Photo by Pedro Lastra on <a
-href="https://unsplash.com/photos/modern-city-buildings-Nyvq2juw4_o">Unsplash</a></em></p>
-<p>A stunning example of modern architectural photography showcasing
-clean lines and geometric patterns in urban environments.</p>
-<h3 id="nature-landscapes">Nature &amp; Landscapes</h3>
-<p><img
-src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&amp;q=80"
-alt="Mountain Landscape" /> <em>Photo by Nathan Anderson on <a
-href="https://unsplash.com/photos/green-mountains-under-white-clouds-6VhPY27jdps">Unsplash</a></em></p>
-<p>Breathtaking landscape photography capturing the raw beauty of
-mountain ranges and natural vistas.</p>
-<h3 id="abstract-creative">Abstract &amp; Creative</h3>
-<p><img
-src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=800&amp;q=80"
-alt="Abstract Colors" /> <em>Photo by Pawel Czerwinski on <a
-href="https://unsplash.com/photos/multicolored-abstract-painting-8uZPynIu-rQ">Unsplash</a></em></p>
-<p>Creative abstract photography exploring color, texture, and artistic
-composition techniques.</p>
-<h2 id="digital-art-techniques">🎨 Digital Art Techniques</h2>
-<h3 id="color-theory-in-practice">Color Theory in Practice</h3>
-<ul>
-<li><strong>Complementary Colors</strong>: Using opposing colors for
-visual impact</li>
-<li><strong>Monochromatic Schemes</strong>: Single-color variations for
-harmony</li>
-<li><strong>Triadic Combinations</strong>: Three evenly-spaced colors
-for balance</li>
-</ul>
-<h3 id="composition-guidelines">Composition Guidelines</h3>
-<ul>
-<li><strong>Rule of Thirds</strong>: Positioning subjects along
-imaginary grid lines</li>
-<li><strong>Leading Lines</strong>: Directing viewer attention through
-the frame</li>
-<li><strong>Negative Space</strong>: Using empty areas to enhance the
-main subject</li>
-</ul>
+<h1 id="building-an-art-gallery-with-kiwi-blog">🎨 Building an Art
+Gallery with Kiwi Blog</h1>
+<p>Let me show you how to create a stunning art gallery using Kiwi
+Blog’s Markdown features.</p>
+<h2 id="how-this-gallery-works">How This Gallery Works</h2>
+<p>Here’s the actual Markdown that creates this gallery:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🖼️ My Art Collection</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 2rem 0;&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;text-align: center;&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=300</span><span class="er">&amp;</span><span class="st">q=80&quot;</span><span class="ot"> </span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ot">     style</span><span class="op">=</span><span class="st">&quot;width: 100%; height: 200px; object-fit: cover; border-radius: 8px;&quot;</span><span class="ot"> </span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ot">     alt</span><span class="op">=</span><span class="st">&quot;Abstract Art&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;&lt;</span><span class="kw">em</span><span class="dt">&gt;</span>Abstract Colors<span class="dt">&lt;/</span><span class="kw">em</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>Digital Art, 2024<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;text-align: center;&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300</span><span class="er">&amp;</span><span class="st">q=80&quot;</span><span class="ot"> </span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ot">     style</span><span class="op">=</span><span class="st">&quot;width: 100%; height: 200px; object-fit: cover; border-radius: 8px;&quot;</span><span class="ot"> </span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ot">     alt</span><span class="op">=</span><span class="st">&quot;Mountain Landscape&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;&lt;</span><span class="kw">em</span><span class="dt">&gt;</span>Mountain Vista<span class="dt">&lt;/</span><span class="kw">em</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>Photography, 2024<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;text-align: center;&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">&quot;https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=300</span><span class="er">&amp;</span><span class="st">q=80&quot;</span><span class="ot"> </span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ot">     style</span><span class="op">=</span><span class="st">&quot;width: 100%; height: 200px; object-fit: cover; border-radius: 8px;&quot;</span><span class="ot"> </span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ot">     alt</span><span class="op">=</span><span class="st">&quot;Architecture&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;&lt;</span><span class="kw">em</span><span class="dt">&gt;</span>Urban Lines<span class="dt">&lt;/</span><span class="kw">em</span><span class="dt">&gt;&lt;</span><span class="kw">br</span><span class="dt">&gt;</span>Architecture, 2024<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+<h2 id="the-result">🖼️ The Result</h2>
+<div
+style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 2rem 0;">
+<div style="text-align: center;">
+<img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=300&q=80" 
+     style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" 
+     alt="Abstract Art">
+<p>
+<em>Abstract Colors</em><br>Digital Art, 2024
+</p>
+</div>
+<div style="text-align: center;">
+<img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&q=80" 
+     style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" 
+     alt="Mountain Landscape">
+<p>
+<em>Mountain Vista</em><br>Photography, 2024
+</p>
+</div>
+<div style="text-align: center;">
+<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=300&q=80" 
+     style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" 
+     alt="Architecture">
+<p>
+<em>Urban Lines</em><br>Architecture, 2024
+</p>
+</div>
+</div>
+<h2 id="pro-tips-for-galleries">💡 Pro Tips for Galleries</h2>
+<p><strong>1. Control Image Sizes</strong>: Use
+<code>w=300&amp;q=80</code> in Unsplash URLs <strong>2. Responsive
+Grid</strong>:
+<code>grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))</code>
+<strong>3. Consistent Heights</strong>:
+<code>height: 200px; object-fit: cover</code> <strong>4. Rounded
+Corners</strong>: <code>border-radius: 8px</code> for modern look</p>
 <hr />
     </main>
   </div>

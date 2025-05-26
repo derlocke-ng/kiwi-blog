@@ -1,37 +1,72 @@
-# 🎨 Art & Photography Showcase
+# 🎨 Building an Art Gallery with Kiwi Blog
 
-Explore beautiful visual content and artistic photography from around the world.
+Let me show you how to create a stunning art gallery using Kiwi Blog's Markdown features.
 
-## 📸 Featured Photography
+## How This Gallery Works
 
-### Urban Architecture
-![Modern Architecture](https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80)
-*Photo by Pedro Lastra on [Unsplash](https://unsplash.com/photos/modern-city-buildings-Nyvq2juw4_o)*
+Here's the actual Markdown that creates this gallery:
 
-A stunning example of modern architectural photography showcasing clean lines and geometric patterns in urban environments.
+```markdown
+## 🖼️ My Art Collection
 
-### Nature & Landscapes  
-![Mountain Landscape](https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80)
-*Photo by Nathan Anderson on [Unsplash](https://unsplash.com/photos/green-mountains-under-white-clouds-6VhPY27jdps)*
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 2rem 0;">
 
-Breathtaking landscape photography capturing the raw beauty of mountain ranges and natural vistas.
+<div style="text-align: center;">
+<img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=300&q=80" 
+     style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" 
+     alt="Abstract Art">
+<p><em>Abstract Colors</em><br>Digital Art, 2024</p>
+</div>
 
-### Abstract & Creative
-![Abstract Colors](https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=800&q=80)
-*Photo by Pawel Czerwinski on [Unsplash](https://unsplash.com/photos/multicolored-abstract-painting-8uZPynIu-rQ)*
+<div style="text-align: center;">
+<img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&q=80" 
+     style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" 
+     alt="Mountain Landscape">
+<p><em>Mountain Vista</em><br>Photography, 2024</p>
+</div>
 
-Creative abstract photography exploring color, texture, and artistic composition techniques.
+<div style="text-align: center;">
+<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=300&q=80" 
+     style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" 
+     alt="Architecture">
+<p><em>Urban Lines</em><br>Architecture, 2024</p>
+</div>
 
-## 🎨 Digital Art Techniques
+</div>
+```
 
-### Color Theory in Practice
-- **Complementary Colors**: Using opposing colors for visual impact
-- **Monochromatic Schemes**: Single-color variations for harmony
-- **Triadic Combinations**: Three evenly-spaced colors for balance
+## 🖼️ The Result
 
-### Composition Guidelines
-- **Rule of Thirds**: Positioning subjects along imaginary grid lines
-- **Leading Lines**: Directing viewer attention through the frame
-- **Negative Space**: Using empty areas to enhance the main subject
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 2rem 0;">
+
+<div style="text-align: center;">
+<img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=300&q=80" 
+     style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" 
+     alt="Abstract Art">
+<p><em>Abstract Colors</em><br>Digital Art, 2024</p>
+</div>
+
+<div style="text-align: center;">
+<img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&q=80" 
+     style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" 
+     alt="Mountain Landscape">
+<p><em>Mountain Vista</em><br>Photography, 2024</p>
+</div>
+
+<div style="text-align: center;">
+<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=300&q=80" 
+     style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" 
+     alt="Architecture">
+<p><em>Urban Lines</em><br>Architecture, 2024</p>
+</div>
+
+</div>
+
+## 💡 Pro Tips for Galleries
+
+**1. Control Image Sizes**: Use `w=300&q=80` in Unsplash URLs
+**2. Responsive Grid**: `grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))`
+**3. Consistent Heights**: `height: 200px; object-fit: cover`
+**4. Rounded Corners**: `border-radius: 8px` for modern look
 
 ---
