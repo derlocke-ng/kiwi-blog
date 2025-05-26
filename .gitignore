@@ -1,0 +1,30 @@
+# Generated HTML files (optional - you may want to include them)
+# Uncomment the lines below if you don't want to commit generated files
+index.html
+archive.html
+sample.html
+# *.html
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Node modules (if you add npm packages later)
+node_modules/
+package-lock.json
+
+# Build artifacts
+dist/
+build/

@@ -1,0 +1,523 @@
+:root {
+  --content-hue: 100; /* Default kiwi green for content */
+  --header-hue: 210; /* Default blue-gray for header/footer */
+  --dark-mode: 0; /* 0 = light mode, 1 = dark mode */
+  
+  /* Content colors */
+  --content-light: hsl(var(--content-hue), 35%, calc(85% - (var(--dark-mode) * 70%)));
+  --content-medium: hsl(var(--content-hue), 45%, calc(55% - (var(--dark-mode) * 15%)));
+  --content-dark: hsl(var(--content-hue), 60%, calc(35% + (var(--dark-mode) * 30%)));
+  --content-darker: hsl(var(--content-hue), 65%, calc(25% + (var(--dark-mode) * 50%)));
+  --content-text: hsl(var(--content-hue), 50%, calc(20% + (var(--dark-mode) * 65%)));
+  --content-link: hsl(var(--content-hue), 60%, calc(40% + (var(--dark-mode) * 25%)));
+  --content-link-hover: hsl(var(--content-hue), 70%, calc(30% + (var(--dark-mode) * 35%)));
+  --bg-light: hsl(var(--content-hue), 30%, calc(95% - (var(--dark-mode) * 85%)));
+  --bg-medium: hsl(var(--content-hue), 25%, calc(92% - (var(--dark-mode) * 80%)));
+  
+  /* Header/Footer colors - same for both */
+  --header-bg: hsl(var(--header-hue), 25%, calc(25% - (var(--dark-mode) * 15%)));
+  --header-border: hsl(var(--header-hue), 20%, calc(20% - (var(--dark-mode) * 10%)));
+  --header-text: hsl(var(--header-hue), 15%, calc(85% + (var(--dark-mode) * 10%)));
+  --header-accent: hsl(var(--header-hue), 60%, calc(65% + (var(--dark-mode) * 10%)));
+  --header-link: hsl(var(--header-hue), 50%, calc(90% + (var(--dark-mode) * 5%)));
+  --header-link-hover: hsl(var(--header-hue), 60%, calc(70% + (var(--dark-mode) * 15%)));
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-medium) 100%);
+  color: var(--content-text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.taskbar {
+  display: flex;
+  align-items: center;
+  background: var(--header-bg);
+  color: var(--header-text);
+  padding: 0 1rem;
+  height: 48px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.taskbar .logo {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-right: 2rem;
+}
+
+.taskbar .logo a {
+  color: var(--header-link);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.taskbar .logo a:hover {
+  color: var(--header-link-hover);
+}
+
+.taskbar .menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.taskbar .menu li a {
+  color: var(--header-link);
+  text-decoration: none;
+  padding: 0.5em 0.8em;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.taskbar .menu li a:hover {
+  background: var(--header-accent);
+  color: var(--header-bg);
+}
+
+.theme-slider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+.dark-mode-toggle {
+  background: var(--header-accent);
+  border: none;
+  color: var(--header-bg);
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.dark-mode-toggle:hover {
+  background: var(--header-link-hover);
+  transform: translateY(-1px);
+}
+
+.slider-group {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  position: relative;
+}
+
+.slider-group::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--header-bg);
+  color: var(--header-text);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+.slider-group:hover::after {
+  opacity: 1;
+}
+
+.theme-slider label {
+  font-size: 1em;
+  color: var(--header-text);
+}
+
+.slider {
+  width: 100px;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(to right, 
+    hsl(0, 70%, 60%), 
+    hsl(60, 70%, 60%), 
+    hsl(120, 70%, 60%), 
+    hsl(180, 70%, 60%), 
+    hsl(240, 70%, 60%), 
+    hsl(300, 70%, 60%), 
+    hsl(360, 70%, 60%)
+  );
+  outline: none;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 0.8;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #333;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #333;
+  cursor: pointer;
+}
+
+main {
+  max-width: 700px;
+  width: 100%;
+  background: linear-gradient(145deg, 
+    hsl(0, 0%, calc(100% - (var(--dark-mode) * 85%))) 0%, 
+    var(--bg-light) 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px hsla(var(--content-hue), 60%, 25%, calc(0.12 + (var(--dark-mode) * 0.2)));
+  padding: 2rem;
+  border: 1px solid var(--content-light);
+  margin: 0;
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+iframe {
+  border-radius: 8px;
+  background: var(--content-light);
+}
+
+/* Dynamic theme styling for content */
+h1, h2, h3 {
+  color: var(--content-darker);
+}
+
+h1 {
+  border-bottom: 2px solid var(--content-medium);
+  padding-bottom: 0.5em;
+}
+
+h2 {
+  color: var(--content-dark);
+}
+
+a {
+  color: var(--content-link);
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--content-link-hover);
+}
+
+blockquote {
+  border-left: 4px solid var(--content-medium);
+  background: linear-gradient(135deg, var(--bg-light) 0%, var(--content-light) 100%);
+  margin: 1em 0;
+  padding: 0.8em 1.2em;
+  border-radius: 4px;
+}
+
+code {
+  background: var(--content-light);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  color: var(--content-darker);
+  font-size: 0.9em;
+}
+
+.pinned-post {
+  background: linear-gradient(135deg, var(--bg-light) 0%, var(--content-light) 100%);
+  border-left: 5px solid var(--content-medium);
+  border-radius: 8px;
+  margin: 2em 0 2em 0;
+  padding: 1.5em 1.5em 1em 1.5em;
+  box-shadow: 0 2px 12px hsla(var(--content-hue), 45%, 55%, 0.15);
+}
+.pinned-post strong {
+  color: var(--content-dark);
+  font-size: 1.1em;
+}
+.pinned-post blockquote {
+  border-left: 3px solid var(--content-medium);
+  margin: 1em 0 0.5em 0;
+  padding-left: 1em;
+  color: var(--content-dark);
+  background: linear-gradient(135deg, var(--bg-light) 0%, var(--content-light) 100%);
+}
+
+/* Blog entry styling */
+.blogentry {
+  background: linear-gradient(145deg, 
+    hsl(0, 0%, calc(100% - (var(--dark-mode) * 85%))) 0%, 
+    var(--bg-light) 100%);
+  border: 1px solid var(--content-light);
+  border-radius: 8px;
+  padding: 1.5em;
+  margin: 1.5em 0;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.blogentry:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px hsla(var(--content-hue), 45%, 55%, calc(0.15 + (var(--dark-mode) * 0.2)));
+}
+
+/* Date styling */
+.date {
+  color: var(--content-medium);
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+/* Archive styling */
+.archive h3 {
+  color: var(--content-dark);
+  border-bottom: 1px solid var(--content-medium);
+  padding-bottom: 0.3em;
+}
+
+.archive ul {
+  background: linear-gradient(135deg, var(--bg-light) 0%, var(--content-light) 100%);
+  border-radius: 6px;
+  padding: 1em 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.archive li {
+  margin: 0.5em 0;
+  padding: 0.3em 0;
+  border-bottom: 1px solid hsla(var(--content-hue), 45%, 55%, 0.2);
+}
+
+.archive li:last-child {
+  border-bottom: none;
+}
+
+footer {
+  background: var(--header-bg);
+  border-top: 1px solid var(--header-border);
+  margin-top: 0;
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  padding: 1.5em 0 0.5em 0;
+  color: var(--header-text);
+  font-size: 0.97em;
+}
+.footer-links {
+  margin-bottom: 0.2em;
+}
+.footer-links a {
+  color: var(--header-accent);
+  text-decoration: none;
+  margin: 0 0.3em;
+  font-weight: 500;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+  color: var(--header-link-hover);
+}
+.footer-info {
+  color: var(--header-text);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .main-wrapper {
+    padding: 1rem 0.5rem;
+    align-items: flex-start;
+  }
+  
+  main {
+    margin-top: 1rem;
+  }
+  
+  .taskbar {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 0.5rem 1rem;
+  }
+  
+  .theme-slider {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .taskbar .menu {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-wrapper {
+    padding: 0.5rem 0.25rem;
+  }
+  
+  main {
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .taskbar .logo {
+    margin-right: 1rem;
+  }
+}
+
+/* Syntax Highlighting Styles for Pygments */
+/* Code blocks */
+pre {
+  background: hsl(var(--content-hue), 20%, calc(98% - (var(--dark-mode) * 90%)));
+  border: 1px solid hsl(var(--content-hue), 30%, calc(85% - (var(--dark-mode) * 70%)));
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+code {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9em;
+  background: hsl(var(--content-hue), 25%, calc(96% - (var(--dark-mode) * 88%)));
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  border: 1px solid hsl(var(--content-hue), 20%, calc(90% - (var(--dark-mode) * 75%)));
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+/* Pygments syntax highlighting */
+.sourceCode {
+  background: hsl(var(--content-hue), 20%, calc(98% - (var(--dark-mode) * 90%)));
+  color: hsl(var(--content-hue), 50%, calc(20% + (var(--dark-mode) * 65%)));
+}
+
+/* Keywords */
+.kw { color: hsl(240, 70%, calc(50% + (var(--dark-mode) * 25%))); font-weight: bold; }
+
+/* Data types */
+.dt { color: hsl(200, 60%, calc(45% + (var(--dark-mode) * 30%))); font-weight: bold; }
+
+/* Decimal values */
+.dv { color: hsl(0, 60%, calc(50% + (var(--dark-mode) * 25%))); }
+
+/* Base-N integers */
+.bn { color: hsl(0, 60%, calc(50% + (var(--dark-mode) * 25%))); }
+
+/* Floats */
+.fl { color: hsl(0, 60%, calc(50% + (var(--dark-mode) * 25%))); }
+
+/* Characters */
+.ch { color: hsl(120, 50%, calc(40% + (var(--dark-mode) * 35%))); }
+
+/* Strings */
+.st { color: hsl(120, 50%, calc(40% + (var(--dark-mode) * 35%))); }
+
+/* Comments */
+.co { color: hsl(var(--content-hue), 30%, calc(60% + (var(--dark-mode) * 15%))); font-style: italic; }
+
+/* Other */
+.ot { color: hsl(30, 70%, calc(45% + (var(--dark-mode) * 30%))); }
+
+/* Alert/Error */
+.al { color: hsl(0, 70%, calc(50% + (var(--dark-mode) * 25%))); font-weight: bold; }
+
+/* Functions */
+.fu { color: hsl(280, 60%, calc(50% + (var(--dark-mode) * 25%))); }
+
+/* Errors */
+.er { color: hsl(0, 80%, calc(50% + (var(--dark-mode) * 25%))); font-weight: bold; }
+
+/* Variables */
+.va { color: hsl(200, 50%, calc(45% + (var(--dark-mode) * 30%))); }
+
+/* Control flow */
+.cf { color: hsl(240, 70%, calc(50% + (var(--dark-mode) * 25%))); font-weight: bold; }
+
+/* Operators */
+.op { color: hsl(var(--content-hue), 50%, calc(30% + (var(--dark-mode) * 45%))); }
+
+/* Built-in functions */
+.bu { color: hsl(200, 60%, calc(45% + (var(--dark-mode) * 30%))); }
+
+/* Extensions */
+.ex { color: hsl(280, 60%, calc(50% + (var(--dark-mode) * 25%))); }
+
+/* Preprocessor */
+.pp { color: hsl(30, 70%, calc(45% + (var(--dark-mode) * 30%))); }
+
+/* Attributes */
+.at { color: hsl(180, 60%, calc(45% + (var(--dark-mode) * 30%))); }
+
+/* Documentation */
+.do { color: hsl(120, 40%, calc(50% + (var(--dark-mode) * 25%))); font-style: italic; }
+
+/* Annotations */
+.an { color: hsl(180, 60%, calc(45% + (var(--dark-mode) * 30%))); font-weight: bold; }
+
+/* Information */
+.in { color: hsl(180, 60%, calc(45% + (var(--dark-mode) * 30%))); font-weight: bold; font-style: italic; }
+
+/* Warning */
+.wa { color: hsl(30, 70%, calc(45% + (var(--dark-mode) * 30%))); font-weight: bold; font-style: italic; }
+
+/* Inline code styling improvements */
+p code, li code {
+  color: hsl(var(--content-hue), 70%, calc(35% + (var(--dark-mode) * 40%)));
+  font-weight: 500;
+}
+
+/* Line numbers in code blocks */
+.line-numbers {
+  counter-reset: line;
+}
+
+.line-numbers .line::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 2em;
+  text-align: right;
+  margin-right: 0.5em;
+  color: hsl(var(--content-hue), 30%, calc(60% + (var(--dark-mode) * 15%)));
+  font-size: 0.8em;
+}
