@@ -11,7 +11,7 @@ This page shows how to create beautiful image galleries in Kiwi Blog with proper
 ### Basic Grid Gallery
 
 **Copy this code:**
-```markdown
+```html
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 2rem 0;">
   <div style="text-align: center;">
     <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=300&q=80" 
@@ -34,7 +34,8 @@ This page shows how to create beautiful image galleries in Kiwi Blog with proper
 </div>
 ```
 
-**Result:**
+**Live Example:**
+
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 2rem 0;">
   <div style="text-align: center;">
     <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=300&q=80" 
@@ -59,7 +60,7 @@ This page shows how to create beautiful image galleries in Kiwi Blog with proper
 ### Simple Row Layout
 
 **For fewer images:**
-```markdown
+```html
 <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin: 2rem 0;">
   <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&q=80" 
        style="width: 280px; height: 200px; object-fit: cover; border-radius: 8px;" 
@@ -70,7 +71,8 @@ This page shows how to create beautiful image galleries in Kiwi Blog with proper
 </div>
 ```
 
-**Result:**
+**Live Example:**
+
 <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin: 2rem 0;">
   <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&q=80" 
        style="width: 280px; height: 200px; object-fit: cover; border-radius: 8px;" 
