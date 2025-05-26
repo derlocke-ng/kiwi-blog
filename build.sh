@@ -71,22 +71,46 @@ done
 echo -e "$LATEST_HTML" > /tmp/latest.html
 
 # Prepare yearly archive and all entries for archive
-ARCHIVE_HTML="<h2>Archive</h2>\n"
+ARCHIVE_HTML="<div class=\"archive-header\">\n"
+ARCHIVE_HTML+="<h1>📅 Blog Archive</h1>\n"
+ARCHIVE_HTML+="<p class=\"archive-description\">Explore all blog posts organized by year. Click any post to jump to it on the main page.</p>\n"
+ARCHIVE_HTML+="</div>\n"
+ARCHIVE_HTML+="<div class=\"archive-content\">\n"
 YEAR=""
+YEAR_COUNT=0
 for entry in "${sorted[@]}"; do
   f="${entry%%|*}"
-  TITLE=$(head -n 1 "$f")
+  TITLE=$(head -n 1 "$f" | sed 's/^# //')
   DATE=$(head -n 2 "$f" | tail -n 1)
   ID=$(basename "$f" .md)
   YR=${DATE:0:4}
   if [ "$YR" != "$YEAR" ]; then
-    [ -n "$YEAR" ] && ARCHIVE_HTML+="</ul>"
-    ARCHIVE_HTML+="<h3>$YR</h3><ul>"
+    [ -n "$YEAR" ] && ARCHIVE_HTML+="</div></div>"
+    YEAR_COUNT=0
+    # Count posts for this year
+    for count_entry in "${sorted[@]}"; do
+      count_date=$(head -n 2 "${count_entry%%|*}" | tail -n 1)
+      count_yr=${count_date:0:4}
+      [ "$count_yr" = "$YR" ] && YEAR_COUNT=$((YEAR_COUNT + 1))
+    done
+    ARCHIVE_HTML+="<div class=\"archive-year\">\n"
+    ARCHIVE_HTML+="<div class=\"year-header\">\n"
+    ARCHIVE_HTML+="<h2 class=\"year-title\">$YR</h2>\n"
+    ARCHIVE_HTML+="<span class=\"post-count\">$YEAR_COUNT posts</span>\n"
+    ARCHIVE_HTML+="</div>\n"
+    ARCHIVE_HTML+="<div class=\"posts-grid\">\n"
     YEAR="$YR"
   fi
-  ARCHIVE_HTML+="<li><a href=\"index.html#$ID\">$TITLE</a> <span class=\"date\">$DATE</span></li>\n"
+  # Format date nicely
+  MONTH_DAY=${DATE:5:5}
+  FORMATTED_DATE=$(date -d "$DATE" "+%B %d" 2>/dev/null || echo "$MONTH_DAY")
+  ARCHIVE_HTML+="<article class=\"archive-post\">\n"
+  ARCHIVE_HTML+="<div class=\"post-date\">$FORMATTED_DATE</div>\n"
+  ARCHIVE_HTML+="<h3 class=\"post-title\"><a href=\"index.html#$ID\">$TITLE</a></h3>\n"
+  ARCHIVE_HTML+="</article>\n"
 done
-[ -n "$YEAR" ] && ARCHIVE_HTML+="</ul>"
+[ -n "$YEAR" ] && ARCHIVE_HTML+="</div></div>"
+ARCHIVE_HTML+="</div>\n"
 echo -e "$ARCHIVE_HTML" > /tmp/archive.html
 
 # Home page (manual, optional)
