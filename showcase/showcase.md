@@ -11,6 +11,11 @@ Learn to create beautiful galleries and embed videos in your Kiwi Blog.
   <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=400&q=80" style="width: 350px; height: 250px; object-fit: cover; border-radius: 8px;" alt="Abstract Colors">
 </div>
 
+<p style="text-align: center; font-size: 0.85em; color: #888; margin-top: 0.5rem;">
+  <em>Left: "Silhouette of Mountains" by Simon Berger</em> • <em>Right: "Aurora Abstract" by Miriam Espacio</em> <br>
+  Images from <a href="https://unsplash.com" target="_blank" style="color: #666;">Unsplash</a>
+</p>
+
 **Copy this code:**
 ```html
 <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin: 2rem 0;">
@@ -25,7 +30,8 @@ Learn to create beautiful galleries and embed videos in your Kiwi Blog.
 
 <div style="text-align: center; margin: 2rem 0;">
   <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=85" style="width: 100%; max-width: 500px; height: 350px; object-fit: cover; border-radius: 12px;" alt="Modern Architecture">
-  <p style="margin-top: 1rem; font-style: italic; color: #666;">🏛️ <em>Modern Architecture</em> - Clean lines and geometric beauty</p>
+  <p style="margin-top: 1rem; font-style: italic; color: #666;">🏛️ <em>"Modern Building with Angular Design"</em> by Scott Webb</p>
+  <p style="font-size: 0.85em; color: #888;">Photo from <a href="https://unsplash.com" target="_blank" style="color: #666;">Unsplash</a></p>
 </div>
 
 **Copy this code:**
@@ -55,40 +61,18 @@ Learn to create beautiful galleries and embed videos in your Kiwi Blog.
 
 ---
 
-## Example 4: Image + Video Side-by-Side
-
-<div style="display: flex; gap: 2rem; margin: 2rem 0; align-items: center; flex-wrap: wrap;">
-  <div style="flex: 1; min-width: 300px;">
-    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=500&q=80" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;" alt="Starry Night">
-    <p style="margin-top: 0.5rem; text-align: center; font-size: 0.9em; color: #666;"><em>Starry Night</em></p>
-  </div>
-  <div style="flex: 1; min-width: 300px; position: relative; padding-bottom: 28%; height: 0; overflow: hidden;">
-    <iframe src="https://www.youtube.com/embed/ZXsQAXx_ao0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px;" allowfullscreen></iframe>
-  </div>
-</div>
-
-**Copy this code:**
-```html
-<div style="display: flex; gap: 2rem; margin: 2rem 0; align-items: center; flex-wrap: wrap;">
-  <div style="flex: 1; min-width: 300px;">
-    <img src="YOUR_IMAGE_URL?w=500&q=80" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px;" alt="Your Alt Text">
-    <p style="margin-top: 0.5rem; text-align: center; font-size: 0.9em; color: #666;"><em>Your Caption</em></p>
-  </div>
-  <div style="flex: 1; min-width: 300px; position: relative; padding-bottom: 28%; height: 0; overflow: hidden;">
-    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px;" allowfullscreen></iframe>
-  </div>
-</div>
-```
-
----
-
-## Example 5: Three Images in a Row
+## Example 4: Three Images in a Row
 
 <div style="display: flex; gap: 1rem; margin: 2rem 0; flex-wrap: wrap; justify-content: center;">
-  <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&q=80" style="width: 200px; height: 150px; object-fit: cover; border-radius: 8px;" alt="Nature">
-  <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=300&q=80" style="width: 200px; height: 150px; object-fit: cover; border-radius: 8px;" alt="Ocean">
-  <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f54?w=300&q=80" style="width: 200px; height: 150px; object-fit: cover; border-radius: 8px;" alt="Forest">
+  <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&q=80" style="width: 200px; height: 150px; object-fit: cover; border-radius: 8px;" alt="Nature Abstract">
+  <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=300&q=80" style="width: 200px; height: 150px; object-fit: cover; border-radius: 8px;" alt="Ocean Waves">
+  <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f54?w=300&q=80" style="width: 200px; height: 150px; object-fit: cover; border-radius: 8px;" alt="Forest Path">
 </div>
+
+<p style="text-align: center; font-size: 0.85em; color: #888; margin-top: 0.5rem;">
+  <em>Left: "Coastal Abstract" by Pawel Czerwinski</em> • <em>Center: "Ocean Wave" by Silas Baisch</em> • <em>Right: "Forest Trail" by Johannes Plenio</em> <br>
+  Images from <a href="https://unsplash.com" target="_blank" style="color: #666;">Unsplash</a>
+</p>
 
 **Copy this code:**
 ```html
@@ -101,11 +85,16 @@ Learn to create beautiful galleries and embed videos in your Kiwi Blog.
 
 ---
 
-## Example 6: Large Hero Image
+## Example 5: Large Hero Image
 
 <div style="margin: 3rem 0;">
   <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=90" style="width: 100%; height: 400px; object-fit: cover; border-radius: 16px;" alt="Mountain Landscape Hero">
 </div>
+
+<p style="text-align: center; font-size: 0.85em; color: #888; margin-top: 0.5rem;">
+  <em>"Glacier Point Landscape" by Yosemite National Park</em> <br>
+  Photo from <a href="https://unsplash.com" target="_blank" style="color: #666;">Unsplash</a>
+</p>
 
 **Copy this code:**
 ```html
