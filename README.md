@@ -44,18 +44,32 @@ start index.html
 ```
 kiwi-blog/
 ├── blogentries/          # Blog posts in Markdown format
+│   ├── blog1.md          # Sample blog post 1
+│   ├── blog2.md          # Sample blog post 2
+│   ├── extending-kiwi-blog.md  # Advanced features guide
+│   ├── getting-started.md      # Getting started guide
 │   ├── home.md           # Homepage content
-│   ├── pinned.md         # Featured/pinned content
-│   └── *.md              # Your blog posts
+│   └── pinned.md         # Featured/pinned content
 ├── sample/               # Custom pages content
-│   └── *.md              # Your custom pages
-├── build.sh              # Build script
+│   └── sample.md         # Sample custom page
+├── showcase/             # Showcase content
+│   └── showcase.md       # Showcase examples and demos
+├── build.sh              # Main build script
 ├── template.html         # Main page template
-├── *-template.html       # Templates for different page types
+├── archive-template.html # Archive page template
+├── sample-template.html  # Sample page template
+├── showcase-template.html # Showcase template
 ├── style.css             # Main stylesheet
 ├── theme.js              # Theme controller
+├── favicon.svg           # Site favicon
 ├── index.html            # Generated homepage
-└── *.html                # Other generated pages
+├── archive.html          # Generated archive page
+├── sample.html           # Generated sample page
+├── showcase.html         # Generated showcase page
+├── LICENSE               # MIT License
+├── README.md             # This documentation
+├── GITHUB-SETUP.md       # GitHub setup instructions
+└── PROJECT-SUMMARY.md    # Project overview and status
 ```
 
 ## 📝 Creating Content
@@ -210,10 +224,14 @@ The theme system uses CSS variables and can be customized in `style.css`:
 
 Customize the page templates in `*-template.html` files. Look for placeholder tags like:
 
-- `{{CONTENT}}`: Where page content is inserted
-- `{{TITLE}}`: Page title
-- `{{DATE}}`: Publication date
-- `{{AUTHOR}}`: Content author
+- `<!--MENU-->`: Where navigation menu links are inserted
+- `<!--HOME-->`: Where homepage content is inserted
+- `<!--PINNED-->`: Where pinned/featured post is inserted
+- `<!--LATEST-->`: Where latest blog posts are inserted
+- `<!--FOOTERLINKS-->`: Where footer navigation links are inserted
+- `<!--ARCHIVE-->`: Where archive content is inserted (in archive-template.html)
+- `<!--SAMPLE-->`: Where sample page content is inserted (in sample-template.html)
+- `<!--SHOWCASE-->`: Where showcase content is inserted (in showcase-template.html)
 
 ## 🤝 Contributing
 
