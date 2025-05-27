@@ -3,13 +3,13 @@
 A lightweight, markdown-powered static site generator with a simple naming pattern for creating custom pages.
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Powered By: Markdown](https://img.shields.io/badge/Powered%20By-Markdown-black)
+![Powered By: Markdown](https://img.shields.io/badge/Powered%20By-Markdown-blue)
 ![Build System: Bash](https://img.shields.io/badge/Build%20System-Bash-green)
 
 ## Quick Start
 
 ```bash
-git clone https://github.com/yourusername/kiwi-blog.git
+git clone https://github.com/derlocke-ng/kiwi-blog.git
 cd kiwi-blog
 chmod +x build.sh
 ./build.sh
@@ -103,10 +103,48 @@ kiwi-blog/
     └── NAME.md
 ```
 
+## 🗺️ Roadmap - Upcoming Features
+
+We're constantly improving Kiwi Blog! Here's what's coming next:
+
+### 🎯 **Phase 1: Content Enhancement**
+- **📋 Table of Contents** - Automatic headline tree generation for long posts
+- **🏷️ Post Tags** - Categorize and organize your blog entries  
+- **📅 Enhanced Archive** - Better sorting and filtering options
+
+### 🔍 **Phase 2: Search & Discovery**
+- **🔎 Entry Search** - Full-text search across all blog posts
+- **🏷️ Tag Search** - Find posts by specific tags quickly
+- **📊 Smart Sorting** - Multiple sort options (date, title, tags, popularity)
+
+### ⚡ **Phase 3: Advanced Features**
+- **📱 Mobile Optimization** - Enhanced responsive design
+- **🌍 Multi-language Support** - Internationalization features
+- **📈 Analytics Integration** - Basic visitor statistics
+- **💬 Comment System** - Optional commenting functionality
+
+### 🎨 **Phase 4: Customization**
+- **🎭 Theme Gallery** - Pre-built theme collections
+- **🧩 Plugin System** - Extensible functionality modules
+- **⚙️ Config File** - YAML-based configuration options
+
+---
+
+*Want to contribute? Check out our [GitHub Issues](https://github.com/derlocke-ng/kiwi-blog/issues) or submit a feature request!*
+
 ## License
 
 MIT License - See [LICENSE](LICENSE) file for details.
 
 ---
 
-**Made with 🥝 by Kiwi Blog contributors**
+<div align="center">
+
+**Made with 🥝 by [derlocke-ng](https://github.com/derlocke-ng)**
+
+*Simple • Powerful • Extensible*
+
+[![GitHub Stars](https://img.shields.io/github/stars/derlocke-ng/kiwi-blog?style=social)](https://github.com/derlocke-ng/kiwi-blog)
+[![GitHub Forks](https://img.shields.io/github/forks/derlocke-ng/kiwi-blog?style=social)](https://github.com/derlocke-ng/kiwi-blog/fork)
+
+</div>
