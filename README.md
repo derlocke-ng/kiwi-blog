@@ -1,6 +1,6 @@
 # 🥝 Kiwi Blog
 
-> *A lightweight, markdown-powered static site generator with a simple naming pattern for creating custom pages.*
+> *A beautifully simple, lightweight static site generator powered by Markdown with infinite blog post scrolling and effortless custom page creation.*
 
 <div align="center">
 
@@ -12,11 +12,17 @@
 
 ## 🌐 Live Demo
 
-🎯 **Check out the live demo:** [https://derlocke-ng.github.io/kiwi-blog/](https://derlocke-ng.github.io/kiwi-blog/)
+🎯 **Experience Kiwi Blog:** [https://derlocke-ng.github.io/kiwi-blog/](https://derlocke-ng.github.io/kiwi-blog/)
 
-> See Kiwi Blog in action with sample content, custom pages, and the archive system!
+✨ **Features in action:**
+- 📜 **Infinite scroll** through blog posts  
+- 🎨 **Beautiful responsive design** with dark/light themes
+- 🔧 **Custom pages** created with the simple naming pattern
+- 📚 **Archive system** with time-sorted entries
 
 ## 🚀 Quick Start
+
+Get your blog created in **under 30 seconds**:
 
 ```bash
 git clone https://github.com/derlocke-ng/kiwi-blog.git
@@ -25,7 +31,25 @@ chmod +x build.sh
 ./build.sh
 ```
 
-> **That's it!** Your blog is now running locally. Open `index.html` in your browser.
+🎉 **That's it!** Now choose how to view your blog:
+
+### 📁 **File System** (Simple)
+Open `index.html` directly in your browser
+
+### 🌐 **Local Web Server** (Recommended)
+Host with Python's built-in server for full functionality:
+
+```bash
+# Python 3 (recommended)
+python3 -m http.server 8000
+
+# Python 2 (if needed)
+python -m SimpleHTTPServer 8000
+```
+
+Then visit: **http://127.0.0.1:8000** 🚀
+
+> **Why use a web server?** Ensures proper MIME types, enables AJAX features, and mimics real hosting conditions!
 
 ## ✨ Creating Subsites - The Naming Pattern
 
@@ -127,7 +151,7 @@ Welcome to my portfolio page!" > portfolio/portfolio.md
 
 ## 📝 Blog Posts
 
-> Create engaging content with automatic time-sorting!
+> **Create engaging content with automatic time-sorting and infinite scroll!**
 
 Add markdown files to `blogentries/` with this format:
 
@@ -140,7 +164,10 @@ Add markdown files to `blogentries/` with this format:
 Content here...
 ```
 
-**✨ Important**: Blog entries are automatically **time-sorted** (newest first) based on the date in each markdown file.
+**✨ Features:**
+- 🔄 **Infinite scrolling** - Readers never hit a "load more" button
+- ⏰ **Auto time-sorted** - Newest posts appear first automatically  
+- 📱 **Mobile responsive** - Perfect reading experience on any device
 
 ## ⚙️ Requirements
 
