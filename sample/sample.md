@@ -6,6 +6,7 @@ Welcome to the **Sample Page**! This demonstrates how Kiwi Blog's custom page sy
 ## 🎯 What This Demonstrates
 
 This page shows you how to:
+
 - ✅ Create custom pages beyond the main blog
 - ✅ Use template-based page generation
 - ✅ Organize content in subfolders
@@ -62,6 +63,7 @@ Your amazing content here!" > mypage/mypage.md
 **Remember**: The build script will look for `<!--MYPAGE-->` placeholder in `mypage-template.html` and replace it with content from the `mypage/` folder.
 
 ### Page Ideas
+
 - **Portfolio**: Showcase your projects
 - **About**: Tell your story
 - **Contact**: Share your contact info
@@ -86,6 +88,7 @@ All files will be combined into one page in alphabetical order.
 
 ### Markdown Features
 Use all standard Markdown features:
+
 - **Headers** for structure
 - **Lists** for organization
 - **Links** for navigation
@@ -99,6 +102,7 @@ Use all standard Markdown features:
 
 ### Template Modification
 Edit your `*-template.html` file to:
+
 - Change the layout
 - Add custom CSS
 - Include JavaScript
@@ -106,6 +110,7 @@ Edit your `*-template.html` file to:
 
 ### Styling
 All pages inherit the main theme system:
+
 - Dual-slider color customization
 - Dark mode support
 - Responsive design
@@ -114,6 +119,7 @@ All pages inherit the main theme system:
 ## 🔗 Navigation Integration
 
 Custom pages automatically appear in:
+
 - **Main navigation menu** (top of every page)
 - **Footer links** (bottom of every page)
 - **Clean URLs** (e.g., `/sample.html`)
