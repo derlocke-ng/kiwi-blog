@@ -95,17 +95,20 @@ Learn to create beautiful galleries and embed videos in your Kiwi Blog.
 ## 🎯 Tips & Tricks
 
 **Get YouTube Video ID:**
+
 1. Go to any YouTube video  
 2. Copy URL: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`
 3. Extract ID after `v=`: `dQw4w9WgXcQ`
 4. Use: `https://www.youtube.com/embed/dQw4w9WgXcQ`
 
 **Image Sizing:**
+
 - Small: `?w=300&q=80` (300px, 80% quality)
 - Medium: `?w=400&q=80` (400px, 80% quality)  
 - Large: `?w=800&q=85` (800px, 85% quality)
 
 **Pro CSS:**
+
 - `object-fit: cover` = no stretching
 - `border-radius: 8px` = rounded corners  
 - `gap: 1rem` = consistent spacing
