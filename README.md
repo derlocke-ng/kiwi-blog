@@ -157,8 +157,6 @@ brew install pandoc
 
 ## 📁 Project Structure
 
-<div align="center">
-
 ```
 🥝 kiwi-blog/
 ├── 🔧 build.sh                    # Main build script
@@ -173,6 +171,10 @@ brew install pandoc
 ├── 📄 archive.html                # Generated archive page
 ├── 📄 sample.html                 # Generated sample page
 ├── 📄 showcase.html               # Generated showcase page
+├── 📄 LICENSE                     # MIT License
+├── 📄 README.md                   # Project documentation
+├── 📄 GITHUB-SETUP.md             # GitHub setup guide
+├── 📄 PROJECT-SUMMARY.md          # Project summary
 ├── 📝 blogentries/                # Blog posts directory
 │   ├── 🏠 home.md                 # Homepage content
 │   ├── 📌 pinned.md               # Featured post
@@ -185,8 +187,6 @@ brew install pandoc
 └── 📁 showcase/                   # Showcase page content
     └── 📝 showcase.md
 ```
-
-</div>
 
 ## 📋 Todo List
 
