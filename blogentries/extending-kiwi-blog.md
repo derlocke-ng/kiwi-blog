@@ -18,6 +18,8 @@ mkdir portfolio
 echo "# My Portfolio
 2025-05-26
 Showcase your best work here!" > portfolio/portfolio.md
+# Update placeholder in template
+sed -i 's/<!--SAMPLE-->/<!--PORTFOLIO-->/g' portfolio-template.html
 ```
 
 ### 2. **Contact Page**
@@ -28,6 +30,8 @@ mkdir contact
 echo "# Contact Me
 2025-05-26
 Get in touch!" > contact/contact.md
+# Update placeholder in template
+sed -i 's/<!--SAMPLE-->/<!--CONTACT-->/g' contact-template.html
 ```
 
 ### 3. **Projects Gallery**
@@ -38,6 +42,8 @@ mkdir projects
 echo "# My Projects
 2025-05-26
 Here are my latest coding adventures!" > projects/projects.md
+# Update placeholder in template
+sed -i 's/<!--SAMPLE-->/<!--PROJECTS-->/g' projects-template.html
 ```
 
 ## 🎨 Theme Customization Ideas
