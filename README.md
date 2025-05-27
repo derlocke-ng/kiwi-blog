@@ -39,14 +39,21 @@ Create a template file ending with `-template.html`:
 cp sample-template.html projects-template.html
 ```
 
-#### 2. Content Folder: `NAME/`
+#### 2. Update the Placeholder
+Edit the template to use the correct placeholder:
+```bash
+# Change <!--SAMPLE--> to <!--PROJECTS-->
+sed -i 's/<!--SAMPLE-->/<!--PROJECTS-->/g' projects-template.html
+```
+
+#### 3. Content Folder: `NAME/`
 Create a matching directory for markdown content:
 ```bash
 mkdir projects
 echo "# My Projects" > projects/projects.md
 ```
 
-#### 3. Placeholder: `<!--NAME-->`
+#### 4. Placeholder: `<!--NAME-->`
 The build script automatically replaces `<!--NAME-->` (uppercase) in your template with the content from the `NAME/` directory.
 
 **Note**: Multiple markdown files in a subsite folder are combined in **alphabetical order** by filename.
@@ -57,12 +64,31 @@ The build script automatically replaces `<!--NAME-->` (uppercase) in your templa
 
 | Step | Action | Result |
 |------|--------|--------|
-| 1️⃣ | Create `portfolio-template.html` | Template ready |
-| 2️⃣ | Create `portfolio/` folder | Content directory |
-| 3️⃣ | Add `portfolio/portfolio.md` | Content file |
-| 4️⃣ | Run `./build.sh` | ✨ `portfolio.html` + menu entry |
+| 1️⃣ | `cp sample-template.html portfolio-template.html` | Template ready |
+| 2️⃣ | Edit `portfolio-template.html`: change `<!--SAMPLE-->` to `<!--PORTFOLIO-->` | Placeholder updated |
+| 3️⃣ | `mkdir portfolio` | Content directory |
+| 4️⃣ | `echo "# My Portfolio" > portfolio/portfolio.md` | Content file |
+| 5️⃣ | `./build.sh` | ✨ `portfolio.html` + menu entry |
 
 </div>
+
+**Complete Example:**
+```bash
+# 1. Copy the sample template
+cp sample-template.html portfolio-template.html
+
+# 2. Update the placeholder inside the template
+sed -i 's/<!--SAMPLE-->/<!--PORTFOLIO-->/g' portfolio-template.html
+
+# 3. Create content directory and file
+mkdir portfolio
+echo "# My Portfolio
+
+Welcome to my portfolio page!" > portfolio/portfolio.md
+
+# 4. Build the site
+./build.sh
+```
 
 ## 🧩 Template Placeholders
 
