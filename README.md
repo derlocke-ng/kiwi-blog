@@ -64,22 +64,34 @@ The build script automatically replaces `<!--NAME-->` (uppercase) in your templa
 
 </div>
 
-## 🧩 Built-in Template Placeholders
+## 🧩 Template Placeholders
 
 <div align="center">
 
-| Placeholder | Purpose | Usage |
-|-------------|---------|-------|
-| `<!--MENU-->` | Navigation menu links | All templates |
-| `<!--HOME-->` | Homepage content | Main template |
-| `<!--PINNED-->` | Featured post content | Homepage |
-| `<!--LATEST-->` | Blog posts | Homepage |
-| `<!--FOOTERLINKS-->` | Footer navigation | All templates |
-| `<!--ARCHIVE-->` | Archive page content | Archive template |
-| `<!--SAMPLE-->` | Sample page content | Sample template |
-| `<!--SHOWCASE-->` | Showcase page content | Showcase template |
+### Universal Placeholders (Available in All Templates)
+| Placeholder | Purpose |
+|-------------|---------|
+| `<!--MENU-->` | Navigation menu links |
+| `<!--FOOTERLINKS-->` | Footer navigation |
+
+### Homepage Template (template.html)
+| Placeholder | Purpose |
+|-------------|---------|
+| `<!--HOME-->` | Homepage content |
+| `<!--PINNED-->` | Featured post content |
+| `<!--LATEST-->` | Blog posts |
+
+### Custom Page Templates
+| Template | Placeholder | Content Source |
+|----------|-------------|----------------|
+| `sample-template.html` | `<!--SAMPLE-->` | `sample/` folder |
+| `showcase-template.html` | `<!--SHOWCASE-->` | `showcase/` folder |
+| `archive-template.html` | `<!--ARCHIVE-->` | Generated archive |
+| `NAME-template.html` | `<!--NAME-->` | `NAME/` folder |
 
 </div>
+
+> **Note**: Each custom template gets its own unique placeholder based on the filename.
 
 ## 📝 Blog Posts
 
@@ -123,27 +135,40 @@ brew install pandoc
 
 ```
 🥝 kiwi-blog/
-├── 🔧 build.sh                # Main build script
-├── 🏠 template.html           # Homepage template
-├── 📄 NAME-template.html      # Custom page templates
-├── 🎨 style.css               # Stylesheet
-├── 📝 blogentries/            # Blog posts
-│   ├── 🏠 home.md
-│   ├── 📌 pinned.md
-│   └── 📰 *.md
-└── 📁 NAME/                   # Custom page content
-    └── 📝 NAME.md
+├── 🔧 build.sh                    # Main build script
+├── 🏠 template.html               # Homepage template
+├── 📄 archive-template.html       # Archive page template
+├── 📄 sample-template.html        # Sample page template
+├── 📄 showcase-template.html      # Showcase page template
+├── 🎨 style.css                   # Main stylesheet
+├── ⚙️ theme.js                    # Theme system
+├── 🖼️ favicon.svg                 # Site icon
+├── 📄 index.html                  # Generated homepage
+├── 📄 archive.html                # Generated archive page
+├── 📄 sample.html                 # Generated sample page
+├── 📄 showcase.html               # Generated showcase page
+├── 📝 blogentries/                # Blog posts directory
+│   ├── 🏠 home.md                 # Homepage content
+│   ├── 📌 pinned.md               # Featured post
+│   ├── 📰 blog1.md                # Blog post
+│   ├── 📰 blog2.md                # Blog post
+│   ├── 📰 extending-kiwi-blog.md  # Blog post
+│   └── 📰 getting-started.md      # Blog post
+├── 📁 sample/                     # Sample page content
+│   └── 📝 sample.md
+└── 📁 showcase/                   # Showcase page content
+    └── 📝 showcase.md
 ```
 
 </div>
 
 ## 📋 Todo List
 
-- [ ] Headline tree (table of contents)
-- [ ] Post tags
-- [ ] Search for entries
-- [ ] Search for tags
-- [ ] Sort like archive
+- [ ] **Table of Contents** - Automatic headline tree generation for long posts
+- [ ] **Post Tags** - Categorize and organize blog entries with tags
+- [ ] **Entry Search** - Full-text search functionality across all blog posts  
+- [ ] **Tag Search** - Find posts by filtering specific tags
+- [ ] **Enhanced Sorting** - Additional sorting options similar to archive page
 
 ## License
 
