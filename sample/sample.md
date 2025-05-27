@@ -28,11 +28,12 @@ Each custom page needs two components:
 
 ### 3. Build Process
 When you run `./build.sh`:
-1. Scans for all `*-template.html` files
-2. Finds matching content folders
-3. Converts Markdown to HTML
-4. Generates the final page
-5. Updates navigation automatically
+1. Scans for all `*-template.html` files (excluding `template.html` and `archive-template.html`)
+2. For each template, finds the matching content folder
+3. Converts all `.md` files in the content folder to HTML
+4. Replaces the uppercase placeholder (e.g., `<!--SAMPLE-->`) with the converted content
+5. Replaces `<!--MENU-->` and `<!--FOOTERLINKS-->` with auto-generated navigation
+6. Outputs the final HTML page
 
 ### 4. This Page Example
 - **Template**: `sample-template.html`
