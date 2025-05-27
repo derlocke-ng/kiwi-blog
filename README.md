@@ -233,6 +233,49 @@ Customize the page templates in `*-template.html` files. Look for placeholder ta
 - `<!--SAMPLE-->`: Where sample page content is inserted (in sample-template.html)
 - `<!--SHOWCASE-->`: Where showcase content is inserted (in showcase-template.html)
 
+### Creating New Page Types
+
+Kiwi Blog follows a consistent naming pattern for adding new page types:
+
+1. **Create a template file**: `NAME-template.html` with a placeholder `<!--NAME-->`
+2. **Create a content folder**: `NAME/` directory to hold your Markdown files
+3. **Add content**: Place Markdown files in the `NAME/` directory
+
+The build system automatically:
+- Finds all `*-template.html` files and creates corresponding HTML pages
+- Reads Markdown content from the matching directory
+- Replaces `<!--NAME-->` (uppercase) with the content
+- Adds the page to navigation menus and footer links
+
+**Example: Creating a "Projects" Page**
+
+```bash
+# 1. Copy an existing template as a starting point
+cp sample-template.html projects-template.html
+
+# 2. Create a directory for projects content
+mkdir projects
+
+# 3. Create a Markdown file for your projects page
+cat > projects/projects.md << EOF
+# My Projects
+
+**Date:** $(date +%Y-%m-%d)  
+**Author:** Your Name
+
+## Project 1
+Amazing project description...
+
+## Project 2
+Another cool project...
+EOF
+
+# 4. Build the site
+./build.sh
+```
+
+This creates `projects.html` and adds it to your site navigation automatically.
+
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to:
