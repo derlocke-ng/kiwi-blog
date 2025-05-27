@@ -43,11 +43,16 @@ The repository includes:
 
 ### Essential Files
 - `build.sh` - Main build script
-- `template.html` - Homepage template
+- `template.html` - Homepage template  
+- `archive-template.html` - Archive page template
+- `sample-template.html` - Sample page template
+- `showcase-template.html` - Showcase page template
 - `style.css` - Responsive styling with dark/light themes
 - `theme.js` - Theme switching functionality
+- `favicon.svg` - Site icon
 - `blogentries/` - Blog posts in Markdown
 - `sample/`, `showcase/` - Example custom pages
+- `index.html`, `archive.html`, `sample.html`, `showcase.html` - Generated pages
 
 ## 🌐 GitHub Pages Hosting
 
