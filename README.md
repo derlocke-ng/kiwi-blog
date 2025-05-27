@@ -10,6 +10,12 @@
 
 </div>
 
+## 🌐 Live Demo
+
+🎯 **Check out the live demo:** [https://derlocke-ng.github.io/kiwi-blog/](https://derlocke-ng.github.io/kiwi-blog/)
+
+> See Kiwi Blog in action with sample content, custom pages, and the archive system!
+
 ## 🚀 Quick Start
 
 ```bash
@@ -195,6 +201,7 @@ brew install pandoc
 - [ ] **Entry Search** - Full-text search functionality across all blog posts  
 - [ ] **Tag Search** - Find posts by filtering specific tags
 - [ ] **Enhanced Sorting** - Additional sorting options similar to archive page
+- [ ] **Post and Subsite Generator** - Create blog posts and subsites via script
 
 ## License
 
