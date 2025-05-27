@@ -23,11 +23,13 @@ Kiwi Blog uses a simple three-part naming pattern:
 
 ### 2. Template System
 Each custom page needs two components:
+
 - **Template**: `pagename-template.html` (defines the layout)
 - **Content**: `pagename/` folder with `.md` files (your content)
 
 ### 3. Build Process
 When you run `./build.sh`:
+
 1. Scans for all `*-template.html` files (excluding `template.html` and `archive-template.html`)
 2. For each template, finds the matching content folder
 3. Converts all `.md` files in the content folder to HTML

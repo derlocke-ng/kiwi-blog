@@ -55,19 +55,28 @@ template (e.g., <code>&lt;!--SAMPLE--&gt;</code> - always
 uppercase)</li>
 </ul>
 <h3 id="template-system">2. Template System</h3>
-<p>Each custom page needs two components: - <strong>Template</strong>:
-<code>pagename-template.html</code> (defines the layout) -
-<strong>Content</strong>: <code>pagename/</code> folder with
-<code>.md</code> files (your content)</p>
+<p>Each custom page needs two components:</p>
+<ul>
+<li><strong>Template</strong>: <code>pagename-template.html</code>
+(defines the layout)</li>
+<li><strong>Content</strong>: <code>pagename/</code> folder with
+<code>.md</code> files (your content)</li>
+</ul>
 <h3 id="build-process">3. Build Process</h3>
-<p>When you run <code>./build.sh</code>: 1. Scans for all
-<code>*-template.html</code> files (excluding <code>template.html</code>
-and <code>archive-template.html</code>) 2. For each template, finds the
-matching content folder 3. Converts all <code>.md</code> files in the
-content folder to HTML 4. Replaces the uppercase placeholder (e.g.,
-<code>&lt;!--SAMPLE--&gt;</code>) with the converted content 5. Replaces
-<code>&lt;!--MENU--&gt;</code> and <code>&lt;!--FOOTERLINKS--&gt;</code>
-with auto-generated navigation 6. Outputs the final HTML page</p>
+<p>When you run <code>./build.sh</code>:</p>
+<ol type="1">
+<li>Scans for all <code>*-template.html</code> files (excluding
+<code>template.html</code> and <code>archive-template.html</code>)</li>
+<li>For each template, finds the matching content folder</li>
+<li>Converts all <code>.md</code> files in the content folder to
+HTML</li>
+<li>Replaces the uppercase placeholder (e.g.,
+<code>&lt;!--SAMPLE--&gt;</code>) with the converted content</li>
+<li>Replaces <code>&lt;!--MENU--&gt;</code> and
+<code>&lt;!--FOOTERLINKS--&gt;</code> with auto-generated
+navigation</li>
+<li>Outputs the final HTML page</li>
+</ol>
 <h3 id="this-page-example">4. This Page Example</h3>
 <ul>
 <li><strong>Template</strong>: <code>sample-template.html</code></li>
