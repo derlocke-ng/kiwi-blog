@@ -35,6 +35,8 @@ echo "# My Projects" > projects/projects.md
 ### 3. Placeholder: `<!--NAME-->`
 The build script automatically replaces `<!--NAME-->` (uppercase) in your template with the content from the `NAME/` directory.
 
+**Note**: Multiple markdown files in a subsite folder are combined in **alphabetical order** by filename.
+
 ### Example: Creating a "Portfolio" Subsite
 
 1. **Create template**: `portfolio-template.html`
@@ -69,6 +71,8 @@ Add markdown files to `blogentries/` with this format:
 
 Content here...
 ```
+
+**Important**: Blog entries are automatically **time-sorted** (newest first) based on the date in each markdown file.
 
 ## Requirements
 

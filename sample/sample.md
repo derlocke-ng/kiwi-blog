@@ -13,12 +13,19 @@ This page shows you how to:
 
 ## 🔧 How Custom Pages Work
 
-### 1. Template System
+### 1. The NAME Pattern
+Kiwi Blog uses a simple three-part naming pattern:
+
+- **Template File**: `NAME-template.html` (e.g., `sample-template.html`)
+- **Content Folder**: `NAME/` directory (e.g., `sample/`)
+- **Placeholder**: `<!--NAME-->` in template (e.g., `<!--SAMPLE-->` - always uppercase)
+
+### 2. Template System
 Each custom page needs two components:
 - **Template**: `pagename-template.html` (defines the layout)
 - **Content**: `pagename/` folder with `.md` files (your content)
 
-### 2. Build Process
+### 3. Build Process
 When you run `./build.sh`:
 1. Scans for all `*-template.html` files
 2. Finds matching content folders
@@ -26,9 +33,10 @@ When you run `./build.sh`:
 4. Generates the final page
 5. Updates navigation automatically
 
-### 3. This Page Example
+### 4. This Page Example
 - **Template**: `sample-template.html`
 - **Content**: `sample/sample.md` (this file!)
+- **Placeholder**: `<!--SAMPLE-->` in the template
 - **Output**: `sample.html`
 - **Navigation**: Auto-added to menu
 
@@ -51,6 +59,8 @@ Your amazing content here!" > mypage/mypage.md
 ./build.sh
 ```
 
+**Remember**: The build script will look for `<!--MYPAGE-->` placeholder in `mypage-template.html` and replace it with content from the `mypage/` folder.
+
 ### Page Ideas
 - **Portfolio**: Showcase your projects
 - **About**: Tell your story
@@ -70,7 +80,7 @@ mypage/
 └── contact.md
 ```
 
-**Important**: Files are combined in **alphabetical order** by filename (not by date like blog entries).
+**Important**: Files are combined in **alphabetical order** by filename (unlike blog entries which are time-sorted by date).
 
 All files will be combined into one page in alphabetical order.
 

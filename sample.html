@@ -15,7 +15,6 @@
 <li><a href="archive.html">Archive</a></li>
 <li><a href="./sample.html">Sample</a></li>
 <li><a href="./showcase.html">Showcase</a></li>
-<li><a href="./test.html">Test</a></li>
 
     </ul>
     <div class="theme-slider">
@@ -40,21 +39,34 @@ Kiwi Blog’s custom page system works.</p>
 blog - ✅ Use template-based page generation - ✅ Organize content in
 subfolders - ✅ Get automatic navigation integration</p>
 <h2 id="how-custom-pages-work">🔧 How Custom Pages Work</h2>
-<h3 id="template-system">1. Template System</h3>
+<h3 id="the-name-pattern">1. The NAME Pattern</h3>
+<p>Kiwi Blog uses a simple three-part naming pattern:</p>
+<ul>
+<li><strong>Template File</strong>: <code>NAME-template.html</code>
+(e.g., <code>sample-template.html</code>)</li>
+<li><strong>Content Folder</strong>: <code>NAME/</code> directory (e.g.,
+<code>sample/</code>)</li>
+<li><strong>Placeholder</strong>: <code>&lt;!--NAME--&gt;</code> in
+template (e.g., <code>&lt;!--SAMPLE--&gt;</code> - always
+uppercase)</li>
+</ul>
+<h3 id="template-system">2. Template System</h3>
 <p>Each custom page needs two components: - <strong>Template</strong>:
 <code>pagename-template.html</code> (defines the layout) -
 <strong>Content</strong>: <code>pagename/</code> folder with
 <code>.md</code> files (your content)</p>
-<h3 id="build-process">2. Build Process</h3>
+<h3 id="build-process">3. Build Process</h3>
 <p>When you run <code>./build.sh</code>: 1. Scans for all
 <code>*-template.html</code> files 2. Finds matching content folders 3.
 Converts Markdown to HTML 4. Generates the final page 5. Updates
 navigation automatically</p>
-<h3 id="this-page-example">3. This Page Example</h3>
+<h3 id="this-page-example">4. This Page Example</h3>
 <ul>
 <li><strong>Template</strong>: <code>sample-template.html</code></li>
 <li><strong>Content</strong>: <code>sample/sample.md</code> (this
 file!)</li>
+<li><strong>Placeholder</strong>: <code>&lt;!--SAMPLE--&gt;</code> in
+the template</li>
 <li><strong>Output</strong>: <code>sample.html</code></li>
 <li><strong>Navigation</strong>: Auto-added to menu</li>
 </ul>
@@ -74,6 +86,10 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Build the site</span></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ex">./build.sh</span></span></code></pre></div>
+<p><strong>Remember</strong>: The build script will look for
+<code>&lt;!--MYPAGE--&gt;</code> placeholder in
+<code>mypage-template.html</code> and replace it with content from the
+<code>mypage/</code> folder.</p>
 <h3 id="page-ideas">Page Ideas</h3>
 <ul>
 <li><strong>Portfolio</strong>: Showcase your projects</li>
@@ -92,8 +108,8 @@ folder:</p>
 ├── projects.md
 └── contact.md</code></pre>
 <p><strong>Important</strong>: Files are combined in
-<strong>alphabetical order</strong> by filename (not by date like blog
-entries).</p>
+<strong>alphabetical order</strong> by filename (unlike blog entries
+which are time-sorted by date).</p>
 <p>All files will be combined into one page in alphabetical order.</p>
 <h3 id="markdown-features">Markdown Features</h3>
 <p>Use all standard Markdown features: - <strong>Headers</strong> for
@@ -135,7 +151,7 @@ build system</em> 🥝</p>
   <footer>
     <div class="footer-content">
       <div class="footer-links">
-<a href="index.html#home">Home</a> | <a href="archive.html">Archive</a> | <a href="./sample.html">Sample</a> | <a href="./showcase.html">Showcase</a> | <a href="./test.html">Test</a>
+<a href="index.html#home">Home</a> | <a href="archive.html">Archive</a> | <a href="./sample.html">Sample</a> | <a href="./showcase.html">Showcase</a>
       </div>
       <div class="footer-info">
         <span>© 2025 Kiwi Blog &mdash; <a href="mailto:your@email.com">Contact</a></span>
