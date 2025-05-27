@@ -1,6 +1,6 @@
 # My First Blog Post
 
-**Date:** 2025-05-23  
+**Date:** 2024-05-23  
 **Author:** derlocke-ng
 
 Welcome to your new blog! This is your first post written in Markdown.
