@@ -4,10 +4,10 @@
 
 ### 1. Initialize Git Repository
 ```bash
-cd your-project-directory
+cd kiwi-blog
 git init
 git add .
-git commit -m "Initial commit: Kiwi Blog static site generator"
+git commit -m "feat: initial Kiwi Blog setup"
 ```
 
 ### 2. Create GitHub Repository
@@ -34,12 +34,20 @@ git push -u origin main
 ## Repository Structure
 
 The repository includes:
-- ✅ Complete source code
-- ✅ Example content and blog posts
-- ✅ Comprehensive README.md
+- ✅ Complete source code and templates
+- ✅ Example content and blog posts  
+- ✅ Comprehensive README.md with live demo
 - ✅ MIT License
-- ✅ .gitignore for development files
-- ✅ Generated HTML files (for immediate deployment)
+- ✅ Generated HTML files (ready for deployment)
+- ✅ Build script for easy regeneration
+
+### Essential Files
+- `build.sh` - Main build script
+- `template.html` - Homepage template
+- `style.css` - Responsive styling with dark/light themes
+- `theme.js` - Theme switching functionality
+- `blogentries/` - Blog posts in Markdown
+- `sample/`, `showcase/` - Example custom pages
 
 ## 🌐 GitHub Pages Hosting
 
@@ -60,18 +68,31 @@ GitHub Pages provides free hosting for your Kiwi Blog:
 
 ### Description
 ```
-🥝 A modern, lightweight static site generator with advanced theming and dynamic page creation
+A beautifully simple static site generator with infinite blog scrolling and effortless custom page creation
 ```
 
 ### Topics/Tags
 ```
-static-site-generator, blog, markdown, css-themes, responsive-design, javascript, html-css, github-pages
+static-site-generator, markdown, blog, infinite-scroll, responsive-design, bash, pandoc, github-pages
 ```
 
 ### Features to Enable
 - ✅ Issues (for bug reports and feature requests)
-- ✅ Wiki (for extended documentation)
+- ✅ Wiki (for extended documentation)  
 - ✅ Discussions (for community support)
+
+## 🔧 Troubleshooting
+
+### GitHub Pages Not Loading?
+1. Check that `index.html` exists in your repository root
+2. Ensure Pages is set to deploy from `main` branch `/` (root)
+3. Wait 5-10 minutes for initial deployment
+4. Check repository Settings > Pages for deployment status
+
+### Build Issues?
+1. Make sure `pandoc` is installed: `sudo apt-get install pandoc`
+2. Check that `build.sh` has execute permissions: `chmod +x build.sh`
+3. Run `./build.sh` locally to test before pushing
 
 ---
 
